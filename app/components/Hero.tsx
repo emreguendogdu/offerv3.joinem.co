@@ -46,7 +46,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full mx-auto max-w-259 flex flex-col items-center gap-5"
+      className="relative w-full mx-auto max-w-259 flex flex-col items-center gap-8 md:gap-5"
     >
       <div className="flex flex-col w-full">
         <div className="flex flex-col items-center pt-2 pb-7 gap-6">
@@ -102,13 +102,16 @@ export function Hero() {
         </div>
 
         {/* CTA */}
-        <Button variant="orange" className="w-full capitalize ">
+        <Button
+          variant="orange"
+          className="w-full capitalize font-bold text-lg"
+        >
           Am I Qualified?
         </Button>
       </div>
 
       {/* Photo collage */}
-      <div className="relative w-full h-[649px]">
+      <div className="relative w-full h-[335px] md:h-[649px]">
         <Image
           src="/images/hero-photo-collage.png"
           alt="Happy patients"

@@ -22,7 +22,7 @@ export default function Home() {
     <div className="min-h-screen bg-white font-text">
       <PromoBanner />
 
-      <div className="relative bg-[linear-gradient(#faf0e4_10%,#fff_100%)] pt-10 pb-7.5 flex flex-col gap-5 px-4">
+      <div className="relative bg-[linear-gradient(#faf0e4_10%,#fff_100%)] p-[0.9375rem] md:pt-10 md:pb-7.5 flex flex-col gap-3 md:gap-5 md:px-4">
         <Header />
         <Hero />
       </div>
