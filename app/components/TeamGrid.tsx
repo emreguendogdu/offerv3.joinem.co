@@ -27,50 +27,49 @@ const DOCTORS = [
 
 export function TeamGrid() {
   return (
-    <section className="bg-white py-16">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="grid items-start gap-8 md:grid-cols-2">
-          <h2 className="font-display text-3xl font-bold leading-snug">
-            Meet the{' '}
-            <span className=" text-primary font-extrabold">incredible</span>{' '}
-            doctors we&apos;ve partnered with.
+    <section className="bg-white py-24 px-4 overflow-hidden">
+      <div className="mx-auto max-w-[77.625rem]">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
+          <h2 className="text-[#2F2A25] font-display text-[32px] sm:text-[40px] font-medium leading-[1.1] tracking-tight max-w-[500px]">
+            Meet the <span className="text-[#FB923C]">incredible</span> doctors
+            we&apos;ve partnered with.
           </h2>
-          <div>
-            <p className=" leading-relaxed text-gray-600">
+          <div className="flex flex-col gap-6 lg:max-w-[420px]">
+            <p className="text-[#2F2A25] text-base sm:text-[17px] leading-[1.6] opacity-90">
               TrimRx physicians are here to guide you every step of the way,
               bringing both their expertise and genuine care to keep you
               supported.
             </p>
-            <div className="mt-4">
-              <Button variant="orange" size="lg">
-                Take the Assessment
+            <div>
+              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-8 py-4 rounded-full font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
+                TAKE THE ASSESSMENT
               </Button>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 -mx-6 overflow-x-auto px-6 pb-4">
-          <div className="flex gap-6" style={{ minWidth: 'max-content' }}>
-            {DOCTORS.map((doc) => (
-              <div
-                key={doc.name}
-                className="w-64 shrink-0 overflow-hidden rounded-2xl bg-white shadow-sm border border-gray-100"
-              >
-                <div className="relative h-60 w-full">
-                  <Image
-                    src={`/images/${doc.img}`}
-                    alt={doc.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-4 text-center">
-                  <h4 className="font-bold">{doc.name}</h4>
-                  <p className="mt-1 text-xs text-gray-500">{doc.cred}</p>
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {DOCTORS.map((doc) => (
+            <div
+              key={doc.name}
+              className="relative aspect-[4/5] overflow-hidden rounded-[56px] group"
+            >
+              <Image
+                src={`/images/${doc.img}`}
+                alt={doc.name}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-x-4 bottom-4 bg-white/95 backdrop-blur-sm rounded-[32px] p-6 text-center shadow-lg border border-white/20">
+                <h4 className="text-[#2F2A25] font-bold text-[17px] leading-tight mb-1">
+                  {doc.name}
+                </h4>
+                <p className="text-[#2F2A25] text-[11px] leading-snug opacity-60">
+                  {doc.cred}
+                </p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
