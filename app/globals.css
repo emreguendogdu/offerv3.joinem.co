@@ -39,16 +39,30 @@ body {
 }
 
 @keyframes scroll {
-  0% {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
 
 .logo-ticker {
-  animation: scroll 25s linear infinite;
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: scroll var(--marquee-duration, 40s) linear infinite;
+  will-change: transform;
+}
+
+.logo-ticker:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .logo-ticker {
+    --marquee-duration: 10s;
+  }
 }
 
 /* FAQ details/summary styling */
