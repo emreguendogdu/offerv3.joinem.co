@@ -25,7 +25,7 @@ export function Marquee({
     <div
       {...props}
       className={cn(
-        'group flex overflow-hidden p-2 [--gap:1rem] gap-(--gap)',
+        'group flex overflow-hidden p-2 [--gap:1rem]',
         {
           'flex-row': !vertical,
           'flex-col': vertical,
@@ -40,11 +40,12 @@ export function Marquee({
           <div
             key={i}
             className={cn(
-              'flex shrink-0 justify-around gap-(--gap) min-w-full will-change-transform',
+              'flex shrink-0 justify-start gap-(--gap) min-w-full will-change-transform',
               {
-                'animate-[scroll_var(--duration)_linear_infinite] flex-row':
+                'animate-[marquee_var(--duration)_linear_infinite] flex-row pr-(--gap)':
                   !vertical,
-                'animate-scroll-vertical flex-col': vertical,
+                'animate-[marquee-vertical_var(--duration)_linear_infinite] flex-col pb-(--gap)':
+                  vertical,
                 'group-hover:[animation-play-state:paused]': pauseOnHover,
                 '[animation-direction:reverse]': reverse,
               },

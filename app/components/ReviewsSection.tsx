@@ -86,7 +86,7 @@ export function ReviewsSection() {
       <div className="mx-auto max-w-[77.625rem] px-4 mb-16">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
           <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
-            There&apos;s a reason people are <br />
+            There&apos;s a reason people are{' '}
             <span className="text-[#FB923C]">raving about us.</span>
           </h2>
           <div className="flex flex-col gap-6 lg:max-w-[420px]">
@@ -134,7 +134,7 @@ export function ReviewsSection() {
 function MarqueeItem({ item }: { item: any }) {
   if (item.type === 'image') {
     return (
-      <div className="relative h-[320px] w-[500px] shrink-0 rounded-[24px] overflow-hidden bg-[#F8F9FA]">
+      <div className="relative h-[220px] w-[384px] shrink-0 rounded-[24px] overflow-hidden bg-[#F8F9FA]">
         <Image
           src={item.src}
           alt={item.alt || ''}
@@ -146,7 +146,7 @@ function MarqueeItem({ item }: { item: any }) {
   }
 
   return (
-    <div className="w-[400px] bg-[#F8F9FA] rounded-[24px] p-8 flex flex-col gap-6 shrink-0 h-[320px] justify-between">
+    <div className="w-[384px] bg-[#F8F9FA] rounded-[24px] p-8 flex flex-col gap-6 shrink-0 h-[220px] justify-between">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           {item.avatar ? (
@@ -165,7 +165,7 @@ function MarqueeItem({ item }: { item: any }) {
         </div>
         <Stars />
       </div>
-      <p className="text-[#2F2A25] text-[15px] leading-[1.6] opacity-80 overflow-y-auto custom-scrollbar">
+      <p className="text-[#2F2A25] text-sm opacity-80 overflow-y-auto custom-scrollbar">
         {item.text}
       </p>
     </div>

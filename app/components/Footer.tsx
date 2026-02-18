@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-white py-12">
-      <div className="mx-auto max-w-5xl px-4">
+    <footer className="bg-white flex flex-col gap-6 md:gap-15 overflow-hidden">
+      <div className="flex flex-col gap-6 md:gap-15 px-4 md:px-8 ">
         {/* Contact info */}
         <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-16">
           <div className="text-3xl tracking-tight text-brand-dark">
@@ -12,9 +13,10 @@ export function Footer() {
             <span className="font-light">.</span>
             <span className="font-light">rx</span>
           </div>
-          <div className="flex flex-col gap-3  text-gray-600">
-            <div className="flex items-center gap-3 rounded-full bg-gray-50 px-5 py-2.5">
+          <div className="flex flex-col gap-5 text-gray-600">
+            <div className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold">
               <svg
+                className="shrink-0"
                 width="18"
                 height="18"
                 viewBox="0 0 24 24"
@@ -27,8 +29,9 @@ export function Footer() {
               </svg>
               hello@trimrx.org
             </div>
-            <div className="flex items-center gap-3 rounded-full bg-gray-50 px-5 py-2.5">
+            <div className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold">
               <svg
+                className="shrink-0"
                 width="18"
                 height="18"
                 viewBox="0 0 24 24"
@@ -40,8 +43,9 @@ export function Footer() {
               </svg>
               (888) 896-1612
             </div>
-            <div className="flex items-center gap-3 rounded-full bg-gray-50 px-5 py-2.5">
+            <div className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold">
               <svg
+                className="shrink-0"
                 width="18"
                 height="18"
                 viewBox="0 0 24 24"
@@ -58,23 +62,24 @@ export function Footer() {
         </div>
 
         {/* Disclaimer */}
-        <div className="mt-10 border-t border-gray-200 pt-8">
-          <p className="text-xs font-bold text-gray-500 uppercase">
+        <div className="text-base">
+          <p className="uppercase">
             Important Safety Information &amp; Disclaimer:
           </p>
-          <p className="mt-3 text-[11px] leading-relaxed text-gray-400">
+          <br />
+          <p>
             Medication Options: The TrimRx platform connects you with licensed
             medical providers who can prescribe medication based on their
             professional judgment. This may include:
           </p>
-          <p className="mt-2 text-[11px] leading-relaxed text-gray-400">
+          <p>
             &bull; Compounded Medication Program: Our primary program provides
             access to compounded medications, which are prepared and shipped by
             a state-licensed sterile compounding pharmacy. These compounded
             drugs are not FDA-approved. This means the FDA has not reviewed them
             for safety, effectiveness, or quality.
           </p>
-          <p className="mt-2 text-[11px] leading-relaxed text-gray-400">
+          <p>
             &bull; Prescriptions for Branded Medications: Alternatively, your
             provider may write a prescription for an FDA-approved branded
             medication (e.g., Ozempic&reg;, Wegovy&reg;). TrimRx does not sell,
@@ -82,7 +87,7 @@ export function Footer() {
             branded medication, you are responsible for filling the prescription
             at your chosen pharmacy and for all associated costs.
           </p>
-          <p className="mt-2 text-[11px] leading-relaxed text-gray-400">
+          <p>
             No Guarantees: Individual results may vary. Weight loss is not
             guaranteed and is influenced by many factors, including diet,
             exercise, and individual biology. The information on this website is
@@ -94,41 +99,42 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Links */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-gray-400">
-          <a href="#" className=" hover:text-gray-600">
-            Safety Information
-          </a>
-          <a href="#" className=" hover:text-gray-600">
-            HIPPA Privacy Policy
-          </a>
-          <a href="#" className=" hover:text-gray-600">
-            SMS Privacy Policy
-          </a>
-          <a href="#" className=" hover:text-gray-600">
-            Privacy Policy
-          </a>
-          <a href="#" className=" hover:text-gray-600">
-            Terms &amp; Conditions
-          </a>
-          <a href="#" className=" hover:text-gray-600">
-            Shipping Policy
-          </a>
-        </div>
-
-        {/* LegitScript + Copyright */}
-        <div className="mt-6 flex flex-col items-center gap-3">
-          <div className="relative h-16 w-16">
-            <Image
-              src="/images/iPUa6q2apUM6PH2ZJ047D5Zgg.png"
-              alt="LegitScript Certified"
-              fill
-              className="object-contain"
-            />
+        <div className="flex flex-col">
+          {/* Links */}
+          <div className="relative">
+            <div className="absolute border-t border-t-black/15 left-0 right-0 top-0 w-[150%] -translate-x-1/4"></div>
+            <div className="grid grid-cols-3 items-center justify-center mx-auto max-w-lg gap-4 text-sm pt-4 px-4 md:pt-8 pb-5 md:px-8">
+              <a href="#">Safety Information</a>
+              <a href="#">HIPPA Privacy Policy</a>
+              <a href="#">SMS Privacy Policy</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Shipping Policy</a>
+            </div>
           </div>
-          <p className="text-xs text-gray-400">
-            &copy; 2025 TRIMRX. All rights reserved
-          </p>
+
+          {/* LegitScript + Copyright */}
+          <div className="flex flex-col items-center gap-3">
+            <Link
+              href="https://www.legitscript.com/websites/?checker_keywords=joinem.co"
+              target="_blank"
+            >
+              <div className="relative h-16 w-16 md:w-27 md:h-27">
+                <Image
+                  src="/images/iPUa6q2apUM6PH2ZJ047D5Zgg.png"
+                  alt="LegitScript Certified"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </Link>
+          </div>
+
+          <div className="w-[200%] -translate-x-1/4 h-full bg-black mt-4 flex items-center justify-center p-4">
+            <p className="text-sm text-white">
+              &copy; 2025 TRIMRX. All rights reserved
+            </p>
+          </div>
         </div>
       </div>
     </footer>

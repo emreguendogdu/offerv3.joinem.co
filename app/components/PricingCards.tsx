@@ -53,7 +53,7 @@ export function PricingCards() {
         {PRICING_CONFIG.map((card) => (
           <div
             key={card.id}
-            className="relative rounded-2xl text-left flex flex-col pt-20 min-w-[301px]"
+            className="relative rounded-2xl text-left flex flex-col pt-20 min-w-[301px] md:min-w-[402px]"
           >
             <div className="relative rounded-t-[inherit] h-[210px] md:h-[280px] w-full bg-accent">
               <span className="absolute top-3 left-3 z-10 rounded-full bg-brand-green px-3 py-1 text-xs font-bold text-white">

@@ -3,7 +3,6 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { LogoBar } from './components/LogoBar';
 import { PricingCards } from './components/PricingCards';
-import { Testimonials } from './components/Testimonials';
 import { WeightLossCalculator } from './components/WeightLossCalculator';
 import { ResultsGrid } from './components/ResultsGrid';
 import { MetabolismSection } from './components/MetabolismSection';
@@ -29,7 +28,6 @@ export default function Home() {
 
       <LogoBar />
       <PricingCards />
-      <Testimonials />
       <WeightLossCalculator />
       <ResultsGrid />
       <MetabolismSection />
