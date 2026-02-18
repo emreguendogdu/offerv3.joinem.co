@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-display: var(--font-red-hat-display);
+  --font-text: var(--font-red-hat-text);
+
+  --color-brand-orange: #fb923c;
+  --color-brand-green: #779d7c;
+  --color-brand-dark: #2c2320;
+  --color-brand-brown: #3b332f;
+  --color-brand-cream: #faf8f5;
+  --color-brand-light: #f5f0eb;
+  --color-brand-peach: #fef0e1;
+  --color-brand-blue-light: #f0f4f8;
+  --color-brand-blue: #4a90b8;
+
+  --color-primary: #2e7c77;
+  --color-secondary: #223d71;
+  --color-accent: #d1eeed;
+  --color-foreground: #223d71;
+
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+body {
+  font-family: var(--font-text), 'Red Hat Text', Arial, sans-serif;
+  color: #2c2320;
+  background: #ffffff;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-ticker {
+  animation: scroll 25s linear infinite;
+}
+
+/* FAQ details/summary styling */
+details summary::-webkit-details-marker {
+  display: none;
+}
+details summary {
+  list-style: none;
+}
+
+/* Weight slider */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #fb923c 50%, #e5e7eb 50%);
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fb923c;
+  border: 4px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Timeline vertical line */
+.timeline-line {
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: 0;
+  width: 2px;
+  background: #e5e7eb;
+}
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #4a90b8;
+  background: white;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+@layer base {
+  strong {
+    font-weight: 700;
+  }
+}
