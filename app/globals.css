@@ -10,7 +10,7 @@
   --color-brand-brown: #3b332f;
   --color-brand-cream: #faf8f5;
   --color-brand-light: #f5f0eb;
-  --color-brand-peach: #fef0e1;
+  --color-brand-peach: #fee0c8;
   --color-brand-blue-light: #f0f4f8;
   --color-brand-blue: #4a90b8;
 
@@ -51,7 +51,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   width: max-content;
-  animation: scroll var(--marquee-duration, 40s) linear infinite;
+  animation: scroll var(--marquee-duration, 80s) linear infinite;
   will-change: transform;
 }
 
@@ -61,7 +61,7 @@ body {
 
 @media (max-width: 768px) {
   .logo-ticker {
-    --marquee-duration: 10s;
+    --marquee-duration: 60s;
   }
 }
 

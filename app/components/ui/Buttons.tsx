@@ -23,7 +23,7 @@ const sizeMap: Record<ButtonSize, string> = {
 };
 
 const baseStyles =
-  'inline-flex items-center justify-center rounded-full uppercase text-white transition-all';
+  'inline-flex items-center justify-center rounded-full uppercase text-white transition-all w-full md:w-auto';
 
 /**
  * Modern, scalable Button component built for the Embody design system.

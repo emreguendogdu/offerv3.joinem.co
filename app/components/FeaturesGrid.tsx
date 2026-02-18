@@ -1,5 +1,3 @@
-import React from 'react';
-
 const FEATURES = [
   {
     title: 'TrimRx money back guarantee',
@@ -82,14 +80,14 @@ export function FeaturesGrid() {
   return (
     <section className="bg-white py-16 px-4">
       <div className="mx-auto max-w-[77.625rem]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[44rem] mx-auto">
+        <div className="grid grid-cols-2 gap-4 max-w-[44rem] mx-auto">
           {FEATURES.map((card) => (
             <div
               key={card.title}
               className="flex flex-col items-center justify-center rounded-[4px] border border-[#F3F4F6] bg-[#F8FAFB] p-8 md:p-10 text-center min-h-[140px] md:min-h-[160px]"
             >
               <div className="mb-4">{card.icon}</div>
-              <p className="text-[#38312C] font-semibold text-[15px] md:text-[16px] leading-tight">
+              <p className="text-[#38312C] font-semibold text-sm md:text-base leading-tight">
                 {card.title}
               </p>
             </div>

@@ -26,9 +26,11 @@ const DOCTORS = [
 ];
 
 export function TeamGrid() {
+  const doctorsList = [...DOCTORS, ...DOCTORS, ...DOCTORS, ...DOCTORS];
+
   return (
-    <section className="bg-white py-24 px-4 overflow-hidden">
-      <div className="mx-auto max-w-[77.625rem]">
+    <section className="bg-white py-24 overflow-hidden">
+      <div className="mx-auto max-w-[77.625rem] px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight max-w-[500px]">
             Meet the <span className="text-[#FB923C]">incredible</span> doctors
@@ -41,18 +43,31 @@ export function TeamGrid() {
               supported.
             </p>
             <div>
-              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-8 py-4 rounded-full font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
+              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-8 py-4 rounded-full font-normal md:font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
                 TAKE THE ASSESSMENT
               </Button>
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {DOCTORS.map((doc) => (
+      <div
+        className="w-full overflow-hidden"
+        style={{
+          maskImage:
+            'linear-gradient(to right, transparent, black 12.5%, black 87.5%, transparent)',
+          WebkitMaskImage:
+            'linear-gradient(to right, transparent, black 12.5%, black 87.5%, transparent)',
+        }}
+      >
+        <div
+          className="logo-ticker flex gap-6 w-max select-none"
+          style={{ animationPlayState: 'running' }}
+        >
+          {doctorsList.map((doc, i) => (
             <div
-              key={doc.name}
-              className="relative aspect-[4/5] overflow-hidden rounded-[56px] group"
+              key={`${doc.name}-${i}`}
+              className="relative aspect-[4/5] w-[336px] md:w-[350px] shrink-0 overflow-hidden rounded-[56px] group"
             >
               <Image
                 src={`/images/${doc.img}`}

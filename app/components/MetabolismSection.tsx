@@ -4,10 +4,10 @@ import { Button } from './ui/Buttons';
 
 export function MetabolismSection() {
   return (
-    <section className="bg-brand-cream py-16 max-w-[75rem] mx-auto px-4">
-      <div className="grid items-center gap-10 md:grid-cols-2">
+    <section className="max-w-[75rem] mx-auto px-4">
+      <div className="bg-brand-cream grid items-center gap-10 md:grid-cols-2 p-5 rounded-3xl">
         <div className="grid grid-cols-2 gap-4">
-          <div className="relative h-64 md:h-90 overflow-hidden rounded-2xl mt-8">
+          <div className="relative h-[25vh] md:h-90 overflow-hidden rounded-2xl mt-8">
             <Image
               src="/images/setUSuF4LXmXJm1JrIxQ78A4dmg.png"
               alt="Weight loss result"
@@ -15,7 +15,7 @@ export function MetabolismSection() {
               className="object-cover"
             />
           </div>
-          <div className="relative h-64 md:h-90 overflow-hidden rounded-2xl">
+          <div className="relative h-[25vh] md:h-90 overflow-hidden rounded-2xl">
             <Image
               src="/images/V0vJeyWRHjhriS71aKjPwkKIjAQ.png"
               alt="Measuring waist"
@@ -26,10 +26,10 @@ export function MetabolismSection() {
         </div>
         <div>
           <div className="flex flex-col gap-6">
-            <h2 className="font-display text-4xl md:text-5xl font-medium leading-[3.5rem]">
+            <h2 className="font-display text-5xl text-[2.75rem] md:text-5xl font-medium">
               We will fix your broken metabolism.
             </h2>
-            <p className="  leading-relaxed text-gray-600 text-lg">
+            <p className="text-gray-600 text-base md:text-lg">
               Traditional diets don&apos;t work because nearly 70% of weight is{' '}
               <strong className="text-primary  font-bold">
                 genetically determined
@@ -40,7 +40,7 @@ export function MetabolismSection() {
             </p>
             <Button
               variant="dark"
-              className="w-fit md:px-10 md:py-3.5 font-bold"
+              className="w-full py-3.5 md:w-fit md:px-10 font-bold"
             >
               Get Started
             </Button>

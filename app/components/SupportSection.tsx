@@ -7,9 +7,9 @@ export function SupportSection() {
       <div className="mx-auto max-w-[77.625rem] bg-[#F2F2F2] rounded-[48px] p-8 md:p-16 lg:p-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
-            <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight">
+            <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[40px] leading-[1.1] md:tracking-tight">
               Unlimited 24/7 support <br />
-              <span className="text-[#FB923C]">included.</span>
+              <strong className="text-[#FB923C]">included.</strong>
             </h2>
             <p className="text-[#2F2A25] text-base md:text-[17px] leading-[1.6] opacity-90 max-w-[480px]">
               TrimRx provides 24/7 access to a dedicated team of specialists,
@@ -20,8 +20,8 @@ export function SupportSection() {
               time.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 h-[300px] md:h-[400px]">
-            <div className="relative h-full overflow-hidden rounded-[24px] md:rounded-[32px]">
+          <div className="grid grid-cols-2 gap-4 h-[22vh] md:h-[400px]">
+            <div className="relative h-full overflow-hidden rounded-[24px] md:rounded-[32px] mt-8">
               <Image
                 src="/images/VFZS546xGl8hWlrXSKafeSpHjhk.png"
                 alt="Support specialist"

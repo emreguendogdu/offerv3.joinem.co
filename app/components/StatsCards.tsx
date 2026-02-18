@@ -13,8 +13,8 @@ const STATS = [
 
 export function StatsCards() {
   return (
-    <section className="bg-white py-16 text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 items-center justify-center">
-      <h2 className="font-display text-3xl md:text-[2.75rem]">
+    <section className="bg-white py-16 md:text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 md:items-center md:justify-center">
+      <h2 className="font-display text-2x text-[2rem] md:text-[2.75rem]">
         Why are so many patients signing up for TrimRX?{' '}
         <strong className=" text-primary">It works.</strong>
       </h2>
@@ -23,17 +23,17 @@ export function StatsCards() {
         weight.
       </p>
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 w-full">
+      <div className="grid grid-cols-1 gap-6 md:gap-4 md:grid-cols-4 w-full">
         {STATS.map((stat) => (
           <div
             key={stat.label}
-            className="rounded-2xl bg-brand-peach p-6 flex flex-col items-center justify-center text-center"
+            className="bg-brand-peach p-3 md:p-6 flex md:flex-col justify-between items-center md:justify-center text-center rounded-3xl"
           >
-            <p className="font-text text-[42px] md:text-[72px] font-bold text-brand-dark leading-tight md:leading-[108px]">
+            <p className="font-text text-[42px] md:text-[72px] font-bold text-brand-dark leading-tight md:leading-[108px] w-[40%] md:w-auto text-left md:text-center">
               {stat.value}
               <span className="font-normal text-brand-orange">{stat.unit}</span>
             </p>
-            <p className="mt-2 text-xs md:text-sm text-gray-600 max-w-[180px]">
+            <p className="mt-2 text-xs md:text-sm text-gray-600 max-w-[180px] w-[60%] md:w-auto">
               {stat.label}
             </p>
           </div>

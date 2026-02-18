@@ -70,7 +70,7 @@ export function Hero() {
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-base md:text-xl text-brand-brown pt-1 pb-2">
+          <p className="text-base md:text-xl text-brand-brown pt-1 pb-2 -tracking-[0.02em]">
             The proven way to lose 15% of your body weight fast!
           </p>
 
@@ -111,7 +111,7 @@ export function Hero() {
       </div>
 
       {/* Photo collage */}
-      <div className="relative w-full h-[335px] md:h-[649px]">
+      <div className="relative w-full h-[24vh] md:h-[649px]">
         <Image
           src="/images/hero-photo-collage.png"
           alt="Happy patients"

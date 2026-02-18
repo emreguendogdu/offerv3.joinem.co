@@ -4,7 +4,7 @@ import Image from 'next/image';
 export function Footer() {
   return (
     <footer className="bg-white py-12">
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="mx-auto max-w-5xl px-4">
         {/* Contact info */}
         <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-16">
           <div className="text-3xl tracking-tight text-brand-dark">

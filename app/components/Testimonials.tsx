@@ -5,7 +5,7 @@ import { Button } from './ui/Buttons';
 
 export function Testimonials() {
   return (
-    <section className="bg-white pt-16">
+    <section className="bg-white pt-16 px-4">
       <div className="mx-auto max-w-[75rem]">
         <div className="grid items-center gap-5 md:grid-cols-2">
           <h2 className="font-display text-3xl leading-snug">
@@ -22,7 +22,7 @@ export function Testimonials() {
             <div className="mt-5">
               <Button
                 variant="dark"
-                className="bg-brand-brown hover:bg-black tracking-[1.28px]"
+                className="bg-brand-brown hover:bg-black tracking-[1.28px] w-full md:w-fit py-2.5"
               >
                 I&apos;m Ready, Let&apos;s Go
               </Button>
@@ -36,12 +36,12 @@ export function Testimonials() {
           <div className="mt-2 flex justify-center">
             <Stars starClassName="w-12 h-18 text-[#E1CAA0]" />
           </div>
-          <h3 className="mt-4 font-display text-2xl md:text-4xl">
+          <h3 className="mt-4 font-display text-3xl text-[2rem] md:text-4xl">
             &ldquo;When nothing else worked,{' '}
             <strong className="text-primary">TrimRx did</strong>
             &rdquo;
           </h3>
-          <div className="mt-2 text-sm flex items-center justify-end gap-1.5  text-gray-500">
+          <div className="mt-2 text-sm flex items-center justify-center md:justify-end gap-1.5  text-gray-500">
             <Check /> Verified TrimRx Customer
           </div>
         </div>
@@ -59,59 +59,59 @@ export function Testimonials() {
           </div>
 
           {/* Floating quotes */}
-          <div className="hidden md:block">
+          <div>
             {/* Left side */}
             <div
-              className="absolute top-[10%] left-[10%] max-w-[240px] text-right animate-float"
+              className="absolute top-[-2%] left-[2%] md:top-[10%] md:left-[10%] max-w-[140px] md:max-w-[240px] text-right animate-float"
               style={{ animationDelay: '0s' }}
             >
-              <p className="text-[28px] font-semibold leading-[1.1] text-[#B9B3AC]">
+              <p className="text-[16px] md:text-[28px] font-semibold leading-[1.2] md:leading-[1.1] text-[#B9B3AC]">
                 Very easy and <br />
                 convenient for a very <br />
                 busy working lady.
               </p>
-              <p className="mt-3 flex items-center justify-end gap-2 text-[10px] font-semibold text-[#B9B3AC]/60">
+              <p className="mt-2 md:mt-3 flex items-center justify-end gap-2 text-[9px] md:text-[10px] font-semibold text-[#B9B3AC]/60">
                 <Check className="w-3 h-3 opacity-40" /> Verified TrimRx
                 Customer
               </p>
             </div>
             <div
-              className="absolute top-[45%] left-[5%] max-w-[280px] text-right animate-float"
+              className="absolute top-[45%] left-[1%] md:top-[45%] md:left-[5%] max-w-[150px] md:max-w-[280px] text-right animate-float"
               style={{ animationDelay: '1s' }}
             >
-              <p className="text-[28px] font-semibold leading-[1.1] text-[#B9B3AC]">
+              <p className="text-[16px] md:text-[28px] font-semibold leading-[1.2] md:leading-[1.1] text-[#B9B3AC]">
                 Everyone I have come in <br />
                 contact with has been so <br />
                 kind a helpful!
               </p>
-              <p className="mt-3 flex items-center justify-end gap-2 text-[10px] font-semibold text-[#B9B3AC]/60">
+              <p className="mt-2 md:mt-3 flex items-center justify-end gap-2 text-[9px] md:text-[10px] font-semibold text-[#B9B3AC]/60">
                 <Check className="w-3 h-3 opacity-40" /> Verified TrimRx
                 Customer
               </p>
             </div>
             {/* Right side */}
             <div
-              className="absolute top-[20%] right-[10%] max-w-[240px] text-left animate-float"
+              className="absolute top-[15%] right-[2%] md:top-[20%] md:right-[10%] max-w-[140px] md:max-w-[240px] text-left animate-float"
               style={{ animationDelay: '0.5s' }}
             >
-              <p className="text-[28px] font-semibold leading-[1.1] text-[#B9B3AC]">
+              <p className="text-[16px] md:text-[28px] font-semibold leading-[1.2] md:leading-[1.1] text-[#B9B3AC]">
                 ...the weight vanished!
               </p>
-              <p className="mt-3 flex items-center justify-start gap-2 text-[10px] font-semibold text-[#B9B3AC]/60">
+              <p className="mt-2 md:mt-3 flex items-center justify-start gap-2 text-[9px] md:text-[10px] font-semibold text-[#B9B3AC]/60">
                 <Check className="w-3 h-3 opacity-40" /> Verified TrimRx
                 Customer
               </p>
             </div>
             <div
-              className="absolute top-[55%] right-[5%] max-w-[280px] text-left animate-float"
+              className="absolute top-[60%] right-[1%] md:top-[55%] md:right-[5%] max-w-[150px] md:max-w-[280px] text-left animate-float"
               style={{ animationDelay: '1.5s' }}
             >
-              <p className="text-[28px] font-semibold leading-[1.1] text-[#B9B3AC]">
+              <p className="text-[16px] md:text-[28px] font-semibold leading-[1.2] md:leading-[1.1] text-[#B9B3AC]">
                 Every person I have <br />
                 contact with shows <br />
                 compassion.
               </p>
-              <p className="mt-3 flex items-center justify-start gap-2 text-[10px] font-semibold text-[#B9B3AC]/60">
+              <p className="mt-2 md:mt-3 flex items-center justify-start gap-2 text-[9px] md:text-[10px] font-semibold text-[#B9B3AC]/60">
                 <Check className="w-3 h-3 opacity-40" /> Verified TrimRx
                 Customer
               </p>

@@ -2,12 +2,89 @@ import React from 'react';
 import Image from 'next/image';
 import { Stars } from './ui/Icons';
 import { Button } from './ui/Buttons';
+import { Marquee } from './ui/Marquee';
 
 export function ReviewsSection() {
+  const topMarquee = [
+    {
+      type: 'image',
+      src: 'https://framerusercontent.com/images/PXqJ2sfwTMLRdk9LZr7XAMQinYc.png',
+      alt: 'Result 1',
+    },
+    {
+      type: 'review',
+      name: 'Jamie K.',
+      avatar:
+        'https://framerusercontent.com/images/YKzoGJpfFFf1BdjjaSowMezQ8.png',
+      text: 'The whole process was way easier than I thought. The questions made sense, and when I had concerns, they actually responded quickly (like, same day!). My prescription arrived on time and the support has been amazing. Wish I started sooner!',
+    },
+    {
+      type: 'image',
+      src: 'https://framerusercontent.com/images/J9q5bVSoP1ItX7IQ3rtRNrPDWA.png',
+      alt: 'Result 2',
+    },
+    {
+      type: 'review',
+      name: 'Terika S.',
+      avatar:
+        'https://framerusercontent.com/images/8jMaqpfuydUeRcai6qscNossfPY.png',
+      text: "I've tried so many things before this - diets, gym memberships, you name it. Nothing worked. But my provider here? She actually gets it. Felt like talking to a friend who happens to be a doctor. I'm finally seeing real results!",
+    },
+    {
+      type: 'image',
+      src: 'https://framerusercontent.com/images/eKEZ1mlvVbuQYZZFRP2HGWM52Y.png',
+      alt: 'Result 3',
+    },
+    {
+      type: 'review',
+      name: 'Billy M.',
+      avatar:
+        'https://framerusercontent.com/images/LJga7ZjWTOSDuC5dyBzOgGSZYfs.png',
+      text: "Honestly, I was skeptical at first. But Ms. Gonzalez really took the time to listen to me. She explained everything about the medication and what to expect. No judgment, just real help. I'm down 28 pounds in 3 months and feeling like myself again!",
+    },
+  ];
+
+  const botMarquee = [
+    {
+      type: 'review',
+      name: 'Lou-Ann T.',
+      text: "I'm 13 pounds away from my goal weight! Can you believe it? The doctors and staff have been so supportive through this whole journey. I asked to stay on maintenance for a bit to get used to my new routine, and they totally understood. This is the real deal!",
+    },
+    {
+      type: 'image',
+      src: 'https://framerusercontent.com/images/jCpumbS2hmf0bTV4rn63Ex5o.png',
+      alt: 'Result 4',
+    },
+    {
+      type: 'review',
+      name: 'Elizabeth R.',
+      avatar:
+        'https://framerusercontent.com/images/AD7wBSbBjaoJEY2kpZy640pME.png',
+      text: "My clinician walked me through everything step by step. No medical jargon, just straight talk about what to expect, when I'd see changes, and how to adjust if needed. It's been 4 months and I've lost 22 pounds. My energy is through the roof!",
+    },
+    {
+      type: 'image',
+      src: 'https://framerusercontent.com/images/YDTDeNWqw3fWa6r7VeFWgpXIiDw.png',
+      alt: 'Result 5',
+    },
+    {
+      type: 'review',
+      name: 'Dan P.',
+      avatar:
+        'https://framerusercontent.com/images/qYFgJk4MbvlC8LvC0cove7Yoi84.png',
+      text: "Dolores was awesome - super friendly and answered all my questions without making me feel rushed. I was nervous about starting, but she made it easy. Just got my first shipment and I'm actually excited about this journey for once!",
+    },
+    {
+      type: 'image',
+      src: 'https://framerusercontent.com/images/HVBXeD99wX7b2PnjNTPHMR0Kgw.png',
+      alt: 'Result 6',
+    },
+  ];
+
   return (
-    <section className="bg-white py-24 px-4 overflow-hidden">
-      <div className="mx-auto max-w-[77.625rem]">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
+    <section className="bg-white py-24 overflow-hidden">
+      <div className="mx-auto max-w-[77.625rem] px-4 mb-16">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
           <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
             There&apos;s a reason people are <br />
             <span className="text-[#FB923C]">raving about us.</span>
@@ -28,116 +105,69 @@ export function ReviewsSection() {
             </div>
           </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-[#EFE8DB] rounded-[32px] p-8 flex flex-col gap-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-gray-100">
-                  <Image
-                    src="/images/HVBXeD99wX7b2PnjNTPHMR0Kgw.png"
-                    alt="Terika S."
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <span className="text-[#2F2A25] font-bold text-sm">
-                  Terika S.
-                </span>
-              </div>
-              <Stars />
-            </div>
-            <p className="text-[#2F2A25] text-[15px] leading-[1.6] opacity-80">
-              I&apos;ve tried so many things before this – diets, gym
-              memberships, you name it. Nothing worked. But my provider here?
-              She actually gets it. Felt like talking to a friend who happens to
-              be a doctor. I&apos;m finally seeing real results!
-            </p>
-          </div>
+      <div className="flex flex-col gap-6 w-full">
+        {/* Top Marquee */}
+        <Marquee pauseOnHover className="[--duration:60s]" duration="60s">
+          {topMarquee.map((item, index) => (
+            <MarqueeItem key={`top-${index}`} item={item} />
+          ))}
+        </Marquee>
 
-          {/* Large Image Card */}
-          <div className="relative h-[400px] md:h-auto rounded-[32px] overflow-hidden shadow-sm">
-            <Image
-              src="/images/jCpumbS2hmf0bTV4rn63Ex5o.png"
-              alt="Happy patient"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-[#F8F9FA] rounded-[32px] p-8 flex flex-col gap-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full border border-gray-100">
-                  <Image
-                    src="/images/HVBXeD99wX7b2PnjNTPHMR0Kgw.png"
-                    alt="Billy M."
-                    fill
-                    className="object-cover opacity-80"
-                  />
-                </div>
-                <span className="text-[#2F2A25] font-bold text-sm">
-                  Billy M.
-                </span>
-              </div>
-              <Stars />
-            </div>
-            <p className="text-[#2F2A25] text-[15px] leading-[1.6] opacity-80">
-              Honestly, I was skeptical at first. But Ms. Gonzalez really took
-              the time to listen to me. She explained everything about the
-              medication and what to expect. No judgment, just real help.
-              I&apos;m down 28 pounds in 3 months and feeling like myself again!
-            </p>
-          </div>
-
-          {/* Row 2 */}
-          <div className="bg-[#F8F9FA] rounded-[32px] p-8">
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-[#2F2A25] font-bold text-sm">
-                Elizabeth R.
-              </span>
-              <Stars />
-            </div>
-            <p className="text-[#2F2A25] text-sm leading-[1.6] opacity-70">
-              My clinician walked me through everything step by step. No medical
-              jargon, just straight talk about what to expect, when I&apos;d see
-              changes, and how to adjust if needed. It&apos;s been 4 months and
-              I&apos;ve lost 22 pounds. My energy is through the roof!
-            </p>
-          </div>
-
-          <div className="bg-[#F8F9FA] rounded-[32px] p-8">
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-[#2F2A25] font-bold text-sm">
-                Lou-Ann T.
-              </span>
-              <Stars />
-            </div>
-            <p className="text-[#2F2A25] text-sm leading-[1.6] opacity-70">
-              I&apos;m 13 pounds away from my goal weight! Can you believe it?
-              The doctors and staff have been so supportive through this whole
-              journey. I asked to stay on maintenance for a bit to get used to
-              my new routine, and they totally understood. This is the real
-              deal!
-            </p>
-          </div>
-
-          <div className="bg-[#F8F9FA] rounded-[32px] p-8">
-            <div className="flex items-center justify-between mb-6">
-              <span className="text-[#2F2A25] font-bold text-sm">Jamie K.</span>
-              <Stars />
-            </div>
-            <p className="text-[#2F2A25] text-sm leading-[1.6] opacity-70">
-              The whole process was way easier than I thought. The questions
-              made sense, and when I had concerns, they actually responded
-              quickly (like, same day!). My prescription arrived on time and the
-              support has been amazing.
-            </p>
-          </div>
-        </div>
+        {/* Bottom Marquee */}
+        <Marquee
+          reverse
+          pauseOnHover
+          className="[--duration:60s]"
+          duration="60s"
+        >
+          {botMarquee.map((item, index) => (
+            <MarqueeItem key={`bot-${index}`} item={item} />
+          ))}
+        </Marquee>
       </div>
     </section>
+  );
+}
+
+function MarqueeItem({ item }: { item: any }) {
+  if (item.type === 'image') {
+    return (
+      <div className="relative h-[320px] w-[500px] shrink-0 rounded-[24px] overflow-hidden bg-[#F8F9FA]">
+        <Image
+          src={item.src}
+          alt={item.alt || ''}
+          fill
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="w-[400px] bg-[#F8F9FA] rounded-[24px] p-8 flex flex-col gap-6 shrink-0 h-[320px] justify-between">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          {item.avatar ? (
+            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-gray-100">
+              <Image
+                src={item.avatar}
+                alt={item.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+          ) : null}
+          <span className="text-[#2F2A25] font-bold text-base">
+            {item.name}
+          </span>
+        </div>
+        <Stars />
+      </div>
+      <p className="text-[#2F2A25] text-[15px] leading-[1.6] opacity-80 overflow-y-auto custom-scrollbar">
+        {item.text}
+      </p>
+    </div>
   );
 }

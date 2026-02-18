@@ -16,7 +16,7 @@ const PATIENTS = [
 export function ResultsGrid() {
   return (
     <section className="bg-white py-16">
-      <div className="mx-auto max-w-[81rem] px-6 text-center">
+      <div className="mx-auto max-w-[81rem] px-4 text-left md:text-center">
         <div className="flex flex-col gap-4">
           <h2 className="font-display text-4xl md:text-5xl text-center font-medium">
             The change we&apos;ve all been waiting for.
@@ -28,10 +28,8 @@ export function ResultsGrid() {
           </p>
         </div>
         {/* People photo grid */}
-        <div
-          className="mt-10 grid grid-cols-4 grid-rows-2 gap-3"
-          style={{ height: 600 }}
-        >
+        {/* People photo grid */}
+        <div className="mt-10 hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[600px]">
           {PATIENTS.map((img, i) => (
             <div key={i} className="relative overflow-hidden rounded-2xl">
               <Image
@@ -44,9 +42,62 @@ export function ResultsGrid() {
           ))}
         </div>
 
+        {/* Mobile Grid */}
+        <div className="mt-10 grid grid-cols-3 gap-3 md:hidden">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-3">
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+              <Image
+                src={`/images/${PATIENTS[2].src}`}
+                alt={PATIENTS[2].alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+              <Image
+                src={`/images/${PATIENTS[5].src}`}
+                alt={PATIENTS[5].alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Column 2 */}
+          <div className="flex flex-col gap-3">
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+              <Image
+                src={`/images/${PATIENTS[0].src}`}
+                alt={PATIENTS[0].alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+              <Image
+                src={`/images/${PATIENTS[1].src}`}
+                alt={PATIENTS[1].alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Column 3 */}
+          <div className="relative w-full h-full overflow-hidden rounded-2xl">
+            <Image
+              src={`/images/${PATIENTS[4].src}`}
+              alt={PATIENTS[4].alt}
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+
         {/* 3 stat badges */}
         <div className="flex flex-col w-fit gap-5 mx-auto">
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+          <div className="mt-10 flex flex-wrap items-center justify-start md:justify-center gap-6">
             <div className="flex items-center gap-2">
               <Check />
               <span className="text-lg">

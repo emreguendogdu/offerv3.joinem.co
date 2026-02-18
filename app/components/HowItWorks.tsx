@@ -32,35 +32,77 @@ const STEPS = [
 export function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const lineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Entrance animation observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const stepIndex = parseInt(
-              entry.target.getAttribute('data-step') || '0',
-            );
-            setActiveStep(stepIndex);
             entry.target.classList.add('opacity-100', 'translate-y-0');
             entry.target.classList.remove('opacity-0', 'translate-y-10');
           }
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.2 },
     );
 
     const steps = document.querySelectorAll('.how-it-works-step');
     steps.forEach((step) => observer.observe(step));
 
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      if (!containerRef.current || !lineRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const triggerPoint = windowHeight * 0.55; // Trigger slightly below center
+
+      // Calculate progress relative to the container
+      // The line starts at top-4 (16px).
+      const relativeY = triggerPoint - rect.top;
+      const startOffset = 16;
+      const maxLineHeight = rect.height - 32; // approximate padding bottom
+
+      let currentHeight = relativeY - startOffset;
+      if (currentHeight < 0) currentHeight = 0;
+      if (currentHeight > maxLineHeight) currentHeight = maxLineHeight;
+
+      // Direct DOM update for seamless performance
+      lineRef.current.style.height = `${currentHeight}px`;
+
+      // Determine active step
+      const stepElements =
+        containerRef.current.querySelectorAll('.how-it-works-step');
+      let currentActive = -1;
+
+      stepElements.forEach((step, index) => {
+        const stepDiv = step as HTMLDivElement;
+        // Dot is at top 1.5 (6px)
+        const dotY = stepDiv.offsetTop + 6;
+        if (currentHeight >= dotY) {
+          currentActive = index;
+        }
+      });
+
+      if (currentActive !== -1) {
+        setActiveStep(currentActive);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    requestAnimationFrame(handleScroll); // Initial check
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
-    <section className="bg-white py-24 px-4 overflow-hidden">
+    <section className="bg-white py-8 md:py-24 px-4 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
         <div className="flex flex-col gap-6 w-full lg:max-w-[420px]">
-          <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight">
+          <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[40px] font-medium leading-[1.1] md:tracking-tight">
             Begin your weight loss journey with TrimRX.
           </h2>
           <p className="leading-[1.6] text-[#2F2A25] text-base md:text-[17px] opacity-90">
@@ -71,21 +113,25 @@ export function HowItWorks() {
             receiving your prescription.
           </p>
           <div className="mt-4">
-            <Button className="bg-[#111111] text-white px-10 py-4 rounded-full font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity">
+            <Button className="bg-[#111111] text-white px-10 py-4 rounded-full font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity w-full md:w-fit">
               Get Started
             </Button>
           </div>
         </div>
 
         {/* Timeline */}
-        <div className="relative flex-1 space-y-16 pl-4 md:pl-20">
+        <div
+          ref={containerRef}
+          className="relative flex-1 space-y-16 pl-16 md:pl-20"
+        >
           {/* Track Line */}
-          <div className="absolute left-[20px] md:left-[24px] top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
+          <div className="absolute left-[32px] md:left-[40px] top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
 
           {/* Progress Line */}
           <div
-            className="absolute left-[20px] md:left-[24px] top-4 w-[1.5px] bg-[#FB923C] transition-all duration-700 ease-out"
-            style={{ height: `${(activeStep / (STEPS.length - 1)) * 90}%` }}
+            ref={lineRef}
+            className="absolute left-[32px] md:left-[40px] top-4 w-[1.5px] bg-[#FB923C]"
+            style={{ height: '0px' }}
           />
 
           {STEPS.map((step, index) => (
@@ -96,7 +142,7 @@ export function HowItWorks() {
             >
               <div
                 className={cn(
-                  'absolute -left-[28px] md:-left-[44px] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
+                  'absolute -left-[44px] md:-left-[52px] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
                   activeStep >= index ? 'border-[#FB923C]' : 'border-[#F1F5F9]',
                 )}
               >

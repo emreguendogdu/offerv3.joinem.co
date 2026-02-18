@@ -16,15 +16,12 @@ export function LogoBar() {
     <section className="border-y border-[#ebebeb] bg-white py-10 md:py-14">
       <div className="relative overflow-hidden">
         {/* Masking gradients for a "premium" fade effect */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent md:w-32" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent md:w-32" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-white to-transparent md:w-32" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l from-white to-transparent md:w-32" />
 
         <div className="logo-ticker flex items-center gap-10 md:gap-20">
           {[...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS].map((logo, i) => (
-            <div
-              key={i}
-              className="shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-            >
+            <div key={i} className="shrink-0">
               <Image
                 src={`/images/${logo.src}`}
                 alt={logo.alt}

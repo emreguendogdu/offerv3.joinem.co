@@ -37,30 +37,29 @@ const PRICING_CONFIG: PricingCard[] = [
 
 export function PricingCards() {
   return (
-    <section className="bg-white py-16 mx-auto max-w-[78.75rem] px-6 text-center">
-      <h2 className="font-display text-3xl font-medium leading-[1.2] md:text-[34px]">
+    <section className="bg-white py-16 mx-auto max-w-[78.75rem] px-4 text-center">
+      <h2 className="font-display text-[30px] font-medium leading-[1.25] text-black">
         Trusted by experts.
         <br />
-        <span className="font-bold text-primary">priced for you.</span>
+        <span className="font-black text-brand-orange">priced for you.</span>
       </h2>
-      <p className="mt-3 text-gray-600">
+      <p className="mt-4 font-display text-base leading-[1.4] text-black">
         Find the right GLP-1 medication with the confidence that comes from
         knowing it is{' '}
-        <span className="text-primary font-bold">doctor-approved</span> and
-        budget-friendly.
+        <span className="text-brand-orange font-bold">doctor-approved</span>.
       </p>
-
-      <div className="mt-10 mx-auto max-w-[52.75rem] md:grid md:gap-5 md:grid-cols-2 flex flex-col gap-6">
+      {/* Hide scrollbar */}
+      <div className="mt-10 mx-auto max-w-[52.75rem] flex gap-4 md:gap-6 overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
         {PRICING_CONFIG.map((card) => (
           <div
             key={card.id}
-            className="relative rounded-2xl text-left flex flex-col pt-20"
+            className="relative rounded-2xl text-left flex flex-col pt-20 min-w-[301px]"
           >
-            <div className="relative rounded-t-[inherit] h-[280px] w-full bg-accent">
+            <div className="relative rounded-t-[inherit] h-[210px] md:h-[280px] w-full bg-accent">
               <span className="absolute top-3 left-3 z-10 rounded-full bg-brand-green px-3 py-1 text-xs font-bold text-white">
                 {card.badge}
               </span>
-              <div className="relative mx-auto my-6 h-48 w-36 md:w-[200px] md:h-[340px]">
+              <div className="relative mx-auto my-6 w-[210px] h-[255px] md:w-[200px] md:h-[340px]">
                 <div className="w-full h-full absolute -top-1/4 hover:scale-[1.1] transition-all">
                   <Image
                     src={card.imageSrc}
@@ -82,7 +81,7 @@ export function PricingCards() {
               <div className="flex flex-col gap-2 w-full">
                 <p className="text-center">
                   <span className=" text-gray-500">Starting at</span>{' '}
-                  <span className="font-display text-3xl font-black text-primary">
+                  <span className="font-display text-2xl md:text-3xl font-black text-primary">
                     {card.price}
                   </span>
                 </p>
