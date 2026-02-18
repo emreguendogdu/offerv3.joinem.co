@@ -1,34 +1,38 @@
 import React from 'react';
 import Image from 'next/image';
+import { Button } from './ui/Buttons';
 
 export function Guarantee() {
   return (
-    <section className="bg-white py-16">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="overflow-hidden rounded-3xl bg-brand-cream px-8 py-10 text-center">
-          <div className="relative mx-auto h-40 w-56">
+    <section className="bg-white py-24 px-4 overflow-hidden">
+      <div className="mx-auto max-w-[77.625rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden">
+        <div className="grid items-center gap-12 lg:grid-cols-2 relative z-10">
+          <div className="relative aspect-square w-full max-w-[440px] mx-auto lg:mx-0 overflow-hidden rounded-[40px]">
             <Image
               src="/images/USsnYE6lbhf51vjxPNzwCQYGzsM.png"
-              alt="Happy woman celebrating"
+              alt="Confident patient"
               fill
-              className="object-contain"
+              className="object-cover"
+              priority
             />
           </div>
-          <p className="mt-4  font-medium text-primary">TrimRx Guarantee</p>
-          <h2 className="mt-2 font-display text-2xl font-bold md:text-3xl">
-            The only thing you&apos;ll lose is extra weight.
-          </h2>
-          <p className="mx-auto mt-3 max-w-md  text-gray-600">
-            We&apos;re so confident in our personalized program, we guarantee
-            you&apos;ll lose weight or your money back. It&apos;s that simple.
-          </p>
-          <div className="mt-6">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-primary to-yellow-400 px-8 py-3.5  font-bold uppercase tracking-wider text-white transition-all hover:shadow-lg"
-            >
-              Continue With Confidence
-            </a>
+          <div className="flex flex-col gap-6">
+            <span className="text-[#FB923C] font-semibold text-lg">
+              TrimRx Guarantee
+            </span>
+            <h2 className="text-[#2F2A25] font-display text-[32px] sm:text-[40px] font-medium leading-[1.1] tracking-tight">
+              The only thing you&apos;ll <br />
+              lose is extra weight.
+            </h2>
+            <p className="text-[#2F2A25] text-base sm:text-[17px] leading-[1.6] opacity-90 max-w-[480px]">
+              We&apos;re so confident in our personalized program, we guarantee
+              you&apos;ll lose weight or your money back. It&apos;s that simple.
+            </p>
+            <div className="mt-4">
+              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-10 py-4 rounded-full font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
+                CONTINUE WITH CONFIDENCE
+              </Button>
+            </div>
           </div>
         </div>
       </div>

@@ -21,34 +21,41 @@ const FAQS = [
 
 export function FAQ() {
   return (
-    <section className="bg-gray-50 py-20">
-      <div className="mx-auto max-w-3xl px-6">
-        <h2 className="text-center font-display text-3xl font-medium md:text-4xl">
-          Frequently asked <span className="text-gray-300">questions</span>
+    <section className="bg-[#F8F9FA] py-24 px-4 overflow-hidden">
+      <div className="mx-auto max-w-[50rem]">
+        <h2 className="text-center font-display text-[36px] sm:text-[45px] font-medium leading-[1.1] tracking-tight mb-16 text-[#2D2925]">
+          Frequently asked <span className="text-[#D1D5DB]">questions</span>
         </h2>
 
-        <div className="mt-12 space-y-3">
+        <div className="space-y-4">
           {FAQS.map((faq) => (
-            <details key={faq.q} className="group rounded-xl bg-white">
-              <summary className="flex cursor-pointer items-center justify-between px-6 py-5 text-base font-medium">
+            <details
+              key={faq.q}
+              className="group rounded-[24px] bg-white shadow-sm border border-gray-100 overflow-hidden"
+            >
+              <summary className="flex cursor-pointer items-center justify-between px-8 py-7 text-[17px] font-semibold text-[#2F2925]">
                 {faq.q}
-                <svg
-                  className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
+                <div className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-50 group-open:bg-blue-100 transition-colors">
+                  <svg
+                    className="h-4 w-4 text-blue-500 transition-transform group-open:rotate-180"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </div>
               </summary>
-              <p className="px-6 pb-5  leading-relaxed text-gray-600">
-                {faq.a}
-              </p>
+              <div className="px-8 pb-7">
+                <p className="text-[15.5px] leading-[1.6] text-[#2F2A25] opacity-80">
+                  {faq.a}
+                </p>
+              </div>
             </details>
           ))}
         </div>
