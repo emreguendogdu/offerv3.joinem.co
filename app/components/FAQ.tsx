@@ -23,7 +23,7 @@ export function FAQ() {
   return (
     <section className="bg-[#F8F9FA] py-24 px-4 overflow-hidden">
       <div className="mx-auto max-w-[50rem]">
-        <h2 className="text-center font-display text-[36px] sm:text-[45px] font-medium leading-[1.1] tracking-tight mb-16 text-[#2D2925]">
+        <h2 className="text-center font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight mb-16 text-[#2D2925]">
           Frequently asked <span className="text-[#D1D5DB]">questions</span>
         </h2>
 

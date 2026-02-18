@@ -60,7 +60,7 @@ export function PricingCards() {
               <span className="absolute top-3 left-3 z-10 rounded-full bg-brand-green px-3 py-1 text-xs font-bold text-white">
                 {card.badge}
               </span>
-              <div className="relative mx-auto my-6 h-48 w-36 sm:w-[200px] sm:h-[340px]">
+              <div className="relative mx-auto my-6 h-48 w-36 md:w-[200px] md:h-[340px]">
                 <div className="w-full h-full absolute -top-1/4 hover:scale-[1.1] transition-all">
                   <Image
                     src={card.imageSrc}

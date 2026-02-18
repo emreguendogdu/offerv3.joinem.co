@@ -30,12 +30,12 @@ export function TeamGrid() {
     <section className="bg-white py-24 px-4 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem]">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
-          <h2 className="text-[#2F2A25] font-display text-[32px] sm:text-[40px] font-medium leading-[1.1] tracking-tight max-w-[500px]">
+          <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight max-w-[500px]">
             Meet the <span className="text-[#FB923C]">incredible</span> doctors
             we&apos;ve partnered with.
           </h2>
           <div className="flex flex-col gap-6 lg:max-w-[420px]">
-            <p className="text-[#2F2A25] text-base sm:text-[17px] leading-[1.6] opacity-90">
+            <p className="text-[#2F2A25] text-base md:text-[17px] leading-[1.6] opacity-90">
               TrimRx physicians are here to guide you every step of the way,
               bringing both their expertise and genuine care to keep you
               supported.
@@ -48,7 +48,7 @@ export function TeamGrid() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {DOCTORS.map((doc) => (
             <div
               key={doc.name}

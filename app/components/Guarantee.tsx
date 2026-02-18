@@ -20,11 +20,11 @@ export function Guarantee() {
             <span className="text-[#FB923C] font-semibold text-lg">
               TrimRx Guarantee
             </span>
-            <h2 className="text-[#2F2A25] font-display text-[32px] sm:text-[40px] font-medium leading-[1.1] tracking-tight">
+            <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight">
               The only thing you&apos;ll <br />
               lose is extra weight.
             </h2>
-            <p className="text-[#2F2A25] text-base sm:text-[17px] leading-[1.6] opacity-90 max-w-[480px]">
+            <p className="text-[#2F2A25] text-base md:text-[17px] leading-[1.6] opacity-90 max-w-[480px]">
               We&apos;re so confident in our personalized program, we guarantee
               you&apos;ll lose weight or your money back. It&apos;s that simple.
             </p>

@@ -60,10 +60,10 @@ export function HowItWorks() {
     <section className="bg-white py-24 px-4 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
         <div className="flex flex-col gap-6 w-full lg:max-w-[420px]">
-          <h2 className="text-[#2F2A25] font-display text-[32px] sm:text-[40px] font-medium leading-[1.1] tracking-tight">
+          <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight">
             Begin your weight loss journey with TrimRX.
           </h2>
-          <p className="leading-[1.6] text-[#2F2A25] text-base sm:text-[17px] opacity-90">
+          <p className="leading-[1.6] text-[#2F2A25] text-base md:text-[17px] opacity-90">
             Start your transformation today with TrimRx it&apos;s easy,
             personalized process for accessing GLP-1 medications. Designed with
             your convenience in mind, our streamlined approach ensures

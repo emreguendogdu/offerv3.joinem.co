@@ -120,8 +120,8 @@ export function Testimonials() {
         </div>
 
         {/* HSA/FSA bar */}
-        <div className="py-20 flex items-center justify-center gap-4 text-[24px] sm:text-[32px] md:text-[40px] font-bold text-[#2F2A25]">
-          <div className="relative h-10 w-10 sm:h-12 sm:w-12">
+        <div className="py-20 flex items-center justify-center gap-4 text-[24px] md:text-[32px] md:text-[40px] font-bold text-[#2F2A25]">
+          <div className="relative h-10 w-10 md:h-12 md:w-12">
             <Image
               src="/images/HpMphmT9reZWKHyliNJuwSGqX0.png"
               alt="HSA/FSA"
@@ -142,7 +142,7 @@ export function Testimonials() {
           <div className="flex justify-center gap-1 mb-6">
             <Stars starClassName="w-6 h-6 text-[#FB923C]" />
           </div>
-          <h2 className="text-[#2F2A25] font-display text-[32px] sm:text-[40px] font-medium leading-[1.1] tracking-tight">
+          <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight">
             There&apos;s a reason people are <br />
             <span className="text-[#FB923C] font-bold">raving about us.</span>
           </h2>

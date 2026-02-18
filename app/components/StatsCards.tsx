@@ -14,7 +14,7 @@ const STATS = [
 export function StatsCards() {
   return (
     <section className="bg-white py-16 text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 items-center justify-center">
-      <h2 className="font-display text-3xl sm:text-[2.75rem]">
+      <h2 className="font-display text-3xl md:text-[2.75rem]">
         Why are so many patients signing up for TrimRX?{' '}
         <strong className=" text-primary">It works.</strong>
       </h2>

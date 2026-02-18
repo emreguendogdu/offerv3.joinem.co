@@ -8,12 +8,12 @@ export function ReviewsSection() {
     <section className="bg-white py-24 px-4 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem]">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
-          <h2 className="text-[#2F2A25] font-display text-[36px] sm:text-[45px] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
+          <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
             There&apos;s a reason people are <br />
             <span className="text-[#FB923C]">raving about us.</span>
           </h2>
           <div className="flex flex-col gap-6 lg:max-w-[420px]">
-            <p className="text-[#2F2A25] text-base sm:text-[17px] leading-[1.6] opacity-90">
+            <p className="text-[#2F2A25] text-base md:text-[17px] leading-[1.6] opacity-90">
               Join the thousands of people who have trusted TrimRx to help
               change their lives, achieving significant,{' '}
               <span className="text-[#FB923C] font-semibold">

@@ -1,7 +1,46 @@
-import React from 'react';
 import Image from 'next/image';
 import { Stars, Check } from './ui/Icons';
 import { Button } from './ui/Buttons';
+
+const HERO_FEATURES = [
+  {
+    mobileText: (
+      <>100% online medical visit. Injections and oral options available.</>
+    ),
+    desktopText: (
+      <>
+        <strong>100% online</strong> medical review with licensed U.S. providers
+      </>
+    ),
+  },
+  {
+    mobileText: <strong>Same price, every dose. No hidden fees.</strong>,
+    desktopText: (
+      <>
+        <strong>Same price, every dose.</strong> No hidden fees.
+      </>
+    ),
+  },
+  {
+    mobileText: (
+      <>Prescription & telemed visits included. No insurance required.</>
+    ),
+    desktopText: (
+      <>
+        <strong>No insurance required</strong>{' '}
+        <span className="mx-1 opacity-35">·</span> Simple monthly plan
+      </>
+    ),
+  },
+  {
+    mobileText: <>Free shipping. Arrives in 1–2 days.</>,
+    desktopText: (
+      <>
+        <strong>Free shipping.</strong> Arrives in 1–2 days.
+      </>
+    ),
+  },
+];
 
 export function Hero() {
   return (
@@ -12,74 +51,53 @@ export function Hero() {
       <div className="flex flex-col w-full">
         <div className="flex flex-col items-center pt-2 pb-7 gap-6">
           {/* Trust bar */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-2.5 text-brand-brown">
+          <div className="flex flex-row flex-wrap items-center justify-center gap-2.5 text-brand-brown">
             <Stars />
-            <span className="inline-flex gap-2.5 items-center flex-wrap">
-              <span>
+            <span className="inline-flex justify-center gap-2.5 items-center flex-wrap">
+              <span className="w-fit">
                 <strong>4.9</strong> Excellent Rating
               </span>
-              <span className="opacity-30">•</span>
-              <span>
+              <span className="opacity-30 w-fit">•</span>
+              <span className="w-fit">
                 <strong>350,000+</strong> happy patients
               </span>
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-display text-4xl font-extrabold leading-none text-[2.8125rem] md:text-5xl text-center">
-            Lose <span className="text-primary">1–2lbs</span> per{' '}
-            <br className="inline sm:hidden" />
-            week!
+          <h1 className="font-display text-4xl font-extrabold leading-none text-[2.8125rem] md:text-5xl text-center h-[65px] md:h-auto">
+            Lose <span className="text-primary">1–2lbs</span> per week!
           </h1>
 
           {/* Sub-headline */}
-          <p className="text-base sm:text-xl text-brand-brown">
+          <p className="text-base md:text-xl text-brand-brown pt-1 pb-2">
             The proven way to lose 15% of your body weight fast!
           </p>
 
           {/* Pricing line */}
-          <p className="text-lg text-center">
+          <p className="text-lg text-center pt-1 pb-2">
             Starting at{' '}
-            <span className="font-display text-[1.5625rem] sm:text-3xl font-black text-primary">
+            <span className="font-display text-[1.5625rem] md:text-3xl font-black text-primary">
               $149
             </span>{' '}
             – Compounded GLP-1 &amp; GLP-1 + GIP in stock
           </p>
 
           {/* Feature checklist */}
-          <div className="space-y-4 pt-2 text-left">
-            <div className="flex items-start gap-3">
-              <Check />
-              <span className="text-lg">
-                100% online medical review with licensed U.S. providers
-              </span>
-            </div>
-            <div className="flex items-start gap-3">
-              <Check />
-              <span className="text-lg hidden sm:inline-block">
-                <strong>No insurance required</strong>{' '}
-                <span className="mx-1 opacity-35">·</span> Simple monthly plan
-              </span>
-
-              <span className="inline-block sm:hidden">
-                <strong>Same price, every dose. No hidden fees.</strong>
-              </span>
-            </div>
-            <div className="flex items-start gap-3">
-              <Check />
-              <span className="text-lg
-              ">
-                Transparent pricing <span className="mx-1 opacity-35">·</span>{' '}
-                No hidden fees
-              </span>
-            </div>
-            <div className="flex items-start gap-3">
-              <Check />
-              <span className="text-lg">
-                Discreet delivery <span className="mx-1 opacity-35">·</span>{' '}
-                (where available)
-              </span>
-            </div>
+          <div className="space-y-4.5 pt-2 text-left">
+            {HERO_FEATURES.map((feature, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <Check />
+                <span className="text-lg">
+                  <span className="inline-block md:hidden">
+                    {feature.mobileText}
+                  </span>
+                  <span className="hidden md:inline-block">
+                    {feature.desktopText}
+                  </span>
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 

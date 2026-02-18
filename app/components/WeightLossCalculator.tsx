@@ -14,10 +14,10 @@ export function WeightLossCalculator() {
   const percentage = ((weight - minWeight) / (maxWeight - minWeight)) * 100;
 
   return (
-    <section className="bg-white pt-5 pb-16 px-4 max-w-315 mx-auto sm:px-7.5 sm:pt-6.25">
-      <div className="flex flex-col sm:flex-row gap-6">
+    <section className="bg-white pt-5 pb-16 px-4 max-w-315 mx-auto md:px-7.5 md:pt-6.25">
+      <div className="flex flex-col md:flex-row gap-6">
         {/* Left */}
-        <div className="w-full sm:w-[40%]">
+        <div className="w-full md:w-[40%]">
           <h2 className="font-display text-3xl font-bold leading-snug">
             Want to <strong className="text-primary ">reach your goal</strong>{' '}
             weight fast?
@@ -35,7 +35,7 @@ export function WeightLossCalculator() {
           </div>
         </div>
         {/* Right */}
-        <div className="rounded-2xl bg-brand-cream p-8 sm:px-15 sm:pb-10 w-full sm:w-[60%] shadow-sm">
+        <div className="rounded-2xl bg-brand-cream p-8 md:px-15 md:pb-10 w-full md:w-[60%] shadow-sm">
           <p className="text-base font-medium text-gray-600">
             Select your current weight:
           </p>

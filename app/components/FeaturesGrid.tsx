@@ -82,7 +82,7 @@ export function FeaturesGrid() {
   return (
     <section className="bg-white py-16 px-4">
       <div className="mx-auto max-w-[77.625rem]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[44rem] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[44rem] mx-auto">
           {FEATURES.map((card) => (
             <div
               key={card.title}
