@@ -43,14 +43,7 @@ export function Stars({
           viewBox="0 0 24 24"
           className={cn('w-5 h-5 text-[#FFCA3B]  fill-current', starClassName)}
         >
-
-```
-The `Stars` icon doesn't have `width` and `height` props on the SVG, it uses Tailwind classes `w-5 h-5`.
-`w-5` is 20px.
-If the `viewBox` is `0 0 24 24`, and the star path is `M12 2...`, it's a 20px star inside a 24px container, which then gets scaled to 20px total.
-This makes the star actually 16.66px (20/24 * 20).
-If the user wants a "20px star", they probably want the star to fill the 20px area.
-This means the viewBox
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z" />
         </svg>
       ))}
     </div>
