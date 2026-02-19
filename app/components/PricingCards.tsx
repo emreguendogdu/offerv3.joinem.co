@@ -85,11 +85,12 @@ export function PricingCards() {
                     {card.price}
                   </span>
                 </p>
-                <div className="mt-5 w-full">
-                  <Button variant="dark" className="w-full justify-center">
-                    {card.buttonText}
-                  </Button>
-                </div>
+                <Button
+                  variant="dark"
+                  className="w-full justify-center mt-5 py-3"
+                >
+                  {card.buttonText}
+                </Button>
               </div>
             </div>
           </div>

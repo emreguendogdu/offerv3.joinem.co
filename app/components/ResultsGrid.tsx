@@ -31,7 +31,7 @@ export function ResultsGrid() {
         {/* People photo grid */}
         <div className="mt-10 hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[600px]">
           {PATIENTS.map((img, i) => (
-            <div key={i} className="relative overflow-hidden rounded-2xl">
+            <div key={i} className="relative overflow-hidden rounded-[50px]">
               <Image
                 src={`/images/${img.src}`}
                 alt={img.alt}
@@ -46,7 +46,7 @@ export function ResultsGrid() {
         <div className="mt-10 grid grid-cols-3 gap-3 md:hidden">
           {/* Column 1 */}
           <div className="flex flex-col gap-3">
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
               <Image
                 src={`/images/${PATIENTS[2].src}`}
                 alt={PATIENTS[2].alt}
@@ -54,7 +54,7 @@ export function ResultsGrid() {
                 className="object-cover"
               />
             </div>
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
               <Image
                 src={`/images/${PATIENTS[5].src}`}
                 alt={PATIENTS[5].alt}
@@ -66,7 +66,7 @@ export function ResultsGrid() {
 
           {/* Column 2 */}
           <div className="flex flex-col gap-3">
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
               <Image
                 src={`/images/${PATIENTS[0].src}`}
                 alt={PATIENTS[0].alt}
@@ -74,7 +74,7 @@ export function ResultsGrid() {
                 className="object-cover"
               />
             </div>
-            <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
               <Image
                 src={`/images/${PATIENTS[1].src}`}
                 alt={PATIENTS[1].alt}
@@ -85,7 +85,7 @@ export function ResultsGrid() {
           </div>
 
           {/* Column 3 */}
-          <div className="relative w-full h-full overflow-hidden rounded-2xl">
+          <div className="relative w-full h-full overflow-hidden rounded-[50px]">
             <Image
               src={`/images/${PATIENTS[4].src}`}
               alt={PATIENTS[4].alt}

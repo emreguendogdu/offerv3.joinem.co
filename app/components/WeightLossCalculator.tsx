@@ -31,7 +31,7 @@ export function WeightLossCalculator() {
             and knocking out cravings.
           </p>
           <div className="mt-6">
-            <Button variant="dark" className="px-10 py-2.5">
+            <Button variant="dark" className="px-10 py-3">
               Get Started
             </Button>
           </div>

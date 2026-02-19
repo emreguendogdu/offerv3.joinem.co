@@ -122,7 +122,7 @@ export function HowItWorks() {
         {/* Timeline */}
         <div
           ref={containerRef}
-          className="relative flex-1 space-y-16 pl-16 md:pl-20"
+          className="relative flex-1 space-y-16 pl-24 md:pl-32"
         >
           {/* Track Line */}
           <div className="absolute left-[32px] md:left-[40px] top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
@@ -142,7 +142,7 @@ export function HowItWorks() {
             >
               <div
                 className={cn(
-                  'absolute -left-[44px] md:-left-[52px] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
+                  'absolute -left-[76px] md:-left-[100px] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
                   activeStep >= index ? 'border-[#FB923C]' : 'border-[#F1F5F9]',
                 )}
               >
@@ -153,12 +153,12 @@ export function HowItWorks() {
                   )}
                 />
               </div>
-              <div className="flex flex-col gap-6">
+              <div className="flex flex-col gap-6 max-w-[29.125rem]">
                 <div>
-                  <h3 className="text-[24px] font-bold text-[#2F2A25] leading-tight mb-3">
+                  <h3 className="text-[22px] font-semibold text-[#2F2A25] leading-tight mb-3">
                     {step.title}
                   </h3>
-                  <p className="leading-[1.6] text-[#2F2A25] opacity-70 text-base">
+                  <p className="leading-[1.6] text-[#2F2A25] text-base md:text-[17px] opacity-90">
                     {step.description}
                   </p>
                 </div>

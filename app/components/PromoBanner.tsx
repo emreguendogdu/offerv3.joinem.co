@@ -38,7 +38,7 @@ export function PromoBanner() {
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-center px-4 pt-4 pb-3">
-        <Link href="#" className="flex flex-col items-center gap-2 text-center">
+        <div className="flex flex-col items-center gap-2 text-center">
           {/* Main Offer */}
           <div className="flex items-center gap-2">
             <DiscountIcon className="w-6 h-6" />
@@ -56,7 +56,7 @@ export function PromoBanner() {
               all weight loss plans
             </span>
           </div>
-        </Link>
+        </div>
       </div>
     </div>
   );

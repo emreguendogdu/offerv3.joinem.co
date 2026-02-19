@@ -4,6 +4,8 @@ import { Stars } from './ui/Icons';
 import { Button } from './ui/Buttons';
 import { Marquee } from './ui/Marquee';
 
+// ... (imports remain)
+
 export function ReviewsSection() {
   const topMarquee = [
     {
@@ -107,7 +109,34 @@ export function ReviewsSection() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-6 w-full">
+      {/* Grid Layout for Desktop */}
+      <div className="hidden lg:grid grid-cols-4 gap-4 mx-auto max-w-[77.625rem] px-4 h-[600px]">
+        {/* Column 1: Top smaller (Review), Bottom larger (Image) */}
+        <div className="flex flex-col gap-4 h-full">
+          <MarqueeItem item={topMarquee[1]} className="h-[25%] w-full" />
+          <MarqueeItem item={topMarquee[0]} className="h-[75%] w-full" />
+        </div>
+
+        {/* Column 2: Contains 5th Image (Result 5) */}
+        <div className="flex flex-col gap-4 h-full">
+          <MarqueeItem item={topMarquee[3]} className="h-[50%] w-full" />
+          <MarqueeItem item={botMarquee[3]} className="h-[50%] w-full" />
+        </div>
+
+        {/* Column 3: 4th Image (Result 4), Single Item */}
+        <div className="h-full">
+          <MarqueeItem item={botMarquee[1]} className="h-full w-full" />
+        </div>
+
+        {/* Column 4: Top larger (Image), Bottom smaller (Review) */}
+        <div className="flex flex-col gap-4 h-full">
+          <MarqueeItem item={topMarquee[2]} className="h-[75%] w-full" />
+          <MarqueeItem item={topMarquee[5]} className="h-[25%] w-full" />
+        </div>
+      </div>
+
+      {/* Marquee Layout for Mobile/Tablet */}
+      <div className="flex flex-col gap-6 w-full lg:hidden">
         {/* Top Marquee */}
         <Marquee pauseOnHover className="[--duration:60s]" duration="60s">
           {topMarquee.map((item, index) => (
@@ -131,10 +160,14 @@ export function ReviewsSection() {
   );
 }
 
-function MarqueeItem({ item }: { item: any }) {
+function MarqueeItem({ item, className }: { item: any; className?: string }) {
+  const sizeClasses = className ? '' : 'h-[220px] w-[384px]';
+
   if (item.type === 'image') {
     return (
-      <div className="relative h-[220px] w-[384px] shrink-0 rounded-[24px] overflow-hidden bg-[#F8F9FA]">
+      <div
+        className={`relative shrink-0 rounded-[24px] overflow-hidden bg-[#F8F9FA] ${sizeClasses} ${className || ''}`}
+      >
         <Image
           src={item.src}
           alt={item.alt || ''}
@@ -146,7 +179,9 @@ function MarqueeItem({ item }: { item: any }) {
   }
 
   return (
-    <div className="w-[384px] bg-[#F8F9FA] rounded-[24px] p-8 flex flex-col gap-6 shrink-0 h-[220px] justify-between">
+    <div
+      className={`bg-[#F8F9FA] rounded-[24px] p-8 flex flex-col gap-6 shrink-0 justify-between ${sizeClasses} ${className || ''}`}
+    >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           {item.avatar ? (

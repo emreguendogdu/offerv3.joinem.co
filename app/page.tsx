@@ -15,6 +15,7 @@ import { Guarantee } from './components/Guarantee';
 import { TeamGrid } from './components/TeamGrid';
 import { FeaturesGrid } from './components/FeaturesGrid';
 import { Footer } from './components/Footer';
+import { Testimonials } from './components/Testimonials';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
 
       <LogoBar />
       <PricingCards />
+      <Testimonials />
       <WeightLossCalculator />
       <ResultsGrid />
       <MetabolismSection />
