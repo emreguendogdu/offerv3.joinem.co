@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Check } from './ui/Icons';
+import { cn } from '@/lib/utils';
 
 const PATIENTS = [
   { src: 'cuZhgpBjeSSAKoMvYFHYO1l4.jpg', alt: 'Patient 1' },
@@ -18,80 +19,86 @@ export function ResultsGrid() {
     <section className="bg-white py-16">
       <div className="mx-auto max-w-[81rem] px-4 text-left md:text-center">
         <div className="flex flex-col gap-4">
-          <h2 className="font-display text-4xl md:text-5xl text-center font-medium">
+          <h2 className="font-display text-3xl md:text-5xl text-left md:text-center font-medium">
             The change we&apos;ve all been waiting for.
           </h2>
-          <p className=" text-center">
+          <p className="text-left md:text-center text-lg">
             Join the over{' '}
             <span className="text-primary font-bold">100,000</span> TrimRx
             patients and we&apos;ll help you finally get real, lasting results.
           </p>
         </div>
         {/* People photo grid */}
-        {/* People photo grid */}
-        <div className="mt-10 hidden md:grid grid-cols-4 grid-rows-2 gap-3 h-[600px]">
-          {PATIENTS.map((img, i) => (
-            <div key={i} className="relative overflow-hidden rounded-[50px]">
-              <Image
-                src={`/images/${img.src}`}
-                alt={img.alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </div>
 
-        {/* Mobile Grid */}
-        <div className="mt-10 grid grid-cols-3 gap-3 md:hidden">
+        <div className="mt-10 mb-13.5 grid grid-cols-4 gap-3 h-[600px] w-fit overflow-hidden">
           {/* Column 1 */}
           <div className="flex flex-col gap-3">
-            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
-              <Image
-                src={`/images/${PATIENTS[2].src}`}
-                alt={PATIENTS[2].alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
-              <Image
-                src={`/images/${PATIENTS[5].src}`}
-                alt={PATIENTS[5].alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Column 2 */}
-          <div className="flex flex-col gap-3">
-            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
+            <ImageWrapper className="h-1/3">
               <Image
                 src={`/images/${PATIENTS[0].src}`}
                 alt={PATIENTS[0].alt}
                 fill
                 className="object-cover"
               />
-            </div>
-            <div className="relative aspect-square w-full overflow-hidden rounded-[50px]">
+            </ImageWrapper>
+            <ImageWrapper className="h-2/3">
+              <Image
+                src={`/images/${PATIENTS[4].src}`}
+                alt={PATIENTS[4].alt}
+                fill
+                className="object-cover"
+              />
+            </ImageWrapper>
+          </div>
+
+          {/* Column 2 */}
+          <div className="flex flex-col gap-3">
+            <ImageWrapper className="h-full">
               <Image
                 src={`/images/${PATIENTS[1].src}`}
                 alt={PATIENTS[1].alt}
                 fill
                 className="object-cover"
               />
-            </div>
+            </ImageWrapper>
+            <ImageWrapper className="h-full">
+              <Image
+                src={`/images/${PATIENTS[2].src}`}
+                alt={PATIENTS[2].alt}
+                fill
+                className="object-cover"
+              />
+            </ImageWrapper>
           </div>
 
           {/* Column 3 */}
-          <div className="relative w-full h-full overflow-hidden rounded-[50px]">
+          <ImageWrapper className="h-full">
             <Image
-              src={`/images/${PATIENTS[4].src}`}
-              alt={PATIENTS[4].alt}
+              src={`/images/${PATIENTS[5].src}`}
+              alt={PATIENTS[5].alt}
               fill
               className="object-cover"
             />
+          </ImageWrapper>
+
+          {/* Column 4 */}
+          <div className="flex flex-col gap-3">
+            <ImageWrapper className="h-2/3">
+              <Image
+                src={`/images/${PATIENTS[3].src}`}
+                alt={PATIENTS[3].alt}
+                fill
+                className="object-cover"
+              />
+            </ImageWrapper>
+            <ImageWrapper className="h-1/3">
+              <Image
+                src={`/images/${PATIENTS[7].src}`}
+                alt={PATIENTS[7].alt}
+                fill
+                className="object-cover"
+              />
+            </ImageWrapper>
           </div>
         </div>
 
@@ -127,3 +134,22 @@ export function ResultsGrid() {
     </section>
   );
 }
+
+const ImageWrapper = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <div
+      className={cn(
+        'relative aspect-305/295 w-[151px] md:w-[244px] 2xl:w-[305px] overflow-hidden rounded-[50px]',
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+};

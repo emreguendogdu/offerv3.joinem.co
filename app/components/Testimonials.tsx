@@ -48,7 +48,7 @@ export function Testimonials() {
         </div>
 
         {/* Floating testimonials around vial */}
-        <div className="relative mt-20 flex items-center justify-center py-20 h-full min-h-[500px] md:min-h-[700px] overflow-visible">
+        <div className="relative flex items-center justify-center pt-20 pb-10 h-full min-h-[500px] md:min-h-[700px] overflow-visible">
           {/* Center vial */}
           <div className="relative z-10 h-[350px] w-[220px] md:h-full md:w-[440px] animate-float aspect-[732/1096]">
             <Image
@@ -65,7 +65,7 @@ export function Testimonials() {
             <TestimonialItem
               align="right"
               text={<>Very easy and convenient for a very busy working lady.</>}
-              className="top-[7%] left-[2%] md:top-[5%] md:left-[6%]"
+              className="top-[5%] left-[6%]"
             />
             <TestimonialItem
               align="right"
@@ -75,27 +75,27 @@ export function Testimonials() {
                   helpful!
                 </>
               }
-              className="top-[42%] left-[5%] md:top-[30%] md:left-[17%] md:max-w-[520px]"
+              className="top-[30%] left-[17%] md:max-w-[520px]"
             />
             <TestimonialItem
               align="right"
               text={<>Very nice and informative Dr. Quick and easy!</>}
-              className="top-[74%] left-[0%] md:top-[45%] md:left-[0%]"
+              className="top-[45%] left-[0%]"
             />
             {/* Right side */}
             <TestimonialItem
               text="...the weight vanished!"
-              className="top-[28%] right-[0%] md:top-[20%] md:-right-[0%]"
+              className="top-[20%] -right-[0%]"
               align="center"
             />
             <TestimonialItem
               text="Every person I have contact with shows compassion."
-              className="top-[56%] right-[-1%] md:top-[40%] md:-right-[4%]"
+              className="top-[40%] -right-[4%]"
               align="center"
             />
             <TestimonialItem
               text={<>NP was very helpful and friendly!</>}
-              className="top-[91%] right-[2.5%] md:top-[65%] md:right-[7.5%]"
+              className="top-[65%] right-[7.5%]"
               align="center"
             />
           </div>

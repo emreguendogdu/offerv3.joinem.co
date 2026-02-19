@@ -18,7 +18,7 @@ export function WeightLossCalculator() {
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left */}
         <div className="w-full md:w-[40%]">
-          <h2 className="font-display text-3xl font-bold leading-snug max-w-xs md:max-w-none">
+          <h2 className="font-display text-3xl font-bold leading-snug">
             Want to <strong className="text-primary ">reach your goal</strong>{' '}
             weight fast?
           </h2>
@@ -31,7 +31,7 @@ export function WeightLossCalculator() {
             and knocking out cravings.
           </p>
           <div className="mt-6">
-            <Button variant="dark" className="px-10 py-3">
+            <Button variant="dark" className="px-10 py-3 w-fit">
               Get Started
             </Button>
           </div>
@@ -76,9 +76,9 @@ export function WeightLossCalculator() {
             <p className="text-base font-medium text-gray-600">
               Weight loss potential:
             </p>
-            <p className="text-right text-[4.375rem] tracking-[0] font-light text-brand-dark inline-flex gap-2 items-end leading-none">
+            <p className="text-right text-[3.125rem] md:text-[4.375rem] tracking-[0] font-light text-brand-dark inline-flex gap-2 items-end leading-none">
               <strong className="font-bold">{weightLossPotential}</strong>{' '}
-              <span className="mb-2 text-2xl">lbs</span>
+              <span className="mb-4 md:mb-2 text-2xl">lbs</span>
             </p>
           </div>
         </div>

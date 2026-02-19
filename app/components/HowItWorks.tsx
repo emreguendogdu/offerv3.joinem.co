@@ -99,7 +99,7 @@ export function HowItWorks() {
   }, []);
 
   return (
-    <section className="bg-white py-8 md:py-24 px-4 overflow-hidden">
+    <section className="bg-white py-8 px-4 md:px-10 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
         <div className="flex flex-col gap-6 w-full lg:max-w-[420px]">
           <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[40px] font-medium leading-[1.1] md:tracking-tight">
@@ -153,16 +153,16 @@ export function HowItWorks() {
                   )}
                 />
               </div>
-              <div className="flex flex-col gap-6 max-w-[29.125rem]">
+              <div className="flex flex-col gap-6 w-full lg:max-w-[29.125rem]">
                 <div>
-                  <h3 className="text-[22px] font-semibold text-[#2F2A25] leading-tight mb-3">
+                  <h3 className="text-lg lg:text-[22px] font-semibold text-[#2F2A25] leading-tight mb-3">
                     {step.title}
                   </h3>
                   <p className="leading-[1.6] text-[#2F2A25] text-base md:text-[17px] opacity-90">
                     {step.description}
                   </p>
                 </div>
-                <div className="relative aspect-16/10 w-full overflow-hidden rounded-[40px] shadow-sm border border-gray-100">
+                <div className="relative aspect-16/10 max-h-[220px] lg:max-h-none w-full overflow-hidden rounded-[40px] shadow-sm border border-gray-100">
                   <Image
                     src={`/images/${step.img}`}
                     alt={step.alt}
