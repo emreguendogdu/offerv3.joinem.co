@@ -65,7 +65,7 @@ export function Testimonials() {
             <TestimonialItem
               align="right"
               text={<>Very easy and convenient for a very busy working lady.</>}
-              className="top-[-2%] left-[2%] md:top-[5%] md:left-[6%]"
+              className="top-[7%] left-[2%] md:top-[5%] md:left-[6%]"
             />
             <TestimonialItem
               align="right"
@@ -75,27 +75,27 @@ export function Testimonials() {
                   helpful!
                 </>
               }
-              className="top-[45%] left-[1%] md:top-[30%] md:left-[17%] md:max-w-[520px]"
+              className="top-[42%] left-[5%] md:top-[30%] md:left-[17%] md:max-w-[520px]"
             />
             <TestimonialItem
               align="right"
               text={<>Very nice and informative Dr. Quick and easy!</>}
-              className="top-[80%] left-[1%] md:top-[45%] md:left-[0%]"
+              className="top-[74%] left-[0%] md:top-[45%] md:left-[0%]"
             />
             {/* Right side */}
             <TestimonialItem
               text="...the weight vanished!"
-              className="top-[15%] right-[2%] md:top-[20%] md:-right-[0%]"
+              className="top-[28%] right-[0%] md:top-[20%] md:-right-[0%]"
               align="center"
             />
             <TestimonialItem
               text="Every person I have contact with shows compassion."
-              className="top-[60%] right-[1%] md:top-[40%] md:-right-[4%]"
+              className="top-[56%] right-[-1%] md:top-[40%] md:-right-[4%]"
               align="center"
             />
             <TestimonialItem
               text={<>NP was very helpful and friendly!</>}
-              className="top-[90%] right-[1%] md:top-[65%] md:right-[7.5%]"
+              className="top-[91%] right-[2.5%] md:top-[65%] md:right-[7.5%]"
               align="center"
             />
           </div>
@@ -132,7 +132,7 @@ const TestimonialItem = ({
   return (
     <div
       className={cn(
-        'absolute max-w-[150px] md:max-w-[360px] opacity-10',
+        'absolute max-w-[240px] md:max-w-[360px] opacity-10',
         align === 'left'
           ? 'text-left'
           : align === 'center'
