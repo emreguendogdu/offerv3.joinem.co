@@ -30,7 +30,7 @@ export function ResultsGrid() {
 
   return (
     <section className="bg-white py-16">
-      <div className="mx-auto max-w-[81rem] px-4 text-left md:text-center">
+      <div className="w-full mx-auto md:max-w-[81rem] px-4 text-left md:text-center">
         <div className="flex flex-col gap-4">
           <h2 className="font-display text-3xl md:text-5xl text-left md:text-center font-medium">
             The change we&apos;ve all been waiting for.
@@ -41,17 +41,17 @@ export function ResultsGrid() {
             patients and we&apos;ll help you finally get real, lasting results.
           </p>
         </div>
-        {/* People photo grid */}
 
-        <div className="mt-10 mb-13.5 grid grid-cols-4 gap-3 h-[600px] w-fit overflow-hidden mx-auto">
+        {/* People photo grid */}
+        <div className="mt-8 md:mt-10 md:mb-13.5 grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-3 w-[120%] mx-auto -translate-x-[10%] md:translate-x-0 h-auto aspect-472/350 md:aspect-auto md:h-[600px] md:w-fit overflow-x-clip">
           {/* Column 1 */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1 md:gap-3 mb-8 md:mb-0">
             <ImageWrapper className="h-1/3">
               <Image
                 src={`/images/${PATIENTS[0].src}`}
                 alt={PATIENTS[0].alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-[inherit]"
               />
             </ImageWrapper>
             <ImageWrapper className="h-2/3">
@@ -59,19 +59,19 @@ export function ResultsGrid() {
                 src={`/images/${PATIENTS[4].src}`}
                 alt={PATIENTS[4].alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-[inherit]"
               />
             </ImageWrapper>
           </div>
 
           {/* Column 2 */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-1 md:gap-3 mt-8 md:mt-0">
             <ImageWrapper className="h-full">
               <Image
                 src={`/images/${PATIENTS[1].src}`}
                 alt={PATIENTS[1].alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-[inherit]"
               />
             </ImageWrapper>
             <ImageWrapper className="h-full">
@@ -79,29 +79,29 @@ export function ResultsGrid() {
                 src={`/images/${PATIENTS[2].src}`}
                 alt={PATIENTS[2].alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-[inherit]"
               />
             </ImageWrapper>
           </div>
 
           {/* Column 3 */}
-          <ImageWrapper className="h-full">
+          <ImageWrapper className="mb-8 md:mb-0 h-[calc(100%-2rem)] md:h-full">
             <Image
               src={`/images/${PATIENTS[5].src}`}
               alt={PATIENTS[5].alt}
               fill
-              className="object-cover"
+              className="object-cover rounded-[inherit]"
             />
           </ImageWrapper>
 
           {/* Column 4 */}
-          <div className="flex flex-col gap-3">
+          <div className="flex-col gap-3 hidden md:flex">
             <ImageWrapper className="h-2/3">
               <Image
                 src={`/images/${PATIENTS[3].src}`}
                 alt={PATIENTS[3].alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-[inherit]"
               />
             </ImageWrapper>
             <ImageWrapper className="h-1/3">
@@ -109,7 +109,7 @@ export function ResultsGrid() {
                 src={`/images/${PATIENTS[7].src}`}
                 alt={PATIENTS[7].alt}
                 fill
-                className="object-cover"
+                className="object-cover rounded-[inherit]"
               />
             </ImageWrapper>
           </div>
@@ -140,7 +140,8 @@ export function ResultsGrid() {
 }
 
 function StatBadge({ text, index }: { text: string; index: number }) {
-  const { ref: badgeRef, revealClassName } = useRevealOnInView<HTMLDivElement>();
+  const { ref: badgeRef, revealClassName } =
+    useRevealOnInView<HTMLDivElement>();
 
   return (
     <div
@@ -164,7 +165,7 @@ const ImageWrapper = ({
   return (
     <div
       className={cn(
-        'relative aspect-305/295 w-[151px] md:w-[244px] 2xl:w-[305px] overflow-hidden rounded-[50px]',
+        'relative aspect-305/295 w-full max-w-[151px] md:w-[244px] md:max-w-none 2xl:w-[305px] overflow-hidden rounded-3xl md:rounded-[50px]',
         className,
       )}
     >

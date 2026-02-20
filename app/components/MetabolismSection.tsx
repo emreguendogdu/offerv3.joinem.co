@@ -4,10 +4,10 @@ import { Button } from './ui/Buttons';
 
 export function MetabolismSection() {
   return (
-    <section className="max-w-[75rem] mx-auto px-4">
+    <section className="relative w-full max-w-[75rem] mx-auto px-4">
       <div className="bg-brand-cream grid items-center gap-10 md:grid-cols-2 p-5 rounded-3xl">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="relative h-[25vh] md:h-90 overflow-hidden rounded-2xl mt-8">
+        <div className="grid grid-cols-2 gap-4 overflow-hidden">
+          <div className="relative h-[25vh] w-full md:w-auto md:h-90 overflow-hidden rounded-2xl mt-8">
             <Image
               src="/images/setUSuF4LXmXJm1JrIxQ78A4dmg.png"
               alt="Weight loss result"
@@ -15,7 +15,7 @@ export function MetabolismSection() {
               className="object-cover"
             />
           </div>
-          <div className="relative h-[25vh] md:h-90 overflow-hidden rounded-2xl">
+          <div className="relative h-[25vh] w-full md:w-auto md:h-90 overflow-hidden rounded-2xl">
             <Image
               src="/images/V0vJeyWRHjhriS71aKjPwkKIjAQ.png"
               alt="Measuring waist"
@@ -35,7 +35,7 @@ export function MetabolismSection() {
                 genetically determined
               </strong>
               . With medication, you will work{' '}
-              <strong className="text-primary ">with your body</strong> rather
+              <strong className="text-primary">with your body</strong> rather
               than against it – to reach your goal weight and keep it that way.
             </p>
             <Button
