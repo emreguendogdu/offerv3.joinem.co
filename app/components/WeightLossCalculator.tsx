@@ -6,8 +6,7 @@ import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
 
 export function WeightLossCalculator() {
   const [weight, setWeight] = useState(200);
-  const { ref: sectionRef, revealClassName } =
-    useRevealOnInView<HTMLElement>();
+  const { ref: sectionRef, revealClassName } = useRevealOnInView<HTMLElement>();
 
   const minWeight = 140;
   const maxWeight = 400;
@@ -43,7 +42,7 @@ export function WeightLossCalculator() {
           </div>
         </div>
         {/* Right */}
-        <div className="rounded-2xl bg-brand-cream p-8 md:px-15 md:pb-10 w-full md:w-[60%] shadow-sm">
+        <div className="rounded-2xl bg-accent-light p-8 md:px-15 md:pb-10 w-full md:w-[60%] shadow-sm">
           <p className="text-base font-medium text-gray-600">
             Select your current weight:
           </p>

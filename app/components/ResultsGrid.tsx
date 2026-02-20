@@ -29,7 +29,7 @@ export function ResultsGrid() {
     useRevealOnInView<HTMLDivElement>();
 
   return (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 overflow-x-hidden">
       <div className="w-full mx-auto md:max-w-[81rem] px-4 text-left md:text-center">
         <div className="flex flex-col gap-4">
           <h2 className="font-display text-3xl md:text-5xl text-left md:text-center font-medium">
@@ -43,7 +43,7 @@ export function ResultsGrid() {
         </div>
 
         {/* People photo grid */}
-        <div className="mt-8 md:mt-10 md:mb-13.5 grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-3 w-[120%] mx-auto -translate-x-[10%] md:translate-x-0 h-auto aspect-472/350 md:aspect-auto md:h-[600px] md:w-fit overflow-x-clip">
+        <div className="mt-8 md:mt-10 md:mb-13.5 grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-3 w-[120%] mx-auto -translate-x-[10%] md:translate-x-0 h-auto aspect-472/350 md:aspect-auto md:h-[600px] md:w-fit overflow-x-hidden">
           {/* Column 1 */}
           <div className="flex flex-col gap-1 md:gap-3 mb-8 md:mb-0">
             <ImageWrapper className="h-1/3">
@@ -165,7 +165,7 @@ const ImageWrapper = ({
   return (
     <div
       className={cn(
-        'relative aspect-305/295 w-full max-w-[151px] md:w-[244px] md:max-w-none 2xl:w-[305px] overflow-hidden rounded-3xl md:rounded-[50px]',
+        'relative aspect-305/295 w-full md:w-[244px] md:max-w-none 2xl:w-[305px] overflow-hidden rounded-3xl md:rounded-[50px]',
         className,
       )}
     >

@@ -5,7 +5,7 @@ import { Button } from './ui/Buttons';
 export function MetabolismSection() {
   return (
     <section className="relative w-full max-w-[75rem] mx-auto px-4">
-      <div className="bg-brand-cream grid items-center gap-10 md:grid-cols-2 p-5 rounded-3xl">
+      <div className="bg-accent-light grid items-center gap-10 md:grid-cols-2 p-5 rounded-3xl">
         <div className="grid grid-cols-2 gap-4 overflow-hidden">
           <div className="relative h-[25vh] w-full md:w-auto md:h-90 overflow-hidden rounded-2xl mt-8">
             <Image
@@ -26,7 +26,7 @@ export function MetabolismSection() {
         </div>
         <div>
           <div className="flex flex-col gap-6">
-            <h2 className="font-display text-5xl text-[2.75rem] md:text-5xl font-medium">
+            <h2 className="font-display text-5xl text-[2.25rem] md:text-[2.75rem] font-medium">
               We will fix your broken metabolism.
             </h2>
             <p className="text-gray-600 text-base md:text-lg">

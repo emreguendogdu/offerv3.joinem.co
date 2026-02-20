@@ -7,7 +7,7 @@ export function Header() {
     <header className="w-full">
       <div className="mx-auto flex max-w-[75rem] items-center justify-between">
         <Logo className="w-16 h-16" />
-        <Button variant="dark" className="bg-brand-dark hover:bg-black">
+        <Button variant="dark" className="bg-brand-dark hover:bg-black w-fit">
           Get Started
         </Button>
       </div>
