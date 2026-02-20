@@ -1,38 +1,43 @@
-import React from 'react';
+'use client';
+
 import Image from 'next/image';
 import { Button } from './ui/Buttons';
+import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
 
 export function Guarantee() {
+  const { ref: sectionRef, revealClassName } = useRevealOnInView<HTMLElement>();
+
   return (
-    <section className="bg-white py-24 px-4 overflow-hidden">
-      <div className="mx-auto max-w-[77.625rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden">
-        <div className="grid items-center md:gap-12 lg:grid-cols-2 relative z-10">
-          <div className="relative aspect-square w-full max-h-[23vh] mx-auto lg:mx-0 overflow-hidden rounded-[40px]">
+    <section
+      ref={sectionRef}
+      className={`bg-white py-24 px-4 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
+    >
+      <div className="mx-auto max-w-[58.75rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
+          <div className="relative aspect-square w-full max-h-[200px] mx-auto lg:mx-0 overflow-hidden rounded-[40px]">
             <Image
               src="/images/USsnYE6lbhf51vjxPNzwCQYGzsM.png"
               alt="Confident patient"
               fill
-              className="object-cover"
+              className="object-scale-down"
               priority
             />
           </div>
-          <div className="flex flex-col gap-4 md:gap-6">
-            <span className="text-[#FB923C] font-semibold text-sm md:text-lg text-center md:text-left">
-              TrimRx Guarantee
+          <div className="flex flex-col items-center justify-center gap-4">
+            <span className="text-primary font-semibold text-sm md:text-lg text-center md:text-left">
+              Embody Guarantee
             </span>
-            <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-semibold leading-[1.1] tracking-tight text-center md:text-left">
+            <h2 className="text-[#2F2A25] font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-center md:text-left">
               The only thing you&apos;ll <br />
               lose is extra weight.
             </h2>
-            <p className="text-[#2F2A25] text-base md:text-lg leading-[1.6] opacity-90 max-w-[480px] text-center md:text-left">
+            <p className="text-[#2F2A25] text-sm md:text-base leading-[1.6] opacity-90 max-w-[480px] text-center">
               We&apos;re so confident in our personalized program, we guarantee
               you&apos;ll lose weight or your money back. It&apos;s that simple.
             </p>
-            <div className="md:mt-4">
-              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-10 py-4 rounded-full font-bold text-xs text-[0.625rem] w-full md:w-auto md:text-sm tracking-widest uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
-                CONTINUE WITH CONFIDENCE
-              </Button>
-            </div>
+            <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-10 py-4 rounded-full font-bold text-xs text-[0.625rem] w-full md:w-auto md:text-sm tracking-widest uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
+              CONTINUE WITH CONFIDENCE
+            </Button>
           </div>
         </div>
       </div>

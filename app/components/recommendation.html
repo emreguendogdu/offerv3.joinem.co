@@ -1,0 +1,210 @@
+<style>
+  .product-recommendation-card {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    font-family:
+      'Helvetica',
+      system-ui,
+      -apple-system,
+      sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .product-recommendation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    max-width: 380px;
+  }
+
+  .product-recommendation-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.01em;
+    margin: 0;
+    background: linear-gradient(
+      90deg,
+      var(--color-primary) 0%,
+      var(--color-primary-light) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .product-recommendation-text {
+    font-size: 1rem;
+    line-height: 26px;
+    letter-spacing: -0.01em;
+    margin: 0;
+    font-weight: 500;
+    color: var(--color-foreground);
+  }
+
+  .product-recommendation-text .primary-text {
+    background: linear-gradient(
+      90deg,
+      var(--color-primary) 0%,
+      var(--color-primary-light) 50%,
+      var(--color-primary) 100%
+    );
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+
+    transition: background-position 0.3s ease-in-out;
+  }
+
+  .product-recommendation-text .primary-text:hover {
+    background-position: 100% 0%;
+    text-decoration: underline;
+    scale: 1.02;
+  }
+
+  .product-recommendation-text .capitalize {
+    text-transform: capitalize;
+    font-size: 1.125rem;
+  }
+
+  .product-recommendation-note {
+    font-size: 0.875rem;
+    line-height: 22px;
+    font-weight: 300;
+    margin: 0;
+    color: var(--color-foreground);
+  }
+
+  .product-recommendation-note-desktop {
+    display: none;
+  }
+
+  .product-recommendation-note-mobile {
+    display: block;
+    text-align: center;
+  }
+
+  .card-link {
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .product-recommendation-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .product-recommendation-image {
+    width: auto;
+    height: auto;
+    max-width: 162.5px;
+    max-height: 150px;
+    filter: drop-shadow(0 8px 24px rgba(200, 80, 70, 0.22));
+  }
+
+  @media (min-width: 640px) {
+    .product-recommendation-card {
+      flex-direction: row;
+      padding: 2.5rem;
+      padding-right: 5rem;
+    }
+
+    .product-recommendation-content {
+      text-align: left;
+    }
+
+    .product-recommendation-title {
+      font-size: 2rem;
+      line-height: 40px;
+    }
+
+    .product-recommendation-text {
+      font-size: 1.125rem;
+      line-height: 28px;
+    }
+
+    .product-recommendation-note {
+      font-size: 1rem;
+      line-height: 24px;
+    }
+
+    .product-recommendation-note-desktop {
+      display: block;
+    }
+
+    .product-recommendation-note-mobile {
+      display: none;
+    }
+
+    .product-recommendation-image-container {
+      flex-shrink: 0;
+    }
+
+    .product-recommendation-image {
+      max-width: 260px;
+      max-height: 240px;
+    }
+  }
+</style>
+
+<div class="product-recommendation-card">
+  <div class="product-recommendation-content">
+    <h3 class="product-recommendation-title">Our recommendation</h3>
+    <p class="product-recommendation-text">
+      Based on your intake form, we recommend
+      <span
+        class="primary-text card-link"
+        onclick="
+          event.preventDefault();
+          var el = document.getElementById('tirz-card');
+          if (el) {
+            var rect = el.getBoundingClientRect();
+            window.scrollTo({
+              top: window.pageYOffset + rect.top - 20,
+              behavior: 'smooth',
+            });
+          }
+        "
+      >
+        Tirzepatide Injections.</span
+      >
+      This is the most potent and effective option of all GLP-1 medications.
+    </p>
+    <p class="product-recommendation-note product-recommendation-note-desktop">
+      Note: you can choose whichever medication you prefer, regardless of our
+      recommendation
+    </p>
+  </div>
+
+  <div class="product-recommendation-image-container">
+    <img
+      class="product-recommendation-image"
+      src="https://assets.embeddables.com/inj_tirz1_6935886938295148.webp"
+      alt="Tirzepatide injections box"
+      width="260"
+      height="240"
+      aria-hidden="true"
+    />
+  </div>
+
+  <p class="product-recommendation-note product-recommendation-note-mobile">
+    Note: you can choose whichever medication you prefer, regardless of our
+    recommendation
+  </p>
+</div>

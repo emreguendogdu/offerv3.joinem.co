@@ -14,6 +14,7 @@ import { FAQ } from './components/FAQ';
 import { Guarantee } from './components/Guarantee';
 import { TeamGrid } from './components/TeamGrid';
 import { FeaturesGrid } from './components/FeaturesGrid';
+import { WeightLossGoalQuestion } from './components/WeightLossGoalQuestion';
 import { Footer } from './components/Footer';
 import { Testimonials } from './components/Testimonials';
 
@@ -40,6 +41,7 @@ export default function Home() {
       <FAQ />
       <Guarantee />
       <TeamGrid />
+      <WeightLossGoalQuestion />
       <FeaturesGrid />
       <Footer />
     </div>

@@ -1,5 +1,10 @@
+'use client';
+
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { BRAND } from '@/lib/brand';
+import Link from 'next/link';
+import { useAppendSearchParams } from '@/lib/hooks/useAppendSearchParams';
 
 export type ButtonVariant = 'dark' | 'orange';
 export type ButtonSize = 'sm' | 'md' | 'lg';
@@ -23,7 +28,7 @@ const sizeMap: Record<ButtonSize, string> = {
 };
 
 const baseStyles =
-  'inline-flex items-center justify-center rounded-full uppercase text-white transition-all w-full md:w-auto';
+  'inline-flex items-center justify-center rounded-full uppercase text-white transition-all w-full md:w-auto text-center';
 
 /**
  * Modern, scalable Button component built for the Embody design system.
@@ -36,15 +41,18 @@ export function Button({
   size = 'md',
   className,
   children,
+  href = BRAND.ctaUrl,
   ...props
 }: ButtonProps) {
+  const hrefWithQuery = useAppendSearchParams(href) || href;
+
   return (
-    <a
-      href="#"
+    <Link
+      href={hrefWithQuery}
       className={cn(baseStyles, variantMap[variant], sizeMap[size], className)}
       {...props}
     >
       {children}
-    </a>
+    </Link>
   );
 }

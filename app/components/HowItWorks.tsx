@@ -23,8 +23,8 @@ const STEPS = [
   {
     title: 'Receive your Rx',
     description:
-      'Your medication will be shipped directly to your door for maximum convenience. With TrimRx, starting your treatment is as simple as opening your package and following our easy-to-use instructions.',
-    img: 'CyWffU05zZuh5zYROmchHedwLUI.jpg',
+      'Your medication will be shipped directly to your door for maximum convenience. With Embody, starting your treatment is as simple as opening your package and following our easy-to-use instructions.',
+    img: 'assessment-3.webp',
     alt: 'Package delivery',
   },
 ];
@@ -103,10 +103,10 @@ export function HowItWorks() {
       <div className="mx-auto max-w-[77.625rem] flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
         <div className="flex flex-col gap-6 w-full lg:max-w-[420px]">
           <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[40px] font-medium leading-[1.1] md:tracking-tight">
-            Begin your weight loss journey with TrimRX.
+            Begin your weight loss journey with Embody.
           </h2>
-          <p className="leading-[1.6] text-[#2F2A25] text-base md:text-[17px] opacity-90">
-            Start your transformation today with TrimRx it&apos;s easy,
+          <p className="leading-[1.6] text-[#2F2A25] text-base md:text-lg opacity-90">
+            Start your transformation today with Embody it&apos;s easy,
             personalized process for accessing GLP-1 medications. Designed with
             your convenience in mind, our streamlined approach ensures
             you&apos;re supported every step of the way, from approval to
@@ -130,7 +130,7 @@ export function HowItWorks() {
           {/* Progress Line */}
           <div
             ref={lineRef}
-            className="absolute left-[32px] md:left-[40px] top-4 w-[1.5px] bg-[#FB923C]"
+            className="absolute left-[32px] md:left-[40px] top-4 w-[1.5px] bg-accent-dark"
             style={{ height: '0px' }}
           />
 
@@ -143,13 +143,15 @@ export function HowItWorks() {
               <div
                 className={cn(
                   'absolute -left-[76px] md:-left-[100px] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
-                  activeStep >= index ? 'border-[#FB923C]' : 'border-[#F1F5F9]',
+                  activeStep >= index
+                    ? 'border-accent-dark'
+                    : 'border-[#F1F5F9]',
                 )}
               >
                 <div
                   className={cn(
                     'w-2.5 h-2.5 rounded-full transition-colors duration-500',
-                    activeStep >= index ? 'bg-[#FB923C]' : 'bg-[#F1F5F9]',
+                    activeStep >= index ? 'bg-accent-dark' : 'bg-[#F1F5F9]',
                   )}
                 />
               </div>
@@ -158,7 +160,7 @@ export function HowItWorks() {
                   <h3 className="text-lg lg:text-[22px] font-semibold text-[#2F2A25] leading-tight mb-3">
                     {step.title}
                   </h3>
-                  <p className="leading-[1.6] text-[#2F2A25] text-base md:text-[17px] opacity-90">
+                  <p className="leading-[1.6] text-[#2F2A25] text-base md:text-lg opacity-90">
                     {step.description}
                   </p>
                 </div>

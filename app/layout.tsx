@@ -1,23 +1,23 @@
 import type { Metadata } from 'next';
-import { Red_Hat_Display, Red_Hat_Text } from 'next/font/google';
+import { Manrope, Sora } from 'next/font/google';
 import './globals.css';
 
-const redHatDisplay = Red_Hat_Display({
-  variable: '--font-red-hat-display',
+const sora = Sora({
+  variable: '--font-sora',
   subsets: ['latin'],
-  weight: ['400', '500', '700', '900'],
+  weight: ['400', '500', '600', '700'],
 });
 
-const redHatText = Red_Hat_Text({
-  variable: '--font-red-hat-text',
+const manrope = Manrope({
+  variable: '--font-manrope',
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
-  title: 'Personalized Weight Loss Programs That Work | TrimRX',
+  title: 'Personalized Weight Loss Programs That Work | Embody',
   description:
-    'Start your weight loss journey with TrimRX. FDA-regulated GLP-1 medications, licensed providers, no insurance required. Starting at $149/month.',
+    'Start your weight loss journey with Embody. FDA-regulated GLP-1 medications, licensed providers, no insurance required. Starting at $149/month.',
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${redHatDisplay.variable} ${redHatText.variable} antialiased`}
+        className={`${sora.variable} ${manrope.variable} antialiased`}
       >
         {children}
       </body>

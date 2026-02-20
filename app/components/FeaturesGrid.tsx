@@ -1,6 +1,6 @@
 const FEATURES = [
   {
-    title: 'TrimRx money back guarantee',
+    title: 'Embody money back guarantee',
     icon: (
       <svg
         width="36"

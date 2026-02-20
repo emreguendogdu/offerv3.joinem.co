@@ -9,12 +9,12 @@ export function SupportSection() {
           <div className="flex flex-col gap-6">
             <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[40px] leading-[1.1] md:tracking-tight">
               Unlimited 24/7 support <br />
-              <strong className="text-[#FB923C]">included.</strong>
+              <strong className="text-primary">included.</strong>
             </h2>
-            <p className="text-[#2F2A25] text-base md:text-[17px] leading-[1.6] opacity-90 max-w-[480px]">
-              TrimRx provides 24/7 access to a dedicated team of specialists,
+            <p className="text-[#2F2A25] text-base md:text-lg leading-[1.6] opacity-90 max-w-[480px]">
+              Embody provides 24/7 access to a dedicated team of specialists,
               ensuring you have the support you need{' '}
-              <span className="text-[#FB923C]">around the clock</span>. With
+              <span className="text-primary">around the clock</span>. With
               unlimited appointments, messaging and support, you can confidently
               reach out for guidance, ask questions, or address concerns at any
               time.

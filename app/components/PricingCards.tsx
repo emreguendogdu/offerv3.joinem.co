@@ -16,7 +16,7 @@ const PRICING_CONFIG: PricingCard[] = [
   {
     id: 'semaglutide',
     badge: 'In Stock',
-    imageSrc: '/images/1s3iVupz6x0QUBqFUosk3669sc.png',
+    imageSrc: '/images/products/inj_sema.webp',
     imageAlt: 'Semaglutide vial',
     title: 'GLP-1 Injections',
     description: 'One simple injection per week.',
@@ -26,11 +26,11 @@ const PRICING_CONFIG: PricingCard[] = [
   {
     id: 'tirzepatide',
     badge: 'In Stock',
-    imageSrc: '/images/1s3iVupz6x0QUBqFUosk3669sc.png',
+    imageSrc: '/images/products/inj_tirz.webp',
     imageAlt: 'Tirzepatide vial',
-    title: 'GLP-1 Injections',
+    title: 'GLP-1 + GIP Injections',
     description: 'One simple injection per week.',
-    price: '$149',
+    price: '$199',
     buttonText: 'Get Started',
   },
 ];
@@ -41,12 +41,12 @@ export function PricingCards() {
       <h2 className="font-display text-[30px] font-medium leading-[1.25] text-black">
         Trusted by experts.
         <br />
-        <span className="font-black text-brand-orange">priced for you.</span>
+        <span className="font-black text-primary">priced for you.</span>
       </h2>
       <p className="mt-4 font-display text-base leading-[1.4] text-black">
         Find the right GLP-1 medication with the confidence that comes from
         knowing it is{' '}
-        <span className="text-brand-orange font-bold">doctor-approved</span>.
+        <span className="text-primary font-bold">doctor-approved</span>.
       </p>
       {/* Hide scrollbar */}
       <div className="mt-10 mx-auto max-w-[52.75rem] flex gap-4 md:gap-6 overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">

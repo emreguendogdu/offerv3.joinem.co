@@ -66,7 +66,7 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="font-display text-4xl font-extrabold leading-none text-[2.8125rem] md:text-5xl text-center h-[65px] md:h-auto">
-            Lose <span className="text-primary">1–2lbs</span> per week!
+            Lose <span className="text-primary">1–2 lbs</span> per week!
           </h1>
 
           {/* Sub-headline */}

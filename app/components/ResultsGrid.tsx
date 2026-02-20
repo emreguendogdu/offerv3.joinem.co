@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { Check } from './ui/Icons';
 import { cn } from '@/lib/utils';
+import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
 
 const PATIENTS = [
   { src: 'cuZhgpBjeSSAKoMvYFHYO1l4.jpg', alt: 'Patient 1' },
@@ -13,8 +16,18 @@ const PATIENTS = [
   { src: 'eKEZ1mlvVbuQYZZFRP2HGWM52Y.png', alt: 'Patient 7' },
   { src: '6EcuoAeEA3spcOOzKTuXbA5UHAg.jpg', alt: 'Patient 8' },
 ];
+const STAT_BADGES = [
+  '6x more weight loss than exercise and diet alone',
+  'Lose an average of 18% of your body weight',
+  '93% kept the weight off for good',
+];
+const BADGE_DELAY_STEP_MS = 140;
+const FOOTNOTE_DELAY_MS = STAT_BADGES.length * BADGE_DELAY_STEP_MS + 120;
 
 export function ResultsGrid() {
+  const { ref: footnoteRef, revealClassName: footnoteRevealClassName } =
+    useRevealOnInView<HTMLDivElement>();
+
   return (
     <section className="bg-white py-16">
       <div className="mx-auto max-w-[81rem] px-4 text-left md:text-center">
@@ -24,13 +37,13 @@ export function ResultsGrid() {
           </h2>
           <p className="text-left md:text-center text-lg">
             Join the over{' '}
-            <span className="text-primary font-bold">100,000</span> TrimRx
+            <span className="text-primary font-bold">100,000</span> Embody
             patients and we&apos;ll help you finally get real, lasting results.
           </p>
         </div>
         {/* People photo grid */}
 
-        <div className="mt-10 mb-13.5 grid grid-cols-4 gap-3 h-[600px] w-fit overflow-hidden">
+        <div className="mt-10 mb-13.5 grid grid-cols-4 gap-3 h-[600px] w-fit overflow-hidden mx-auto">
           {/* Column 1 */}
           <div className="flex flex-col gap-3">
             <ImageWrapper className="h-1/3">
@@ -105,33 +118,39 @@ export function ResultsGrid() {
         {/* 3 stat badges */}
         <div className="flex flex-col w-fit gap-5 mx-auto">
           <div className="mt-10 flex flex-wrap items-center justify-start md:justify-center gap-6">
-            <div className="flex items-center gap-2">
-              <Check />
-              <span className="text-lg">
-                6x more weight loss than exercise and diet alone
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check />
-              <span className="text-lg">
-                Lose an average of 18% of your body weight
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Check />
-              <span className="text-lg">93% kept the weight off for good</span>
-            </div>
+            {STAT_BADGES.map((badge, index) => (
+              <StatBadge key={badge} text={badge} index={index} />
+            ))}
           </div>
           {/* Text */}
-          <div className="flex w-full items-start">
+          <div
+            ref={footnoteRef}
+            style={{ transitionDelay: `${FOOTNOTE_DELAY_MS}ms` }}
+            className={`flex w-full items-start transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${footnoteRevealClassName}`}
+          >
             <p className="text-xs text-[#38312C]">
-              * Data based on TrimRx patients over their first 6 months of
+              * Data based on Embody patients over their first 6 months of
               treatment
             </p>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function StatBadge({ text, index }: { text: string; index: number }) {
+  const { ref: badgeRef, revealClassName } = useRevealOnInView<HTMLDivElement>();
+
+  return (
+    <div
+      ref={badgeRef}
+      style={{ transitionDelay: `${index * BADGE_DELAY_STEP_MS}ms` }}
+      className={`flex items-center gap-2 transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
+    >
+      <Check />
+      <span className="text-lg">{text}</span>
+    </div>
   );
 }
 

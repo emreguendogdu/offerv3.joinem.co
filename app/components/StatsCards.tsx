@@ -14,12 +14,12 @@ const STATS = [
 export function StatsCards() {
   return (
     <section className="bg-white py-16 md:text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 md:items-center md:justify-center">
-      <h2 className="font-display text-2x text-[2rem] md:text-[2.75rem]">
-        Why are so many patients signing up for TrimRX?{' '}
+      <h2 className="font-display text-2x text-[2rem] md:text-[2.75rem] max-w-[52.5rem] mx-auto">
+        Why are so many patients signing up for Embody?{' '}
         <strong className=" text-primary">It works.</strong>
       </h2>
       <p className="text-gray-600 text-lg">
-        On average, patients in the TrimRx program lose 15-20% of their body
+        On average, patients in the Embody program lose 15-20% of their body
         weight.
       </p>
 
@@ -27,11 +27,11 @@ export function StatsCards() {
         {STATS.map((stat) => (
           <div
             key={stat.label}
-            className="bg-brand-peach p-3 md:p-6 flex md:flex-col justify-between items-center md:justify-center text-center rounded-3xl"
+            className="bg-accent-light p-3 md:p-6 flex md:flex-col justify-between items-center md:justify-center text-center rounded-3xl"
           >
             <p className="font-text text-[42px] md:text-[72px] font-bold text-brand-dark leading-tight md:leading-[108px] w-[40%] md:w-auto text-left md:text-center">
               {stat.value}
-              <span className="font-normal text-brand-orange">{stat.unit}</span>
+              <span className="font-normal text-primary">{stat.unit}</span>
             </p>
             <p className="mt-2 text-xs md:text-sm text-gray-600 max-w-[180px] w-[60%] md:w-auto">
               {stat.label}

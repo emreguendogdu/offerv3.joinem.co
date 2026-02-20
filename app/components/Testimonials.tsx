@@ -1,10 +1,20 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { Stars, Check } from './ui/Icons';
 import { Button } from './ui/Buttons';
 import { cn } from '@/lib/utils';
+import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
+
+const QUOTE_HIDDEN_CLASS =
+  'opacity-0 translate-y-[150px] motion-reduce:opacity-10 motion-reduce:translate-y-0';
+const QUOTE_VISIBLE_CLASS = 'opacity-10 translate-y-0';
 
 export function Testimonials() {
+  const { ref: bigTestimonialRef, revealClassName: bigTestimonialRevealClass } =
+    useRevealOnInView<HTMLDivElement>();
+
   return (
     <section className="bg-white pt-16 px-4">
       <div className="mx-auto max-w-[75rem]">
@@ -18,7 +28,7 @@ export function Testimonials() {
               be{' '}
               <strong className="font-bold text-primary">life-changing</strong>{' '}
               and improves mood, sleep, energy and longevity. Photos,
-              testimonials and results are from TrimRX patients.
+              testimonials and results are from Embody patients.
             </p>
             <div className="mt-5">
               <Button
@@ -32,31 +42,38 @@ export function Testimonials() {
         </div>
 
         {/* Big testimonial */}
-        <div className="pt-50 text-center w-fit mx-auto">
+        <div
+          ref={bigTestimonialRef}
+          className={`pt-50 text-center w-fit mx-auto transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${bigTestimonialRevealClass}`}
+        >
           <p className=" text-gray-500">10,000+ Patients Agree</p>
           <div className="mt-2 flex justify-center">
             <Stars starClassName="w-12 h-18 text-[#E1CAA0]" />
           </div>
           <h3 className="mt-4 font-display text-3xl text-[2rem] md:text-4xl">
             &ldquo;When nothing else worked,{' '}
-            <strong className="text-primary">TrimRx did</strong>
+            <strong className="text-primary">Embody did</strong>
             &rdquo;
           </h3>
           <div className="mt-2 text-sm flex items-center justify-center md:justify-end gap-1.5  text-gray-500">
-            <Check /> Verified TrimRx Customer
+            <Check /> Verified Embody Customer
           </div>
         </div>
 
         {/* Floating testimonials around vial */}
         <div className="relative flex items-center justify-center pt-20 pb-10 h-full min-h-[500px] md:min-h-[700px] overflow-visible">
           {/* Center vial */}
-          <div className="relative z-10 h-[350px] w-[220px] md:h-full md:w-[440px] animate-float aspect-[732/1096]">
-            <Image
-              src="/images/oVR6o9ucEhQOGyxqILvggd8TuAc.png"
-              alt="TrimRX GLP-1+GIP vial"
-              fill
-              className="object-contain"
-            />
+          <div className="relative z-10 h-[350px] w-[220px] md:h-full md:w-[440px] aspect-[732/1096] [perspective:1200px] -translate-x-[12.5%]">
+            <div className="relative h-full w-full transform-gpu origin-bottom [transform:rotateZ(10deg)_rotateY(-4deg)] md:[transform:rotateZ(10deg)_rotateY(-5deg)]">
+              <div className="relative h-full w-full animate-float">
+                <Image
+                  src="/images/products/inj_tirz.webp"
+                  alt="Embody GLP-1+GIP Tirzepatide vial"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
 
           {/* Floating quotes */}
@@ -76,6 +93,7 @@ export function Testimonials() {
                 </>
               }
               className="top-[30%] left-[17%] md:max-w-[520px]"
+              delayMs={110}
             />
             <TestimonialItem
               align="right"
@@ -122,17 +140,27 @@ interface TestimonialItemProps {
   text: React.ReactNode;
   className?: string;
   align?: 'left' | 'right' | 'center';
+  delayMs?: number;
 }
 
 const TestimonialItem = ({
   text,
   className,
   align = 'left',
+  delayMs = 0,
 }: TestimonialItemProps) => {
+  const { ref: itemRef, revealClassName } = useRevealOnInView<HTMLDivElement>({
+    hiddenClassName: QUOTE_HIDDEN_CLASS,
+    visibleClassName: QUOTE_VISIBLE_CLASS,
+  });
+
   return (
     <div
+      ref={itemRef}
+      style={{ transitionDelay: `${delayMs}ms` }}
       className={cn(
-        'absolute max-w-[240px] md:max-w-[360px] opacity-10',
+        'absolute max-w-[240px] md:max-w-[360px] transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none',
+        revealClassName,
         align === 'left'
           ? 'text-left'
           : align === 'center'
@@ -158,7 +186,7 @@ const TestimonialItem = ({
                 : null,
         )}
       >
-        <Check className="w-4 h-4 md:w-5 md:h-5" /> Verified TrimRx Customer
+        <Check className="w-4 h-4 md:w-5 md:h-5" /> Verified Embody Customer
       </p>
     </div>
   );

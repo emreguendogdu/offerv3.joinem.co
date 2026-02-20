@@ -1,10 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button } from './ui/Buttons';
+import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
 
 export function WeightLossCalculator() {
   const [weight, setWeight] = useState(200);
+  const { ref: sectionRef, revealClassName } =
+    useRevealOnInView<HTMLElement>();
 
   const minWeight = 140;
   const maxWeight = 400;
@@ -14,7 +17,10 @@ export function WeightLossCalculator() {
   const percentage = ((weight - minWeight) / (maxWeight - minWeight)) * 100;
 
   return (
-    <section className="bg-white pt-5 pb-16 px-4 max-w-315 mx-auto md:px-7.5 md:pt-6.25">
+    <section
+      ref={sectionRef}
+      className={`bg-white pt-5 pb-16 px-4 max-w-315 mx-auto md:px-7.5 md:pt-6.25 transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
+    >
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left */}
         <div className="w-full md:w-[40%]">
@@ -47,17 +53,17 @@ export function WeightLossCalculator() {
 
           <div className="relative mt-6 h-7 w-full">
             {/* Range Track Background */}
-            <div className="absolute top-1/2 h-2 w-full -translate-y-1/2 rounded-[200px] bg-[#D4D4D4]" />
+            <div className="absolute top-1/2 h-2 w-full -translate-y-1/2 rounded-[200px] bg-[hsl(0,0%,90%)]" />
 
             {/* Range Progress Bar */}
             <div
-              className="absolute top-1/2 h-2 -translate-y-1/2 rounded-[200px] bg-[#C6A673]"
+              className="absolute top-1/2 h-2 -translate-y-1/2 rounded-[200px] bg-accent"
               style={{ width: `${percentage}%` }}
             />
 
             {/* Range Thumb Handle */}
             <div
-              className="pointer-events-none absolute top-1/2 z-10 h-7 w-7 -translate-y-1/2 rounded-full border-[5px] border-[#C6A673] bg-white shadow-[0_0_4px_0_#E4D8D8]"
+              className="pointer-events-none absolute top-1/2 z-10 h-7 w-7 -translate-y-1/2 rounded-full border-[5px] border-accent bg-white shadow-[0_0_4px_0_#E4D8D8]"
               style={{ left: `calc(${percentage}% - 14px)` }}
             />
 

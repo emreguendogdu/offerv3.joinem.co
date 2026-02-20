@@ -1,23 +1,31 @@
 @import 'tailwindcss';
 
+:root {
+  --foreground: #223d70;
+}
+
 @theme inline {
-  --font-display: var(--font-red-hat-display);
-  --font-text: var(--font-red-hat-text);
+  --font-display: var(--font-sora);
+  --font-text: var(--font-manrope);
 
-  --color-brand-orange: #fb923c;
-  --color-brand-green: #779d7c;
-  --color-brand-dark: #2c2320;
-  --color-brand-brown: #3b332f;
-  --color-brand-cream: #faf8f5;
-  --color-brand-light: #f5f0eb;
-  --color-brand-peach: #fee0c8;
-  --color-brand-blue-light: #f0f4f8;
-  --color-brand-blue: #4a90b8;
+  --color-brand-orange: #f59e0b;
+  --color-brand-green: #2f8f7b;
+  --color-brand-dark: #0f172a;
+  --color-brand-brown: #1f2937;
+  --color-brand-cream: #f7f9fc;
+  --color-brand-light: #eef2f7;
+  --color-brand-peach: #dbeafe;
+  --color-brand-blue-light: #eff6ff;
+  --color-brand-blue: #2563eb;
 
-  --color-primary: #2e7c77;
-  --color-secondary: #223d71;
-  --color-accent: #d1eeed;
-  --color-foreground: #223d71;
+  --color-bg-secondary: #e4ddd4;
+
+  --color-primary: hsl(175, 46%, 34%);
+  --color-secondary: var(--foreground);
+  --color-accent: hsl(178, 46%, 87.6%);
+  --color-accent-dark: hsl(178, 45%, 65%);
+  --color-accent-light: hsl(178, 46%, 95%);
+  --color-foreground: var(--foreground);
 
   --animate-float: float 3s ease-in-out infinite;
 
@@ -33,8 +41,8 @@
 }
 
 body {
-  font-family: var(--font-text), 'Red Hat Text', Arial, sans-serif;
-  color: #2c2320;
+  font-family: var(--font-text), 'Manrope', Arial, sans-serif;
+  color: var(--foreground);
   background: #ffffff;
 }
 
@@ -71,10 +79,6 @@ body {
   width: max-content;
   animation: scroll var(--marquee-duration, 80s) linear infinite;
   will-change: transform;
-}
-
-.logo-ticker:hover {
-  animation-play-state: paused;
 }
 
 @media (max-width: 768px) {

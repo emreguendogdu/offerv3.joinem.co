@@ -6,8 +6,23 @@ import { Marquee } from './ui/Marquee';
 
 // ... (imports remain)
 
+type ImageItem = {
+  type: 'image';
+  src: string;
+  alt?: string;
+};
+
+type ReviewItem = {
+  type: 'review';
+  name: string;
+  avatar?: string;
+  text: string;
+};
+
+type MarqueeContentItem = ImageItem | ReviewItem;
+
 export function ReviewsSection() {
-  const topMarquee = [
+  const topMarquee: MarqueeContentItem[] = [
     {
       type: 'image',
       src: 'https://framerusercontent.com/images/PXqJ2sfwTMLRdk9LZr7XAMQinYc.png',
@@ -46,7 +61,7 @@ export function ReviewsSection() {
     },
   ];
 
-  const botMarquee = [
+  const botMarquee: MarqueeContentItem[] = [
     {
       type: 'review',
       name: 'Lou-Ann T.',
@@ -89,13 +104,13 @@ export function ReviewsSection() {
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
           <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
             There&apos;s a reason people are{' '}
-            <span className="text-[#FB923C]">raving about us.</span>
+            <span className="text-primary">raving about us.</span>
           </h2>
           <div className="flex flex-col gap-6 lg:max-w-[420px]">
-            <p className="text-[#2F2A25] text-base md:text-[17px] leading-[1.6] opacity-90">
-              Join the thousands of people who have trusted TrimRx to help
+            <p className="text-[#2F2A25] text-base md:text-lg leading-[1.6] opacity-90">
+              Join the thousands of people who have trusted Embody to help
               change their lives, achieving significant,{' '}
-              <span className="text-[#FB923C] font-semibold">
+              <span className="text-primary font-semibold">
                 lasting weight loss
               </span>
               .
@@ -109,48 +124,29 @@ export function ReviewsSection() {
         </div>
       </div>
 
-      {/* Grid Layout for Desktop */}
-      <div className="hidden lg:grid grid-cols-4 gap-4 mx-auto max-w-[77.625rem] px-4 h-[600px]">
-        {/* Column 1: Top smaller (Review), Bottom larger (Image) */}
-        <div className="flex flex-col gap-4 h-full">
-          <MarqueeItem item={topMarquee[1]} className="h-[25%] w-full" />
-          <MarqueeItem item={topMarquee[0]} className="h-[75%] w-full" />
-        </div>
-
-        {/* Column 2: Contains 5th Image (Result 5) */}
-        <div className="flex flex-col gap-4 h-full">
-          <MarqueeItem item={topMarquee[3]} className="h-[50%] w-full" />
-          <MarqueeItem item={botMarquee[3]} className="h-[50%] w-full" />
-        </div>
-
-        {/* Column 3: 4th Image (Result 4), Single Item */}
-        <div className="h-full">
-          <MarqueeItem item={botMarquee[1]} className="h-full w-full" />
-        </div>
-
-        {/* Column 4: Top larger (Image), Bottom smaller (Review) */}
-        <div className="flex flex-col gap-4 h-full">
-          <MarqueeItem item={topMarquee[2]} className="h-[75%] w-full" />
-          <MarqueeItem item={topMarquee[5]} className="h-[25%] w-full" />
-        </div>
-      </div>
-
-      {/* Marquee Layout for Mobile/Tablet */}
-      <div className="flex flex-col gap-6 w-full lg:hidden">
+      {/* Marquee Layout for All Breakpoints */}
+      <div
+        className="flex w-full flex-col gap-6 px-4 lg:px-0"
+        style={{
+          maskImage:
+            'linear-gradient(to right, transparent, black 12.5%, black 87.5%, transparent)',
+          WebkitMaskImage:
+            'linear-gradient(to right, transparent, black 12.5%, black 87.5%, transparent)',
+        }}
+      >
         {/* Top Marquee */}
-        <Marquee pauseOnHover className="[--duration:60s]" duration="60s">
+        <Marquee className="[--duration:60s]" duration="60s">
           {topMarquee.map((item, index) => (
-            <MarqueeItem key={`top-${index}`} item={item} />
+            <MarqueeItem
+              key={`top-${index}`}
+              item={item}
+              reviewBgClass="bg-[#FFF4E6]"
+            />
           ))}
         </Marquee>
 
         {/* Bottom Marquee */}
-        <Marquee
-          reverse
-          pauseOnHover
-          className="[--duration:60s]"
-          duration="60s"
-        >
+        <Marquee reverse className="[--duration:60s]" duration="60s">
           {botMarquee.map((item, index) => (
             <MarqueeItem key={`bot-${index}`} item={item} />
           ))}
@@ -160,8 +156,18 @@ export function ReviewsSection() {
   );
 }
 
-function MarqueeItem({ item, className }: { item: any; className?: string }) {
-  const sizeClasses = className ? '' : 'h-[220px] w-[384px]';
+function MarqueeItem({
+  item,
+  className,
+  reviewBgClass = 'bg-[#F8F9FA]',
+}: {
+  item: MarqueeContentItem;
+  className?: string;
+  reviewBgClass?: string;
+}) {
+  const sizeClasses = className
+    ? ''
+    : 'h-[200px] w-[290px] md:h-[220px] md:w-[340px] lg:h-[260px] lg:w-[400px]';
 
   if (item.type === 'image') {
     return (
@@ -180,7 +186,7 @@ function MarqueeItem({ item, className }: { item: any; className?: string }) {
 
   return (
     <div
-      className={`bg-[#F8F9FA] rounded-[24px] p-8 flex flex-col gap-6 shrink-0 justify-between ${sizeClasses} ${className || ''}`}
+      className={`${reviewBgClass} rounded-[24px] p-8 flex flex-col gap-6 shrink-0 justify-between ${sizeClasses} ${className || ''}`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">

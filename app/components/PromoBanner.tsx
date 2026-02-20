@@ -43,14 +43,14 @@ export function PromoBanner() {
           <div className="flex items-center gap-2">
             <DiscountIcon className="w-6 h-6" />
             <span className="text-base font-bold text-white">
-              Limited Time: $140 OFF
+              Limited Time: 50% OFF
             </span>
           </div>
 
           {/* Secondary Badge/Info */}
           <div className="flex items-center gap-2 rounded-full bg-linear-to-r from-primary to-secondary px-4 py-2 shadow-lg shadow-black/20">
             <span className=" font-black text-white uppercase leading-none">
-              $140 OFF
+              50% OFF
             </span>
             <span className=" font-medium text-white/90 leading-none">
               all weight loss plans
