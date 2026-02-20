@@ -1,13 +1,24 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { useSyncExternalStore } from 'react';
+
+function subscribe() {
+  return () => {};
+}
+
+function getSnapshot() {
+  return window.location.search.replace(/^\?/, '');
+}
+
+function getServerSnapshot() {
+  return '';
+}
 
 export function useAppendSearchParams(href?: string) {
-  const searchParams = useSearchParams();
+  const currentQuery = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   if (!href) return href;
 
-  const currentQuery = searchParams.toString();
   if (!currentQuery) return href;
 
   const [hrefWithoutHash, hash = ''] = href.split('#');

@@ -13,7 +13,7 @@ export function Guarantee() {
       className={`bg-white py-24 px-4 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
     >
       <div className="mx-auto max-w-[58.75rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-full max-w-[40rem]">
           <div className="relative aspect-square w-full max-h-[200px] mx-auto lg:mx-0 overflow-hidden rounded-[40px]">
             <Image
               src="/images/USsnYE6lbhf51vjxPNzwCQYGzsM.png"
@@ -31,11 +31,11 @@ export function Guarantee() {
               The only thing you&apos;ll <br />
               lose is extra weight.
             </h2>
-            <p className="text-[#2F2A25] text-sm md:text-base leading-[1.6] opacity-90 max-w-[480px] text-center">
+            <p className="text-[#2F2A25] text-sm md:text-base leading-[1.6] opacity-90 text-center tracking-[-0.32px]">
               We&apos;re so confident in our personalized program, we guarantee
               you&apos;ll lose weight or your money back. It&apos;s that simple.
             </p>
-            <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-10 py-4 rounded-full font-bold text-xs text-[0.625rem] w-full md:w-auto md:text-sm tracking-widest uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
+            <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-10 py-4 rounded-full font-bold text-xs text-[0.625rem] w-full md:w-auto md:text-xs tracking-[1.2px] uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
               CONTINUE WITH CONFIDENCE
             </Button>
           </div>
