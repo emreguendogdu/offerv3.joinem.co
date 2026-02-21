@@ -49,7 +49,7 @@ export function PricingCards() {
         <span className="text-primary font-bold">doctor-approved</span>.
       </p>
       {/* Horizontal scroll on narrow viewports */}
-      <div className="mt-10 w-full md:mx-auto md:max-w-[52.75rem] overflow-x-auto overflow-y-hidden overscroll-x-contain touch-pan-x [-webkit-overflow-scrolling:touch] pb-2 ">
+      <div className="mt-10 w-full md:mx-auto md:max-w-[52.75rem] overflow-x-auto overflow-y-hidden overscroll-x-contain touch-pan-x [-webkit-overflow-scrolling:touch] pb-2 no-scrollbar">
         <div className="flex w-max gap-4 md:gap-6">
           {PRICING_CONFIG.map((card) => (
             <div

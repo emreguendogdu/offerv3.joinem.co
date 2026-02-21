@@ -131,15 +131,15 @@ export function HowItWorks() {
         {/* Timeline */}
         <div
           ref={containerRef}
-          className="relative flex-1 space-y-16 pl-24 md:pl-32"
+          className="relative flex-1 space-y-16 pl-13 md:pl-32"
         >
           {/* Track Line */}
-          <div className="absolute left-[2rem] md:left-[2.5rem] top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
 
+          <div className="absolute left-[0.75rem] md:left-[2.5rem] top-0 md:top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
           {/* Progress Line */}
           <div
             ref={lineRef}
-            className="absolute left-[2rem] md:left-[2.5rem] top-4 w-[1.5px] bg-accent-dark"
+            className="absolute left-[0.75rem] md:left-[2.5rem] top-0 md:top-4 w-[1.5px] bg-accent-dark"
             style={{ height: '0px' }}
           />
 
@@ -151,7 +151,7 @@ export function HowItWorks() {
             >
               <div
                 className={cn(
-                  'absolute -left-[4.75rem] md:-left-[6.25rem] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
+                  'absolute -left-[3.25rem] md:-left-[6.25rem] top-0 md:top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
                   activeStep >= index
                     ? 'border-accent-dark'
                     : 'border-[#F1F5F9]',

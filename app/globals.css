@@ -142,3 +142,15 @@ input[type='range']::-webkit-slider-thumb {
     font-weight: 700;
   }
 }
+
+@layer components {
+  /* globals.css */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE + Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
