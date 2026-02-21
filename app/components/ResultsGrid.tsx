@@ -10,10 +10,10 @@ const PATIENTS = [
   { src: 'cuZhgpBjeSSAKoMvYFHYO1l4.jpg', alt: 'Patient 1' },
   { src: 'NQqOmeOq8ThEBIlN3sKga1O7QQ0.jpg', alt: 'Patient 2' },
   { src: 'slE7NDw3RqftarmJJbMWWCs0to.jpg', alt: 'Patient 3' },
-  { src: 'N51YbqCRIIzwwYPH36B7N9lcGUo.jpg', alt: 'Patient 4' },
+  { src: 'reviews/N51YbqCRIIzwwYPH36B7N9lcGUo.jpg', alt: 'Patient 4' },
   { src: 'mWUMueuLzdw3Ay1FvGSNFxHaWLs.jpg', alt: 'Patient 5' },
   { src: 'RBa6kItPw3GCYCh5RaBEaw8IA.jpg', alt: 'Patient 6' },
-  { src: 'eKEZ1mlvVbuQYZZFRP2HGWM52Y.png', alt: 'Patient 7' },
+  { src: 'reviews/eKEZ1mlvVbuQYZZFRP2HGWM52Y.png', alt: 'Patient 7' },
   { src: '6EcuoAeEA3spcOOzKTuXbA5UHAg.jpg', alt: 'Patient 8' },
 ];
 const STAT_BADGES = [

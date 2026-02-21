@@ -33,8 +33,7 @@ export function ReviewsSection() {
       type: 'review',
       name: 'Lauren M.',
       location: 'Scottsdale, AZ',
-      avatar:
-        '/images/reviews/YKzoGJpfFFf1BdjjaSowMezQ8.png',
+      avatar: '/images/reviews/YKzoGJpfFFf1BdjjaSowMezQ8.png',
       text: "I've tried every diet and workout plan out there, but nothing stuck. With Embody, I'm down 37 lbs and for the first time, I don't feel like I'm fighting my own body.",
     },
     {
@@ -46,8 +45,7 @@ export function ReviewsSection() {
       type: 'review',
       name: 'Nicole S.',
       location: 'Tampa, FL',
-      avatar:
-        '/images/reviews/AD7wBSbBjaoJEY2kpZy640pME.png',
+      avatar: '/images/reviews/AD7wBSbBjaoJEY2kpZy640pME.png',
       text: "I was nervous to start GLP-1s online, but the process was so simple and the doctor support has been amazing. I'm already down 42 lbs in 4 months.",
     },
     {
@@ -59,8 +57,7 @@ export function ReviewsSection() {
       type: 'review',
       name: 'Danielle R.',
       location: 'Nashville, TN',
-      avatar:
-        '/images/reviews/LJga7ZjWTOSDuC5dyBzOgGSZYfs.png',
+      avatar: '/images/reviews/LJga7ZjWTOSDuC5dyBzOgGSZYfs.png',
       text: "Life Changing. The constant food cravings are finally gone. I feel in control again and I'm down 61 pounds since getting started.",
     },
   ];
@@ -70,6 +67,7 @@ export function ReviewsSection() {
       type: 'review',
       name: 'Erin T.',
       location: 'Denver, CO',
+      avatar: '/images/reviews/N51YbqCRIIzwwYPH36B7N9lcGUo.jpg',
       text: "I completed the intake in just a few minutes and had my medication delivered to my door the same week. I'm down 38 lbs and still going... Embody made it truly easy and was so affordable",
     },
     {
@@ -81,8 +79,7 @@ export function ReviewsSection() {
       type: 'review',
       name: 'Tim H.',
       location: 'Austin, TX',
-      avatar:
-        '/images/reviews/8jMaqpfuydUeRcai6qscNossfPY.png',
+      avatar: '/images/reviews/8jMaqpfuydUeRcai6qscNossfPY.png',
       text: "I've lost over 50 pounds so far and my energy levels are higher than they've been in years. I only wish I started sooner.",
     },
     {
@@ -94,8 +91,7 @@ export function ReviewsSection() {
       type: 'review',
       name: 'Ashley C.',
       location: 'Charlotte, NC',
-      avatar:
-        '/images/reviews/qYFgJk4MbvlC8LvC0cove7Yoi84.png',
+      avatar: '/images/reviews/qYFgJk4MbvlC8LvC0cove7Yoi84.png',
       text: "I tried to do it on my own for years. Having a provider guide me through this process made all the difference. I'm down 42 lbs.",
     },
     {
@@ -107,8 +103,8 @@ export function ReviewsSection() {
 
   return (
     <section className="bg-white py-24 overflow-hidden">
-      <div className="mx-auto max-w-[77.625rem] px-4 mb-16">
-        <div className="flex flex-col lg:flex-row justify-between items-start gap-8">
+      <div className="mx-auto max-w-[77.625rem] mb-16">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
           <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
             There&apos;s a reason people are{' '}
             <span className="text-primary">raving about us.</span>
@@ -133,7 +129,7 @@ export function ReviewsSection() {
 
       {/* Marquee Layout for All Breakpoints */}
       <div
-        className="flex w-full flex-col gap-6 px-4 lg:px-0"
+        className="flex w-full flex-col gap-6"
         style={{
           maskImage:
             'linear-gradient(to right, transparent, black 12.5%, black 87.5%, transparent)',
