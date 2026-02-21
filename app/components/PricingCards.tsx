@@ -37,7 +37,7 @@ const PRICING_CONFIG: PricingCard[] = [
 
 export function PricingCards() {
   return (
-    <section className="bg-white md:mx-auto md:max-w-[78.75rem] px-4 md:text-center overflow-hidden">
+    <section className="bg-white md:mx-auto md:max-w-[78.75rem] px-4 text-center overflow-hidden">
       <h2 className="font-display text-[1.875rem] font-medium leading-[1.25] text-black">
         Trusted by experts.
         <br />

@@ -28,8 +28,9 @@ export default function Home() {
         <Hero />
       </div>
 
-      <main className="flex flex-col gap-16 md:gap-40">
-        <LogoBar />
+      <LogoBar />
+
+      <main className="flex flex-col gap-16 md:gap-26 pt-10">
         <PricingCards />
         <Testimonials />
         <WeightLossCalculator />
