@@ -14,10 +14,14 @@ const HERO_FEATURES = [
     ),
   },
   {
-    mobileText: <strong>Same price, every dose. No hidden fees.</strong>,
+    mobileText: (
+      <>
+        <strong>50% OFF Sale.</strong> Save $150 or more instantly.
+      </>
+    ),
     desktopText: (
       <>
-        <strong>Same price, every dose.</strong> No hidden fees.
+        <strong>50% OFF Sale.</strong> Save $150 or more instantly.
       </>
     ),
   },

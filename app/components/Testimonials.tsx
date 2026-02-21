@@ -81,38 +81,33 @@ export function Testimonials() {
             {/* Left side */}
             <TestimonialItem
               align="right"
-              text={<>Very easy and convenient for a very busy working lady.</>}
+              text="The intake only took a couple minutes."
               className="top-[5%] left-[6%]"
             />
             <TestimonialItem
               align="right"
-              text={
-                <>
-                  Everyone I have come in contact with has been so kind a
-                  helpful!
-                </>
-              }
+              text="I’m eating normal portions again. I wish I did this sooner."
               className="top-[30%] left-[17%] md:max-w-[520px]"
               delayMs={110}
             />
             <TestimonialItem
               align="right"
-              text={<>Very nice and informative Dr. Quick and easy!</>}
+              text="I didn’t expect it to feel this manageable!"
               className="top-[45%] left-[0%]"
             />
             {/* Right side */}
             <TestimonialItem
-              text="...the weight vanished!"
+              text="Support has been really responsive!"
               className="top-[20%] -right-[0%]"
               align="center"
             />
             <TestimonialItem
-              text="Every person I have contact with shows compassion."
+              text="Getting started was surprisingly simple."
               className="top-[40%] -right-[4%]"
               align="center"
             />
             <TestimonialItem
-              text={<>NP was very helpful and friendly!</>}
+              text="It just fits into my routine."
               className="top-[65%] right-[7.5%]"
               align="center"
             />

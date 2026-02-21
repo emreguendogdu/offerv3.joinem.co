@@ -5,26 +5,35 @@ import Image from 'next/image';
 import { Button } from './ui/Buttons';
 import { cn } from '@/lib/utils';
 
-const STEPS = [
+type Step = {
+  title: string;
+  description: string;
+  img: string;
+  alt: string;
+  imageClassName?: string;
+};
+
+const STEPS: Step[] = [
   {
     title: 'Get Approved',
     description:
       'Complete a quick online evaluation to determine if GLP-1 medication is right for you. Our team of licensed professionals will review your information and provide approval in no time.',
-    img: '5V0tR6dKBzzKJCldCXqDXysUWdg.jpg',
+    img: '/images/assessment-1.png',
     alt: 'Online assessment',
   },
   {
     title: 'Get Prescribed',
     description:
       "Once approved, you'll receive personalized care and a prescription to support your weight loss and health goals. Your care plan is designed to help you achieve lasting results safely and effectively.",
-    img: 'Kl7MsdwNQwZeXVL0GnHCt5LDh0.jpg',
+    img: '/images/doctors/alan_viglione.webp',
     alt: 'Doctor prescribing',
+    imageClassName: 'object-top',
   },
   {
     title: 'Receive your Rx',
     description:
       'Your medication will be shipped directly to your door for maximum convenience. With Embody, starting your treatment is as simple as opening your package and following our easy-to-use instructions.',
-    img: 'assessment-3.webp',
+    img: '/images/assessment-3.webp',
     alt: 'Package delivery',
   },
 ];
@@ -166,10 +175,10 @@ export function HowItWorks() {
                 </div>
                 <div className="relative aspect-16/10 max-h-[220px] lg:max-h-none w-full overflow-hidden rounded-[40px] shadow-sm border border-gray-100">
                   <Image
-                    src={`/images/${step.img}`}
+                    src={step.img}
                     alt={step.alt}
                     fill
-                    className="object-cover"
+                    className={cn('object-cover', step.imageClassName)}
                   />
                 </div>
               </div>

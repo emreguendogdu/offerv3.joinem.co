@@ -20,7 +20,7 @@ export function SupportSection() {
               time.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 h-[22vh] md:h-[400px]">
+          <div className="grid grid-cols-2 gap-4 h-[22vh] md:h-[340px]">
             <div className="relative h-full overflow-hidden rounded-[24px] md:rounded-[32px] mt-8">
               <Image
                 src="/images/VFZS546xGl8hWlrXSKafeSpHjhk.png"

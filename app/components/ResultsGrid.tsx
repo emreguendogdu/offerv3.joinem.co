@@ -43,7 +43,7 @@ export function ResultsGrid() {
         </div>
 
         {/* People photo grid */}
-        <div className="mt-8 md:mt-10 md:mb-13.5 grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-3 w-[120%] mx-auto -translate-x-[10%] md:translate-x-0 h-auto aspect-472/350 md:aspect-auto md:h-[600px] md:w-fit overflow-x-hidden">
+        <div className="mt-8 md:mt-10 md:mb-13.5 grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-3 w-[120%] mx-auto -translate-x-[10%] md:translate-x-0 h-auto aspect-472/350 md:aspect-auto md:h-[600px] md:w-fit overflow-x-hidden overflow-y-clip">
           {/* Column 1 */}
           <div className="flex flex-col gap-1 md:gap-3 mb-8 md:mb-0">
             <ImageWrapper className="h-1/3">

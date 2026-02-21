@@ -15,6 +15,7 @@ type ImageItem = {
 type ReviewItem = {
   type: 'review';
   name: string;
+  location: string;
   avatar?: string;
   text: string;
 };
@@ -25,75 +26,81 @@ export function ReviewsSection() {
   const topMarquee: MarqueeContentItem[] = [
     {
       type: 'image',
-      src: 'https://framerusercontent.com/images/PXqJ2sfwTMLRdk9LZr7XAMQinYc.png',
+      src: '/images/reviews/PXqJ2sfwTMLRdk9LZr7XAMQinYc.png',
       alt: 'Result 1',
     },
     {
       type: 'review',
-      name: 'Jamie K.',
+      name: 'Lauren M.',
+      location: 'Scottsdale, AZ',
       avatar:
-        'https://framerusercontent.com/images/YKzoGJpfFFf1BdjjaSowMezQ8.png',
-      text: 'The whole process was way easier than I thought. The questions made sense, and when I had concerns, they actually responded quickly (like, same day!). My prescription arrived on time and the support has been amazing. Wish I started sooner!',
+        '/images/reviews/YKzoGJpfFFf1BdjjaSowMezQ8.png',
+      text: "I've tried every diet and workout plan out there, but nothing stuck. With Embody, I'm down 37 lbs and for the first time, I don't feel like I'm fighting my own body.",
     },
     {
       type: 'image',
-      src: 'https://framerusercontent.com/images/J9q5bVSoP1ItX7IQ3rtRNrPDWA.png',
+      src: '/images/reviews/J9q5bVSoP1ItX7IQ3rtRNrPDWA.png',
       alt: 'Result 2',
     },
     {
       type: 'review',
-      name: 'Terika S.',
+      name: 'Nicole S.',
+      location: 'Tampa, FL',
       avatar:
-        'https://framerusercontent.com/images/8jMaqpfuydUeRcai6qscNossfPY.png',
-      text: "I've tried so many things before this - diets, gym memberships, you name it. Nothing worked. But my provider here? She actually gets it. Felt like talking to a friend who happens to be a doctor. I'm finally seeing real results!",
+        '/images/reviews/AD7wBSbBjaoJEY2kpZy640pME.png',
+      text: "I was nervous to start GLP-1s online, but the process was so simple and the doctor support has been amazing. I'm already down 42 lbs in 4 months.",
     },
     {
       type: 'image',
-      src: 'https://framerusercontent.com/images/eKEZ1mlvVbuQYZZFRP2HGWM52Y.png',
+      src: '/images/reviews/eKEZ1mlvVbuQYZZFRP2HGWM52Y.png',
       alt: 'Result 3',
     },
     {
       type: 'review',
-      name: 'Billy M.',
+      name: 'Danielle R.',
+      location: 'Nashville, TN',
       avatar:
-        'https://framerusercontent.com/images/LJga7ZjWTOSDuC5dyBzOgGSZYfs.png',
-      text: "Honestly, I was skeptical at first. But Ms. Gonzalez really took the time to listen to me. She explained everything about the medication and what to expect. No judgment, just real help. I'm down 28 pounds in 3 months and feeling like myself again!",
+        '/images/reviews/LJga7ZjWTOSDuC5dyBzOgGSZYfs.png',
+      text: "Life Changing. The constant food cravings are finally gone. I feel in control again and I'm down 61 pounds since getting started.",
     },
   ];
 
   const botMarquee: MarqueeContentItem[] = [
     {
       type: 'review',
-      name: 'Lou-Ann T.',
-      text: "I'm 13 pounds away from my goal weight! Can you believe it? The doctors and staff have been so supportive through this whole journey. I asked to stay on maintenance for a bit to get used to my new routine, and they totally understood. This is the real deal!",
+      name: 'Erin T.',
+      location: 'Denver, CO',
+      text: "I completed the intake in just a few minutes and had my medication delivered to my door the same week. I'm down 38 lbs and still going... Embody made it truly easy and was so affordable",
     },
     {
       type: 'image',
-      src: 'https://framerusercontent.com/images/jCpumbS2hmf0bTV4rn63Ex5o.png',
+      src: '/images/reviews/jCpumbS2hmf0bTV4rn63Ex5o.png',
       alt: 'Result 4',
     },
     {
       type: 'review',
-      name: 'Elizabeth R.',
+      name: 'Tim H.',
+      location: 'Austin, TX',
       avatar:
-        'https://framerusercontent.com/images/AD7wBSbBjaoJEY2kpZy640pME.png',
-      text: "My clinician walked me through everything step by step. No medical jargon, just straight talk about what to expect, when I'd see changes, and how to adjust if needed. It's been 4 months and I've lost 22 pounds. My energy is through the roof!",
+        '/images/reviews/8jMaqpfuydUeRcai6qscNossfPY.png',
+      text: "I've lost over 50 pounds so far and my energy levels are higher than they've been in years. I only wish I started sooner.",
     },
     {
       type: 'image',
-      src: 'https://framerusercontent.com/images/YDTDeNWqw3fWa6r7VeFWgpXIiDw.png',
+      src: '/images/reviews/YDTDeNWqw3fWa6r7VeFWgpXIiDw.png',
       alt: 'Result 5',
     },
     {
       type: 'review',
-      name: 'Dan P.',
+      name: 'Ashley C.',
+      location: 'Charlotte, NC',
       avatar:
-        'https://framerusercontent.com/images/qYFgJk4MbvlC8LvC0cove7Yoi84.png',
-      text: "Dolores was awesome - super friendly and answered all my questions without making me feel rushed. I was nervous about starting, but she made it easy. Just got my first shipment and I'm actually excited about this journey for once!",
+        '/images/reviews/qYFgJk4MbvlC8LvC0cove7Yoi84.png',
+      text: "I tried to do it on my own for years. Having a provider guide me through this process made all the difference. I'm down 42 lbs.",
     },
     {
       type: 'image',
-      src: 'https://framerusercontent.com/images/HVBXeD99wX7b2PnjNTPHMR0Kgw.png',
+      src: '/images/reviews/HVBXeD99wX7b2PnjNTPHMR0Kgw.png',
       alt: 'Result 6',
     },
   ];
@@ -165,9 +172,8 @@ function MarqueeItem({
   className?: string;
   reviewBgClass?: string;
 }) {
-  const sizeClasses = className
-    ? ''
-    : 'h-[200px] w-[290px] md:h-[220px] md:w-[340px] lg:h-[260px] lg:w-[400px]';
+  const sizeClasses = className ? '' : 'h-[200px] w-[384px] h-[220px]';
+  const reviewSizeClasses = className ? '' : 'w-[384px] h-[220px]';
 
   if (item.type === 'image') {
     return (
@@ -186,7 +192,7 @@ function MarqueeItem({
 
   return (
     <div
-      className={`${reviewBgClass} rounded-[24px] p-8 flex flex-col gap-6 shrink-0 justify-between ${sizeClasses} ${className || ''}`}
+      className={`${reviewBgClass} rounded-[24px] p-8 flex flex-col gap-6 shrink-0 justify-between ${reviewSizeClasses} ${className || ''}`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
@@ -200,13 +206,18 @@ function MarqueeItem({
               />
             </div>
           ) : null}
-          <span className="text-[#2F2A25] font-bold text-base">
-            {item.name}
-          </span>
+          <div className="flex flex-col">
+            <span className="text-[#2F2A25] font-bold text-base leading-tight">
+              {item.name}
+            </span>
+            <span className="text-[#6B7280] text-[0.625rem] md:text-[0.75rem] leading-tight">
+              {item.location}
+            </span>
+          </div>
         </div>
         <Stars />
       </div>
-      <p className="text-[#2F2A25] text-sm opacity-80 overflow-y-auto custom-scrollbar">
+      <p className="text-[#2F2A25] text-sm opacity-80 leading-[1.6] md:overflow-y-auto custom-scrollbar">
         {item.text}
       </p>
     </div>
