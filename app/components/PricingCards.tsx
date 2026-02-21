@@ -37,7 +37,7 @@ const PRICING_CONFIG: PricingCard[] = [
 
 export function PricingCards() {
   return (
-    <section className="bg-white mx-auto max-w-[78.75rem] px-4 text-center">
+    <section className="bg-white mx-auto max-w-[78.75rem] px-4 md:text-center">
       <h2 className="font-display text-[1.875rem] font-medium leading-[1.25] text-black">
         Trusted by experts.
         <br />
@@ -48,53 +48,55 @@ export function PricingCards() {
         knowing it is{' '}
         <span className="text-primary font-bold">doctor-approved</span>.
       </p>
-      {/* Hide scrollbar */}
-      <div className="mt-10 mx-auto max-w-[52.75rem] flex gap-4 md:gap-6 overflow-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
-        {PRICING_CONFIG.map((card) => (
-          <div
-            key={card.id}
-            className="relative rounded-2xl text-left flex flex-col pt-20 min-w-[301px] md:min-w-[402px]"
-          >
-            <div className="relative rounded-t-[inherit] h-[210px] md:h-[280px] w-full bg-accent">
-              <span className="absolute top-3 left-3 z-10 rounded-full bg-brand-green px-3 py-1 text-xs font-bold text-white">
-                {card.badge}
-              </span>
-              <div className="relative mx-auto my-6 w-[210px] h-[255px] md:w-[200px] md:h-[340px]">
-                <div className="w-full h-full absolute -top-1/4 hover:scale-[1.1] transition-all">
-                  <Image
-                    src={card.imageSrc}
-                    alt={card.imageAlt}
-                    fill
-                    className="object-contain select-none pointer-events-none"
-                  />
+      {/* Horizontal scroll on narrow viewports; hides scrollbar visuals */}
+      <div className="mt-10 mx-auto max-w-[52.75rem] overflow-x-auto overflow-y-hidden touch-pan-x [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="flex w-max gap-4 md:gap-6">
+          {PRICING_CONFIG.map((card) => (
+            <div
+              key={card.id}
+              className="relative rounded-2xl text-left flex flex-col pt-20 w-[301px] md:w-[402px] shrink-0"
+            >
+              <div className="relative rounded-t-[inherit] h-[210px] md:h-[280px] w-full bg-accent">
+                <span className="absolute top-3 left-3 z-10 rounded-full bg-brand-green px-3 py-1 text-xs font-bold text-white">
+                  {card.badge}
+                </span>
+                <div className="relative mx-auto my-6 w-[210px] h-[255px] md:w-[200px] md:h-[340px]">
+                  <div className="w-full h-full absolute -top-1/4 hover:scale-[1.1] transition-all">
+                    <Image
+                      src={card.imageSrc}
+                      alt={card.imageAlt}
+                      fill
+                      className="object-contain select-none pointer-events-none"
+                    />
+                  </div>
+                </div>
+              </div>
+              {/* Content */}
+              <div className="flex flex-col gap-5 items-center text-center min-h-[220px] px-8 pt-6 pb-5 bg-[#FAFAFA] rounded-b-[inherit]">
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-center text-lg font-bold">{card.title}</h3>
+                  <p className="text-xs md:text-base text-center text-gray-500">
+                    {card.description}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-2 w-full">
+                  <p className="text-center">
+                    <span className=" text-gray-500">Starting at</span>{' '}
+                    <span className="font-display text-2xl md:text-3xl font-black text-primary">
+                      {card.price}
+                    </span>
+                  </p>
+                  <Button
+                    variant="dark"
+                    className="w-full justify-center mt-5 py-3"
+                  >
+                    {card.buttonText}
+                  </Button>
                 </div>
               </div>
             </div>
-            {/* Content */}
-            <div className="flex flex-col gap-5 items-center text-center min-h-[220px] px-8 pt-6 pb-5 bg-[#FAFAFA] rounded-b-[inherit]">
-              <div className="flex flex-col gap-2">
-                <h3 className="text-center text-lg font-bold">{card.title}</h3>
-                <p className="text-xs md:text-base text-center text-gray-500">
-                  {card.description}
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 w-full">
-                <p className="text-center">
-                  <span className=" text-gray-500">Starting at</span>{' '}
-                  <span className="font-display text-2xl md:text-3xl font-black text-primary">
-                    {card.price}
-                  </span>
-                </p>
-                <Button
-                  variant="dark"
-                  className="w-full justify-center mt-5 py-3"
-                >
-                  {card.buttonText}
-                </Button>
-              </div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

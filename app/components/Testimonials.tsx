@@ -44,7 +44,7 @@ export function Testimonials() {
         {/* Big testimonial */}
         <div
           ref={bigTestimonialRef}
-          className={`pt-50 text-center w-fit mx-auto transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${bigTestimonialRevealClass}`}
+          className={`pt-12 md:pt-24 text-center w-fit mx-auto transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${bigTestimonialRevealClass}`}
         >
           <p className=" text-gray-500">10,000+ Patients Agree</p>
           <div className="mt-2 flex justify-center">
@@ -115,7 +115,7 @@ export function Testimonials() {
         </div>
 
         {/* HSA/FSA bar */}
-        <div className="py-20 flex items-center justify-center gap-2 text-[1.5rem] md:text-[2rem] md:text-[2.5rem] font-bold text-[#2F2A25]">
+        <div className="pt-8 md:pt-12  flex items-center justify-center gap-2 text-[1.5rem] md:text-[2rem] md:text-[2.5rem] font-bold text-[#2F2A25]">
           <div className="relative h-10 w-10 md:h-12 md:w-12">
             <Image
               src="/images/HpMphmT9reZWKHyliNJuwSGqX0.png"
