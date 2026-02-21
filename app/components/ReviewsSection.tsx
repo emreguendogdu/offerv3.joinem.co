@@ -34,7 +34,7 @@ export function ReviewsSection() {
       name: 'Lauren M.',
       location: 'Scottsdale, AZ',
       avatar: '/images/reviews/YKzoGJpfFFf1BdjjaSowMezQ8.png',
-      text: "I've tried every diet and workout plan out there, but nothing stuck. With Embody, I'm down 37 lbs and for the first time, I don't feel like I'm fighting my own body.",
+      text: "I've tried every diet and workout plan out there, but nothing stuck. With Embody, I'm down 37 lbs and for the first time, I don't feel like I'm fighting my own body. For the first time, the results feel steady and something I can realistically maintain.",
     },
     {
       type: 'image',
@@ -46,7 +46,7 @@ export function ReviewsSection() {
       name: 'Nicole S.',
       location: 'Tampa, FL',
       avatar: '/images/reviews/AD7wBSbBjaoJEY2kpZy640pME.png',
-      text: "I was nervous to start GLP-1s online, but the process was so simple and the doctor support has been amazing. I'm already down 42 lbs in 4 months.",
+      text: "I was nervous to start GLP-1s online, but the process was so simple and the doctor support has been amazing. I'm already down 42 lbs in 4 months. The regular check-ins keep me accountable, and I finally feel like I have a plan I can stick with long term.",
     },
     {
       type: 'image',
@@ -58,7 +58,7 @@ export function ReviewsSection() {
       name: 'Danielle R.',
       location: 'Nashville, TN',
       avatar: '/images/reviews/LJga7ZjWTOSDuC5dyBzOgGSZYfs.png',
-      text: "Life Changing. The constant food cravings are finally gone. I feel in control again and I'm down 61 pounds since getting started.",
+      text: "Life changing. The constant food cravings are finally gone. I feel in control again and I'm down 61 pounds since getting started. My confidence is back, my clothes fit comfortably again, and this is the first plan that has felt truly sustainable.",
     },
   ];
 
@@ -68,7 +68,7 @@ export function ReviewsSection() {
       name: 'Erin T.',
       location: 'Denver, CO',
       avatar: '/images/reviews/N51YbqCRIIzwwYPH36B7N9lcGUo.jpg',
-      text: "I completed the intake in just a few minutes and had my medication delivered to my door the same week. I'm down 38 lbs and still going... Embody made it truly easy and was so affordable",
+      text: "I completed the intake in just a few minutes and had my medication delivered to my door the same week. I'm down 38 lbs and still going... Embody made it truly easy and was so affordable. Follow-ups are easy, and the steady progress keeps me motivated every week.",
     },
     {
       type: 'image',
@@ -80,7 +80,7 @@ export function ReviewsSection() {
       name: 'Tim H.',
       location: 'Austin, TX',
       avatar: '/images/reviews/8jMaqpfuydUeRcai6qscNossfPY.png',
-      text: "I've lost over 50 pounds so far and my energy levels are higher than they've been in years. I only wish I started sooner.",
+      text: "I've lost over 50 pounds so far and my energy levels are higher than they've been in years. I only wish I started sooner. My sleep has improved, my joints feel better, and staying consistent no longer feels like a daily struggle. I finally feel like myself again.",
     },
     {
       type: 'image',
@@ -92,7 +92,7 @@ export function ReviewsSection() {
       name: 'Ashley C.',
       location: 'Charlotte, NC',
       avatar: '/images/reviews/qYFgJk4MbvlC8LvC0cove7Yoi84.png',
-      text: "I tried to do it on my own for years. Having a provider guide me through this process made all the difference. I'm down 42 lbs.",
+      text: "I tried to do it on my own for years. Having a provider guide me through this process made all the difference. I'm down 42 lbs. Having real support at every step made it easier to stay on track, and for the first time these results feel lasting.",
     },
     {
       type: 'image',
@@ -189,7 +189,7 @@ function MarqueeItem({
 
   return (
     <div
-      className={`${reviewBgClass} rounded-[24px] p-8 flex flex-col gap-6 shrink-0 justify-between ${reviewSizeClasses} ${className || ''}`}
+      className={`${reviewBgClass} rounded-[24px] p-4 flex flex-col gap-3 shrink-0 ${reviewSizeClasses} ${className || ''}`}
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">

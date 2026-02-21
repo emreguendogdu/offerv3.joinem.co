@@ -74,7 +74,7 @@ export function PricingCards() {
             <div className="flex flex-col gap-5 items-center text-center min-h-[220px] px-8 pt-6 pb-5 bg-[#FAFAFA] rounded-b-[inherit]">
               <div className="flex flex-col gap-2">
                 <h3 className="text-center text-lg font-bold">{card.title}</h3>
-                <p className=" text-center  text-gray-500">
+                <p className="text-xs md:text-base text-center text-gray-500">
                   {card.description}
                 </p>
               </div>

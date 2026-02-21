@@ -115,12 +115,12 @@ export function Hero() {
       </div>
 
       {/* Photo collage */}
-      <div className="relative w-full h-[26dvh] md:h-[649px]">
+      <div className="relative w-full aspect-[1364/790] md:aspect-auto md:h-[649px]">
         <Image
           src="/images/hero-photo-collage.png"
           alt="Happy patients"
           fill
-          className="object-contain"
+          className="object-cover md:object-contain"
           priority
         />
       </div>
