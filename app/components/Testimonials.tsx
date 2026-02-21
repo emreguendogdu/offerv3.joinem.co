@@ -16,7 +16,7 @@ export function Testimonials() {
     useRevealOnInView<HTMLDivElement>();
 
   return (
-    <section className="bg-white pt-8 px-4">
+    <section className="bg-white px-4">
       <div className="mx-auto max-w-[75rem]">
         <div className="grid items-center gap-5 md:grid-cols-2">
           <h2 className="font-display text-3xl leading-snug">

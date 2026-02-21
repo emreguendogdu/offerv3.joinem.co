@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { Button } from './ui/Buttons';
 import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
 import Logo from './ui/Logo';
@@ -11,7 +10,7 @@ export function Guarantee() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white py-8 pt-16 md:py-20 px-4 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
+      className={`bg-white px-4 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
     >
       <div className="mx-auto max-w-[58.75rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden flex items-center justify-center">
         <div className="flex flex-col items-center justify-center w-full max-w-[40rem]">

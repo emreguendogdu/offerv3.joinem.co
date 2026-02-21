@@ -13,7 +13,7 @@ const STATS = [
 
 export function StatsCards() {
   return (
-    <section className="bg-white py-8 md:text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 md:items-center md:justify-center">
+    <section className="bg-white md:text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 md:items-center md:justify-center">
       <h2 className="font-display text-2x text-[2rem] md:text-[2.75rem] max-w-[52.5rem] mx-auto">
         Why are so many patients signing up for Embody?{' '}
         <strong className=" text-primary">It works.</strong>
@@ -27,9 +27,9 @@ export function StatsCards() {
         {STATS.map((stat) => (
           <div
             key={stat.label}
-            className="bg-accent-light p-3 md:p-6 flex md:flex-col justify-between items-center md:justify-center text-center rounded-3xl"
+            className="bg-accent-light p-3 md:p-6 flex md:flex-col justify-between gap-4 items-center md:justify-center text-center rounded-3xl"
           >
-            <p className="font-text text-[2.625rem] md:text-[4.5rem] font-bold text-brand-dark leading-tight md:leading-[6.75rem] w-[40%] md:w-auto text-left md:text-center">
+            <p className="font-text text-[3.2rem] md:text-[4.5rem] font-bold text-brand-dark leading-tight md:leading-[6.75rem] w-[40%] md:w-auto text-left md:text-center">
               {stat.value}
               <span className="font-normal text-primary">{stat.unit}</span>
             </p>

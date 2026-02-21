@@ -78,7 +78,7 @@ const FEATURES = [
 
 export function FeaturesGrid() {
   return (
-    <section className="bg-white py-8 px-4 md:px-8 w-full">
+    <section className="bg-white px-4 md:px-8 w-full">
       <div className="grid grid-cols-2 gap-4 md:gap-6">
         {FEATURES.map((card) => (
           <div

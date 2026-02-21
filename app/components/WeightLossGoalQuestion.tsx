@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 import { BRAND } from '@/lib/brand';
 import { useAppendSearchParams } from '@/lib/hooks/useAppendSearchParams';
 import { Button } from '@/app/components/ui/Buttons';
@@ -29,7 +28,7 @@ function OptionSelect({ text, href }: { text: string; href: string }) {
 
 export function WeightLossGoalQuestion() {
   return (
-    <section className="px-4 md:px-8 w-full py-8">
+    <section className="px-4 md:px-8 w-full">
       {/* Card */}
       <div className="flex items-center justify-center max-w-235 py-10 px-6 md:py-27.5 md:px-15  bg-accent-light rounded-[50px] mx-auto">
         {/* Content Wrapper */}

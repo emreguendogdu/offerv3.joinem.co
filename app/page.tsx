@@ -28,22 +28,24 @@ export default function Home() {
         <Hero />
       </div>
 
-      <LogoBar />
-      <PricingCards />
-      <Testimonials />
-      <WeightLossCalculator />
-      <ResultsGrid />
-      <MetabolismSection />
-      <StatsCards />
-      <HowItWorks />
-      <SupportSection />
-      <ReviewsSection />
-      <FAQ />
-      <Guarantee />
-      <TeamGrid />
-      <WeightLossGoalQuestion />
-      <FeaturesGrid />
-      <Footer />
+      <main className="flex flex-col gap-8 md:gap-20">
+        <LogoBar />
+        <PricingCards />
+        <Testimonials />
+        <WeightLossCalculator />
+        <ResultsGrid />
+        <MetabolismSection />
+        <StatsCards />
+        <HowItWorks />
+        <SupportSection />
+        <ReviewsSection />
+        <FAQ />
+        <Guarantee />
+        <TeamGrid />
+        <WeightLossGoalQuestion />
+        <FeaturesGrid />
+        <Footer />
+      </main>
     </div>
   );
 }

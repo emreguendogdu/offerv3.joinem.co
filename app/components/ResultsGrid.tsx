@@ -33,7 +33,7 @@ export function ResultsGrid() {
     });
 
   return (
-    <section className="bg-white py-8 overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <div className="w-full mx-auto md:max-w-[81rem] px-4 text-left md:text-center">
         <div className="flex flex-col gap-4">
           <h2 className="font-display text-3xl md:text-5xl text-left md:text-center font-medium">

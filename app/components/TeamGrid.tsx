@@ -23,7 +23,7 @@ export function TeamGrid() {
   const doctorsList = [...DOCTORS, ...DOCTORS, ...DOCTORS, ...DOCTORS];
 
   return (
-    <section className="bg-white py-8 md:py-20 overflow-hidden">
+    <section className="bg-white overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-6 md:mb-16">
           <h2 className="text-[#2F2A25] font-display text-[2rem] md:text-[2.5rem] font-medium leading-[1.1] tracking-tight max-w-[500px]">
