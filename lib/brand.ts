@@ -5,9 +5,10 @@ export const BRAND = {
   ctaUrl: 'https://joinem.co/pages/intake',
   logoAlt: 'Embody logo',
   contact: {
-    email: 'hello@joinem.co',
-    phone: '(888) 896-1612',
-    address: '12636 High Bluff Drive Ste 400, San Diego, California, 92130',
+    email: 'support@withembody.com',
+    phone: '(844) 357-3601',
+    address:
+      '1811 Silverside Road, Suite 260, Wilmington, New Castle County, Delaware 19180',
   },
   links: {
     safety: 'https://joinem.co/pages/glp1_medication_safety_information',

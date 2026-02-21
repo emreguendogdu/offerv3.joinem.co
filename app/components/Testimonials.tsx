@@ -87,13 +87,13 @@ export function Testimonials() {
             <TestimonialItem
               align="right"
               text="I’m eating normal portions again. I wish I did this sooner."
-              className="top-[24%] left-[0%] max-w-[190px] md:top-[30%] md:left-[17%] md:max-w-[520px]"
+              className="top-[24%] left-[0%] max-w-[190px] md:top-[30%] md:right-[15%] md:max-w-[520px]"
               delayMs={110}
             />
             <TestimonialItem
               align="right"
               text="I didn’t expect it to feel this manageable!"
-              className="top-[52%] -left-[1%] max-w-[170px] md:top-[45%] md:left-[0%] md:max-w-[360px]"
+              className="top-[52%] -left-[1%] max-w-[170px] md:top-[55%] md:left-[0%] md:max-w-[360px]"
             />
             {/* Right side */}
             <TestimonialItem
