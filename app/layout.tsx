@@ -1,17 +1,41 @@
 import type { Metadata } from 'next';
-import { Manrope, Sora } from 'next/font/google';
-import './globals.css';
+import localFont from 'next/font/local';
 
-const sora = Sora({
-  variable: '--font-sora',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+import './globals.css';
+import Script from 'next/script';
+
+const quincy = localFont({
+  src: [
+    {
+      path: '../public/fonts/Quincy/Quincy-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Quincy/Quincy-Medium.woff',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-quincy',
+  display: 'swap',
 });
 
-const manrope = Manrope({
-  variable: '--font-manrope',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+const helveticaPro = localFont({
+  src: [
+    {
+      path: '../public/fonts/Helvetica-Pro/HelveticaProRoman.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/Helvetica-Pro/HelveticaProBold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-helvetica-pro',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -27,9 +51,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script id="gtm" strategy="afterInteractive">{`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TXLL9VGZ');
+        `}</Script>
+      </head>
       <body
-        className={`${sora.variable} ${manrope.variable} antialiased`}
+        className={`${helveticaPro.variable} ${quincy.variable} antialiased`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TXLL9VGZ"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
         {children}
       </body>
     </html>

@@ -5,8 +5,8 @@
 }
 
 @theme inline {
-  --font-display: var(--font-sora);
-  --font-text: var(--font-manrope);
+  --font-display: var(--font-quincy);
+  --font-text: var(--font-helvetica-pro), 'Helvetica', sans-serif;
 
   --color-brand-orange: #f59e0b;
   --color-brand-green: #2f8f7b;
@@ -140,6 +140,15 @@ input[type='range']::-webkit-slider-thumb {
 @layer base {
   strong {
     font-weight: 700;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-quincy);
   }
 }
 

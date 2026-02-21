@@ -43,7 +43,7 @@ export function PricingCards() {
         <br />
         <span className="font-black text-primary">priced for you.</span>
       </h2>
-      <p className="mt-4 font-display text-base leading-[1.4] text-black">
+      <p className="mt-4 text-base leading-[1.4] text-black">
         Find the right GLP-1 medication with the confidence that comes from
         knowing it is{' '}
         <span className="text-primary font-bold">doctor-approved</span>.

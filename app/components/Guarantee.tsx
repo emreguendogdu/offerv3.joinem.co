@@ -16,7 +16,7 @@ export function Guarantee() {
         <div className="flex flex-col items-center justify-center w-full max-w-[40rem]">
           <Logo className="w-16 h-16 md:w-25 md:h-25" />
           <div className="flex flex-col items-center justify-center gap-4">
-            <span className="text-foreground font-semibold text-sm mt-1 text-center md:text-left uppercase">
+            <span className="text-foreground font-semibold text-[0.625rem] md:text-[0.75rem] mt-1 text-center md:text-left uppercase">
               Guarantee
             </span>
             <h2 className="text-[#2F2A25] font-display text-[1.25rem] md:text-[1.875rem] font-semibold leading-[1.1] tracking-tight text-center">
