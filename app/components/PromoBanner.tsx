@@ -29,11 +29,11 @@ export function PromoBanner() {
   return (
     <div className="relative overflow-hidden bg-black text-white">
       {/* Decorative 'SALE' Strips */}
-      <div className="absolute left-[30%] -translate-x-1/2 top-1/2 translate-y-1/2">
+      <div className="absolute md:left-[30%] -translate-x-1/2 top-1/2 translate-y-1/2">
         <SaleStrip />
       </div>
 
-      <div className="absolute left-[63%] -translate-x-1/2 top-1/2 translate-y-1/2">
+      <div className="absolute left-[85%] md:left-[63%] -translate-x-1/2 top-1/2 translate-y-1/2">
         <SaleStrip />
       </div>
 
