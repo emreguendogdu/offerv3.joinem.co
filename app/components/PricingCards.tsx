@@ -38,7 +38,7 @@ const PRICING_CONFIG: PricingCard[] = [
 export function PricingCards() {
   return (
     <section className="bg-white py-16 mx-auto max-w-[78.75rem] px-4 text-center">
-      <h2 className="font-display text-[30px] font-medium leading-[1.25] text-black">
+      <h2 className="font-display text-[1.875rem] font-medium leading-[1.25] text-black">
         Trusted by experts.
         <br />
         <span className="font-black text-primary">priced for you.</span>

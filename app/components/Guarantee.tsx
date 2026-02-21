@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Button } from './ui/Buttons';
 import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
+import Logo from './ui/Logo';
 
 export function Guarantee() {
   const { ref: sectionRef, revealClassName } = useRevealOnInView<HTMLElement>();
@@ -14,22 +15,14 @@ export function Guarantee() {
     >
       <div className="mx-auto max-w-[58.75rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden flex items-center justify-center">
         <div className="flex flex-col items-center justify-center w-full max-w-[40rem]">
-          <div className="relative aspect-square w-full max-h-[200px] mx-auto lg:mx-0 overflow-hidden rounded-[40px]">
-            <Image
-              src="/images/USsnYE6lbhf51vjxPNzwCQYGzsM.png"
-              alt="Confident patient"
-              fill
-              className="object-scale-down"
-              priority
-            />
-          </div>
+          <Logo className="w-16 h-16 md:w-25 md:h-25" />
           <div className="flex flex-col items-center justify-center gap-4">
-            <span className="text-primary font-semibold text-sm md:text-lg text-center md:text-left">
-              Embody Guarantee
+            <span className="text-foreground font-semibold text-sm mt-1 text-center md:text-left uppercase">
+              Guarantee
             </span>
-            <h2 className="text-[#2F2A25] font-display text-[30px] font-semibold leading-[1.1] tracking-tight text-center md:text-left">
-              The only thing you&apos;ll <br />
-              lose is extra weight.
+            <h2 className="text-[#2F2A25] font-display text-[1.875rem] font-semibold leading-[1.1] tracking-tight text-center">
+              Support that fits your life, backed by a simple 100% satisfaction
+              guarantee.
             </h2>
             <p className="text-[#2F2A25] text-sm md:text-base leading-[1.6] opacity-90 text-center tracking-[-0.32px]">
               We&apos;re so confident in our personalized program, we guarantee

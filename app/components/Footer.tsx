@@ -1,7 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { BRAND } from '@/lib/brand';
+import { FooterPolicyLink } from './FooterPolicyLink';
 import Logo from './ui/Logo';
+
+const FOOTER_POLICY_LINKS = [
+  { href: BRAND.links.safety, label: 'Safety Information' },
+  { href: BRAND.links.hipaa, label: 'HIPPA Privacy Policy' },
+  { href: BRAND.links.smsPrivacy, label: 'SMS Privacy Policy' },
+  { href: BRAND.links.privacy, label: 'Privacy Policy' },
+  { href: BRAND.links.terms, label: 'Terms & Conditions' },
+  { href: BRAND.links.shipping, label: 'Shipping Policy' },
+] as const;
 
 export function Footer() {
   return (
@@ -101,12 +111,11 @@ export function Footer() {
           <div className="relative">
             <div className="absolute border-t border-t-black/15 left-0 right-0 top-0 w-[150%] -translate-x-1/4"></div>
             <div className="grid grid-cols-3 items-center justify-center mx-auto max-w-lg gap-4 text-sm pt-4 px-4 md:pt-8 pb-5 md:px-8">
-              <a href={BRAND.links.safety}>Safety Information</a>
-              <a href={BRAND.links.hipaa}>HIPPA Privacy Policy</a>
-              <a href={BRAND.links.smsPrivacy}>SMS Privacy Policy</a>
-              <a href={BRAND.links.privacy}>Privacy Policy</a>
-              <a href={BRAND.links.terms}>Terms &amp; Conditions</a>
-              <a href={BRAND.links.shipping}>Shipping Policy</a>
+              {FOOTER_POLICY_LINKS.map((link) => (
+                <FooterPolicyLink key={link.href} href={link.href}>
+                  {link.label}
+                </FooterPolicyLink>
+              ))}
             </div>
           </div>
 

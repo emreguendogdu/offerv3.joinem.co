@@ -181,6 +181,7 @@ function MarqueeItem({
           alt={item.alt || ''}
           fill
           className="object-cover"
+          aria-hidden
         />
       </div>
     );
@@ -199,6 +200,7 @@ function MarqueeItem({
                 alt={item.name}
                 fill
                 className="object-cover"
+                aria-hidden
               />
             </div>
           ) : null}

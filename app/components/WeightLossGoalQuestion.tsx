@@ -34,7 +34,7 @@ export function WeightLossGoalQuestion() {
       <div className="flex items-center justify-center max-w-235 py-10 px-6 md:py-27.5 md:px-15  bg-accent-light rounded-[50px] mx-auto">
         {/* Content Wrapper */}
         <div className="relative w-full max-w-120">
-          <h2 className="text-[30px] font-semibold text-center mb-8 md:mb-12.5 text-black leading-tight">
+          <h2 className="text-[1.875rem] font-semibold text-center mb-8 md:mb-12.5 text-black leading-tight">
             What&apos;s your weight loss goal?
           </h2>
 
