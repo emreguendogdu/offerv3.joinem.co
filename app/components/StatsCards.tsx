@@ -13,7 +13,7 @@ const STATS = [
 
 export function StatsCards() {
   return (
-    <section className="bg-white py-16 md:text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 md:items-center md:justify-center">
+    <section className="bg-white py-8 md:text-center mx-auto px-4 max-w-[75rem] flex flex-col gap-4 md:items-center md:justify-center">
       <h2 className="font-display text-2x text-[2rem] md:text-[2.75rem] max-w-[52.5rem] mx-auto">
         Why are so many patients signing up for Embody?{' '}
         <strong className=" text-primary">It works.</strong>

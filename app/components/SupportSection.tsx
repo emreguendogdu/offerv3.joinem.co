@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function SupportSection() {
   return (
-    <section className="bg-white py-16 px-4">
+    <section className="bg-white py-8 px-4">
       <div className="mx-auto max-w-[77.625rem] bg-[#F2F2F2] rounded-[48px] p-8 md:p-16 lg:p-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
