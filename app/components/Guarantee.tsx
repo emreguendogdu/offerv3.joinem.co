@@ -19,7 +19,7 @@ export function Guarantee() {
             <span className="text-foreground font-semibold text-[0.625rem] md:text-[0.75rem] mt-1 text-center md:text-left uppercase">
               Guarantee
             </span>
-            <h2 className="text-[#2F2A25] font-display text-[1.25rem] md:text-[1.875rem] font-semibold leading-[1.1] tracking-tight text-center">
+            <h2 className="text-[#2F2A25] font-display text-[1.5rem] md:text-[1.875rem] font-semibold leading-[1.1] tracking-tight text-center md:max-w-lg md:mx-auto">
               Support that fits your life, backed by a simple 100% satisfaction
               guarantee.
             </h2>
