@@ -37,7 +37,7 @@ const PRICING_CONFIG: PricingCard[] = [
 
 export function PricingCards() {
   return (
-    <section className="bg-white mx-auto max-w-[78.75rem] px-4 md:text-center overflow-hidden">
+    <section className="bg-white md:mx-auto md:max-w-[78.75rem] px-4 md:text-center overflow-hidden">
       <h2 className="font-display text-[1.875rem] font-medium leading-[1.25] text-black">
         Trusted by experts.
         <br />
@@ -49,7 +49,7 @@ export function PricingCards() {
         <span className="text-primary font-bold">doctor-approved</span>.
       </p>
       {/* Horizontal scroll on narrow viewports */}
-      <div className="mt-10 mx-auto max-w-[52.75rem] overflow-x-auto overflow-y-hidden touch-pan-x [-webkit-overflow-scrolling:touch] pb-2">
+      <div className="mt-10 w-full md:mx-auto md:max-w-[52.75rem] overflow-x-auto overflow-y-hidden overscroll-x-contain touch-pan-x [-webkit-overflow-scrolling:touch] pb-2 ">
         <div className="flex w-max gap-4 md:gap-6">
           {PRICING_CONFIG.map((card) => (
             <div

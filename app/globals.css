@@ -44,6 +44,7 @@ body {
   font-family: var(--font-text), 'Manrope', Arial, sans-serif;
   color: var(--foreground);
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 @keyframes scroll {
