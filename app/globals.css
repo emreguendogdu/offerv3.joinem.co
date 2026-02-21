@@ -35,7 +35,7 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px);
+      transform: translateY(-0.625rem);
     }
   }
 }
@@ -121,8 +121,8 @@ input[type='range']::-webkit-slider-thumb {
 /* Timeline vertical line */
 .timeline-line {
   position: absolute;
-  left: 7px;
-  top: 20px;
+  left: 0.4375rem;
+  top: 1.25rem;
   bottom: 0;
   width: 2px;
   background: #e5e7eb;

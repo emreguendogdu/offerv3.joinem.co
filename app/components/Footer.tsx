@@ -6,11 +6,11 @@ import Logo from './ui/Logo';
 
 const FOOTER_POLICY_LINKS = [
   { href: BRAND.links.safety, label: 'Safety Information' },
-  { href: BRAND.links.hipaa, label: 'HIPPA Privacy Policy' },
-  { href: BRAND.links.smsPrivacy, label: 'SMS Privacy Policy' },
+  { href: BRAND.links.medicalConsent, label: 'Medical Consent' },
+  { href: BRAND.links.tcpaCompliance, label: 'TCPA Compliance Policy' },
   { href: BRAND.links.privacy, label: 'Privacy Policy' },
   { href: BRAND.links.terms, label: 'Terms & Conditions' },
-  { href: BRAND.links.shipping, label: 'Shipping Policy' },
+  { href: BRAND.links.refund, label: 'Refund Policy' },
 ] as const;
 
 export function Footer() {

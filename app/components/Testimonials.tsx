@@ -8,7 +8,7 @@ import { cn } from '@/lib/utils';
 import { useRevealOnInView } from '@/lib/hooks/useRevealOnInView';
 
 const QUOTE_HIDDEN_CLASS =
-  'opacity-0 translate-y-[150px] motion-reduce:opacity-10 motion-reduce:translate-y-0';
+  'opacity-0 translate-y-[9.375rem] motion-reduce:opacity-10 motion-reduce:translate-y-0';
 const QUOTE_VISIBLE_CLASS = 'opacity-10 translate-y-0';
 
 export function Testimonials() {
@@ -33,7 +33,7 @@ export function Testimonials() {
             <div className="mt-5">
               <Button
                 variant="dark"
-                className="bg-brand-brown hover:bg-black tracking-[1.28px] w-full md:w-fit py-2.5"
+                className="bg-brand-brown hover:bg-black tracking-[0.08rem] w-full md:w-fit py-2.5"
               >
                 I&apos;m Ready, Let&apos;s Go
               </Button>
@@ -115,7 +115,7 @@ export function Testimonials() {
         </div>
 
         {/* HSA/FSA bar */}
-        <div className="py-20 flex items-center justify-center gap-2 text-[24px] md:text-[32px] md:text-[40px] font-bold text-[#2F2A25]">
+        <div className="py-20 flex items-center justify-center gap-2 text-[1.5rem] md:text-[2rem] md:text-[2.5rem] font-bold text-[#2F2A25]">
           <div className="relative h-10 w-10 md:h-12 md:w-12">
             <Image
               src="/images/HpMphmT9reZWKHyliNJuwSGqX0.png"
@@ -166,12 +166,12 @@ const TestimonialItem = ({
         className,
       )}
     >
-      <p className="text-[16px] md:text-[32px] font-semibold leading-[1.2]">
+      <p className="text-[1rem] md:text-[2rem] font-semibold leading-[1.2]">
         {text}
       </p>
       <p
         className={cn(
-          'mt-2 md:mt-3 flex items-center gap-2 text-[12px] md:text-[14px] font-normal',
+          'mt-2 md:mt-3 flex items-center gap-2 text-[0.75rem] md:text-[0.875rem] font-normal',
           align === 'left'
             ? 'justify-start'
             : align === 'center'

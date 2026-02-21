@@ -24,11 +24,11 @@ export function Guarantee() {
               Support that fits your life, backed by a simple 100% satisfaction
               guarantee.
             </h2>
-            <p className="text-[#2F2A25] text-sm md:text-base leading-[1.6] opacity-90 text-center tracking-[-0.32px]">
+            <p className="text-[#2F2A25] text-sm md:text-base leading-[1.6] opacity-90 text-center tracking-[-0.02rem]">
               We&apos;re so confident in our personalized program, we guarantee
               you&apos;ll lose weight or your money back. It&apos;s that simple.
             </p>
-            <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-10 py-4 rounded-full font-bold text-xs text-[0.625rem] w-full md:w-auto md:text-xs tracking-[1.2px] uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
+            <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-10 py-4 rounded-full font-bold text-xs text-[0.625rem] w-full md:w-auto md:text-xs tracking-[0.075rem] uppercase hover:opacity-90 transition-opacity border-none shadow-lg">
               CONTINUE WITH CONFIDENCE
             </Button>
           </div>

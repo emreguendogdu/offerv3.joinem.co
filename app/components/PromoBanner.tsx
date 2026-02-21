@@ -6,7 +6,7 @@ function SaleStrip({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        'flex items-center gap-[24px] border-y border-[#ebeaea] bg-[#fefefe]/10 p-2 opacity-20 select-none pointer-events-none whitespace-nowrap -rotate-45',
+        'flex items-center gap-[1.5rem] border-y border-[#ebeaea] bg-[#fefefe]/10 p-2 opacity-20 select-none pointer-events-none whitespace-nowrap -rotate-45',
         className,
       )}
       style={{
@@ -16,7 +16,7 @@ function SaleStrip({ className }: { className?: string }) {
     >
       {Array.from({ length: 12 }).map((_, i) => (
         <div key={i} className="flex justify-center">
-          <p className="font-text text-[14px] leading-[16px] text-[#fefefe] font-normal">
+          <p className="font-text text-[0.875rem] leading-[1rem] text-[#fefefe] font-normal">
             SALE
           </p>
         </div>

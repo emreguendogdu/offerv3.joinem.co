@@ -25,7 +25,7 @@ export function FAQ() {
   return (
     <section className="bg-[#F8F9FA] py-24 px-4 overflow-hidden">
       <div className="mx-auto max-w-[50rem]">
-        <h2 className="text-center font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight mb-16 text-[#2D2925]">
+        <h2 className="text-center font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.1] tracking-tight mb-16 text-[#2D2925]">
           Frequently asked <span className="text-[#D1D5DB]">questions</span>
         </h2>
 
@@ -73,7 +73,7 @@ function FAQItem({
         </div>
       </summary>
       <div className="px-8 pb-7">
-        <p className="text-[15.5px] leading-[1.6] text-[#2F2A25] opacity-80">
+        <p className="text-[0.96875rem] leading-[1.6] text-[#2F2A25] opacity-80">
           {faq.a}
         </p>
       </div>

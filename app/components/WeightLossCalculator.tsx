@@ -63,7 +63,7 @@ export function WeightLossCalculator() {
             {/* Range Thumb Handle */}
             <div
               className="pointer-events-none absolute top-1/2 z-10 h-7 w-7 -translate-y-1/2 rounded-full border-[5px] border-accent bg-white shadow-[0_0_4px_0_#E4D8D8]"
-              style={{ left: `calc(${percentage}% - 14px)` }}
+              style={{ left: `calc(${percentage}% - 0.875rem)` }}
             />
 
             <input

@@ -26,7 +26,7 @@ export function TeamGrid() {
     <section className="bg-white py-24 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
-          <h2 className="text-[#2F2A25] font-display text-[32px] md:text-[40px] font-medium leading-[1.1] tracking-tight max-w-[500px]">
+          <h2 className="text-[#2F2A25] font-display text-[2rem] md:text-[2.5rem] font-medium leading-[1.1] tracking-tight max-w-[500px]">
             Meet the <span className="text-primary">incredible</span> doctors
             we&apos;ve partnered with.
           </h2>
@@ -37,7 +37,7 @@ export function TeamGrid() {
               supported.
             </p>
             <div>
-              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-8 py-4 rounded-full font-normal md:font-bold text-[14px] tracking-widest uppercase border-none shadow-lg">
+              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-8 py-4 rounded-full font-normal md:font-bold text-[0.875rem] tracking-widest uppercase border-none shadow-lg">
                 TAKE THE ASSESSMENT
               </Button>
             </div>
@@ -70,7 +70,7 @@ export function TeamGrid() {
                 <h4 className="text-[#2F2A25] font-bold text-lg leading-tight mb-1">
                   {doc.name}
                 </h4>
-                <p className="text-[#2F2A25] text-[11px] leading-snug opacity-60">
+                <p className="text-[#2F2A25] text-[0.6875rem] leading-snug opacity-60">
                   {doc.cred}
                 </p>
               </div>

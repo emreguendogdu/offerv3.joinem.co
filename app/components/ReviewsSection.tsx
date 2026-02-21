@@ -105,7 +105,7 @@ export function ReviewsSection() {
     <section className="bg-white py-24 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] mb-16">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
-          <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[45px] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
+          <h2 className="text-[#2F2A25] font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
             There&apos;s a reason people are{' '}
             <span className="text-primary">raving about us.</span>
           </h2>
@@ -119,7 +119,7 @@ export function ReviewsSection() {
               .
             </p>
             <div>
-              <Button className="bg-[#2D2925] text-white px-10 py-4 rounded-full font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity">
+              <Button className="bg-[#2D2925] text-white px-10 py-4 rounded-full font-bold text-[0.875rem] tracking-widest uppercase hover:opacity-90 transition-opacity">
                 I&apos;M READY, LET&apos;S GO
               </Button>
             </div>

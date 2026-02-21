@@ -29,7 +29,7 @@ export function StatsCards() {
             key={stat.label}
             className="bg-accent-light p-3 md:p-6 flex md:flex-col justify-between items-center md:justify-center text-center rounded-3xl"
           >
-            <p className="font-text text-[42px] md:text-[72px] font-bold text-brand-dark leading-tight md:leading-[108px] w-[40%] md:w-auto text-left md:text-center">
+            <p className="font-text text-[2.625rem] md:text-[4.5rem] font-bold text-brand-dark leading-tight md:leading-[6.75rem] w-[40%] md:w-auto text-left md:text-center">
               {stat.value}
               <span className="font-normal text-primary">{stat.unit}</span>
             </p>

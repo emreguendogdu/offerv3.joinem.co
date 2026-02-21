@@ -20,7 +20,7 @@ function OptionSelect({ text, href }: { text: string; href: string }) {
   return (
     <Link
       href={hrefWithQuery}
-      className="bg-white rounded-[10px] px-[25px] py-[27px] w-full text-sm md:text-base font-semibold text-black border border-gray-100"
+      className="bg-white rounded-[10px] px-[1.5625rem] py-[1.6875rem] w-full text-sm md:text-base font-semibold text-black border border-gray-100"
     >
       {text}
     </Link>
@@ -46,7 +46,7 @@ export function WeightLossGoalQuestion() {
 
           <Button
             href={BRAND.ctaUrl}
-            className="px-[50px] py-[22px] text-[12px] tracking-[1.2px] font-medium md:w-full"
+            className="px-[3.125rem] py-[1.375rem] text-[0.75rem] tracking-[0.075rem] font-medium md:w-full"
           >
             CONTINUE
           </Button>

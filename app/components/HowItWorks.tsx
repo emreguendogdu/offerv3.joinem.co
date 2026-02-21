@@ -111,7 +111,7 @@ export function HowItWorks() {
     <section className="bg-white py-8 px-4 md:px-10 md:py-24 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
         <div className="flex flex-col gap-6 w-full lg:max-w-[420px]">
-          <h2 className="text-[#2F2A25] font-display text-[36px] md:text-[40px] font-medium leading-[1.1] md:tracking-tight">
+          <h2 className="text-[#2F2A25] font-display text-[2.25rem] md:text-[2.5rem] font-medium leading-[1.1] md:tracking-tight">
             Begin your weight loss journey with Embody.
           </h2>
           <p className="leading-[1.6] text-[#2F2A25] text-base md:text-lg opacity-90">
@@ -122,7 +122,7 @@ export function HowItWorks() {
             receiving your prescription.
           </p>
           <div className="mt-4">
-            <Button className="bg-[#111111] text-white px-10 py-4 rounded-full font-bold text-[14px] tracking-widest uppercase hover:opacity-90 transition-opacity w-full md:w-fit">
+            <Button className="bg-[#111111] text-white px-10 py-4 rounded-full font-bold text-[0.875rem] tracking-widest uppercase hover:opacity-90 transition-opacity w-full md:w-fit">
               Get Started
             </Button>
           </div>
@@ -134,12 +134,12 @@ export function HowItWorks() {
           className="relative flex-1 space-y-16 pl-24 md:pl-32"
         >
           {/* Track Line */}
-          <div className="absolute left-[32px] md:left-[40px] top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
+          <div className="absolute left-[2rem] md:left-[2.5rem] top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
 
           {/* Progress Line */}
           <div
             ref={lineRef}
-            className="absolute left-[32px] md:left-[40px] top-4 w-[1.5px] bg-accent-dark"
+            className="absolute left-[2rem] md:left-[2.5rem] top-4 w-[1.5px] bg-accent-dark"
             style={{ height: '0px' }}
           />
 
@@ -151,7 +151,7 @@ export function HowItWorks() {
             >
               <div
                 className={cn(
-                  'absolute -left-[76px] md:-left-[100px] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
+                  'absolute -left-[4.75rem] md:-left-[6.25rem] top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
                   activeStep >= index
                     ? 'border-accent-dark'
                     : 'border-[#F1F5F9]',
@@ -166,7 +166,7 @@ export function HowItWorks() {
               </div>
               <div className="flex flex-col gap-6 w-full lg:max-w-[29.125rem]">
                 <div>
-                  <h3 className="text-lg lg:text-[22px] font-semibold text-[#2F2A25] leading-tight mb-3">
+                  <h3 className="text-lg lg:text-[1.375rem] font-semibold text-[#2F2A25] leading-tight mb-3">
                     {step.title}
                   </h3>
                   <p className="leading-[1.6] text-[#2F2A25] text-base md:text-lg opacity-90">
