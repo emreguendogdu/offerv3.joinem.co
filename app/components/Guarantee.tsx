@@ -12,7 +12,7 @@ export function Guarantee() {
       ref={sectionRef}
       className={`bg-white px-4 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
     >
-      <div className="mx-auto max-w-[58.75rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden flex items-center justify-center">
+      <div className="mx-auto max-w-[58.75rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] card relative overflow-hidden flex items-center justify-center">
         <div className="flex flex-col items-center justify-center w-full max-w-[40rem]">
           <Logo className="w-16 h-16 md:w-25 md:h-25" />
           <div className="flex flex-col items-center justify-center gap-4">

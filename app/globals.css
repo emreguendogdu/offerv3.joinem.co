@@ -153,4 +153,14 @@ input[type='range']::-webkit-slider-thumb {
     -ms-overflow-style: none; /* IE + Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .card {
+    padding: 2.5rem; /* 40px */
+  }
+
+  @media screen and (min-width: 768px) {
+    .card {
+      padding: 4rem; /* 64px */
+    }
+  }
 }
