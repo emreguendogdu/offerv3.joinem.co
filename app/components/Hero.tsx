@@ -120,7 +120,7 @@ export function Hero() {
           src="/images/hero-photo-collage.png"
           alt="Happy patients"
           fill
-          className="object-cover"
+          className="object-cover md:object-contain"
           priority
         />
       </div>
