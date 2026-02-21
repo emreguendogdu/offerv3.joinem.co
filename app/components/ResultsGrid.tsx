@@ -146,10 +146,9 @@ export function ResultsGrid() {
 }
 
 function StatBadge({ text, index }: { text: string; index: number }) {
-  const { ref: badgeRef, revealClassName } =
-    useRevealOnInView<HTMLDivElement>({
-      hiddenClassName: MOBILE_SAFE_HIDDEN_REVEAL_CLASS,
-    });
+  const { ref: badgeRef, revealClassName } = useRevealOnInView<HTMLDivElement>({
+    hiddenClassName: MOBILE_SAFE_HIDDEN_REVEAL_CLASS,
+  });
 
   return (
     <div
@@ -173,7 +172,7 @@ const ImageWrapper = ({
   return (
     <div
       className={cn(
-        'relative aspect-305/295 w-full md:w-[244px] md:max-w-none 2xl:w-[305px] overflow-hidden rounded-3xl md:rounded-[50px]',
+        'relative aspect-305/295 w-full lg:w-[244px] md:max-w-none 2xl:w-[305px] overflow-hidden rounded-3xl md:rounded-[50px]',
         className,
       )}
     >

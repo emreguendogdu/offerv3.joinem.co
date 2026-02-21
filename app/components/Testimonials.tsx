@@ -44,7 +44,7 @@ export function Testimonials() {
         {/* Big testimonial */}
         <div
           ref={bigTestimonialRef}
-          className={`pt-12 md:pt-24 text-center w-fit mx-auto transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${bigTestimonialRevealClass}`}
+          className={`pt-12 md:pt-24 text-center w-fit mx-auto transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${bigTestimonialRevealClass} mb-10`}
         >
           <p className=" text-gray-500">10,000+ Patients Agree</p>
           <div className="mt-2 flex justify-center">
@@ -61,10 +61,10 @@ export function Testimonials() {
         </div>
 
         {/* Floating testimonials around vial */}
-        <div className="relative flex items-center justify-center pt-20 pb-10 h-full min-h-[620px] md:min-h-[700px] overflow-visible">
+        <div className="relative flex items-center justify-center md:pb-10 h-full min-h-[440px] md:min-h-[700px] overflow-visible">
           {/* Center vial */}
-          <div className="relative z-10 h-[350px] w-[220px] md:h-full md:w-[440px] aspect-732/1096 perspective-distant md:-translate-x-[12.5%]">
-            <div className="relative h-full w-full transform-gpu origin-bottom transform-[rotateZ(10deg)_rotateY(-12deg)] md:transform-[rotateZ(10deg)_rotateY(-5deg)]">
+          <div className="relative z-10 h-[320px] w-[200px] md:h-full md:w-[400px] aspect-732/1096 perspective-distant -translate-x-[12.5%] md:-translate-x-[12.5%]">
+            <div className="relative h-full w-full vial-rotate-container">
               <div className="relative h-full w-full animate-float">
                 <Image
                   src="/images/products/inj_tirz.webp"
@@ -98,7 +98,7 @@ export function Testimonials() {
             {/* Right side */}
             <TestimonialItem
               text="Support has been really responsive!"
-              className="top-[10%] -right-[3%] max-w-[180px] md:top-[20%] md:-right-[0%] md:max-w-[360px]"
+              className="top-[10%] -right-[3%] max-w-[180px] md:top-[15%] md:-right-[0%] md:max-w-[360px]"
               align="center"
             />
             <TestimonialItem
@@ -108,7 +108,7 @@ export function Testimonials() {
             />
             <TestimonialItem
               text="It just fits into my routine."
-              className="top-[74%] right-[1%] max-w-[165px] md:top-[65%] md:right-[7.5%] md:max-w-[360px]"
+              className="top-[65%] right-[0%] max-w-[165px] md:top-[65%] md:right-[7.5%] md:max-w-[360px]"
               align="center"
             />
           </div>
@@ -169,7 +169,7 @@ const TestimonialItem = ({
       <p className="text-[1rem] md:text-[2rem] font-semibold leading-[1.2]">
         {text}
       </p>
-      <p
+      <div
         className={cn(
           'mt-2 md:mt-3 flex items-center gap-2 text-[0.75rem] md:text-[0.875rem] font-normal',
           align === 'left'
@@ -181,8 +181,11 @@ const TestimonialItem = ({
                 : null,
         )}
       >
-        <Check className="w-4 h-4 md:w-5 md:h-5" /> Verified Embody Customer
-      </p>
+        <Check className="w-4 h-4 md:w-5 md:h-5" />{' '}
+        <span className="w-fit whitespace-nowrap">
+          Verified Embody Customer
+        </span>
+      </div>
     </div>
   );
 };

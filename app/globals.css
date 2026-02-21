@@ -163,4 +163,20 @@ input[type='range']::-webkit-slider-thumb {
       padding: 4rem; /* 64px */
     }
   }
+
+  .vial-rotate-container {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    will-change: transform;
+    /* Mobile defaults */
+    transform: rotateZ(10deg) rotateY(-12deg);
+    transform-origin: bottom;
+  }
+
+  /* Desktop override */
+  @media (min-width: 768px) {
+    .vial-rotate-container {
+      transform: rotateZ(10deg) rotateY(-5deg);
+    }
+  }
 }
