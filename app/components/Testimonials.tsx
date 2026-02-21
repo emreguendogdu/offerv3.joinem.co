@@ -61,10 +61,10 @@ export function Testimonials() {
         </div>
 
         {/* Floating testimonials around vial */}
-        <div className="relative flex items-center justify-center pt-20 pb-10 h-full min-h-[500px] md:min-h-[700px] overflow-visible">
+        <div className="relative flex items-center justify-center pt-20 pb-10 h-full min-h-[620px] md:min-h-[700px] overflow-visible">
           {/* Center vial */}
-          <div className="relative z-10 h-[350px] w-[220px] md:h-full md:w-[440px] aspect-[732/1096] [perspective:1200px] -translate-x-[12.5%]">
-            <div className="relative h-full w-full transform-gpu origin-bottom [transform:rotateZ(10deg)_rotateY(-4deg)] md:[transform:rotateZ(10deg)_rotateY(-5deg)]">
+          <div className="relative z-10 h-[350px] w-[220px] md:h-full md:w-[440px] aspect-732/1096 perspective-distant md:-translate-x-[12.5%]">
+            <div className="relative h-full w-full transform-gpu origin-bottom transform-[rotateZ(10deg)_rotateY(-12deg)] md:transform-[rotateZ(10deg)_rotateY(-5deg)]">
               <div className="relative h-full w-full animate-float">
                 <Image
                   src="/images/products/inj_tirz.webp"
@@ -82,33 +82,33 @@ export function Testimonials() {
             <TestimonialItem
               align="right"
               text="The intake only took a couple minutes."
-              className="top-[5%] left-[6%]"
+              className="top-[4%] -left-[2%] max-w-[170px] md:top-[5%] md:left-[6%] md:max-w-[360px]"
             />
             <TestimonialItem
               align="right"
               text="I’m eating normal portions again. I wish I did this sooner."
-              className="top-[30%] left-[17%] md:max-w-[520px]"
+              className="top-[24%] left-[0%] max-w-[190px] md:top-[30%] md:left-[17%] md:max-w-[520px]"
               delayMs={110}
             />
             <TestimonialItem
               align="right"
               text="I didn’t expect it to feel this manageable!"
-              className="top-[45%] left-[0%]"
+              className="top-[52%] -left-[1%] max-w-[170px] md:top-[45%] md:left-[0%] md:max-w-[360px]"
             />
             {/* Right side */}
             <TestimonialItem
               text="Support has been really responsive!"
-              className="top-[20%] -right-[0%]"
+              className="top-[10%] -right-[3%] max-w-[180px] md:top-[20%] md:-right-[0%] md:max-w-[360px]"
               align="center"
             />
             <TestimonialItem
               text="Getting started was surprisingly simple."
-              className="top-[40%] -right-[4%]"
+              className="top-[38%] -right-[2%] max-w-[180px] md:top-[40%] md:-right-[4%] md:max-w-[360px]"
               align="center"
             />
             <TestimonialItem
               text="It just fits into my routine."
-              className="top-[65%] right-[7.5%]"
+              className="top-[74%] right-[1%] max-w-[165px] md:top-[65%] md:right-[7.5%] md:max-w-[360px]"
               align="center"
             />
           </div>

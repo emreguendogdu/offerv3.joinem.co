@@ -23,9 +23,9 @@ const FAQS = [
 
 export function FAQ() {
   return (
-    <section className="bg-[#F8F9FA] py-24 px-4 overflow-hidden">
+    <section className="bg-[#F8F9FA] py-8 md:py-20 px-4 overflow-hidden">
       <div className="mx-auto max-w-[50rem]">
-        <h2 className="text-center font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.1] tracking-tight mb-16 text-[#2D2925]">
+        <h2 className="text-center font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.5] tracking-tight mb-6 md:mb-16 text-[#2D2925]">
           Frequently asked <span className="text-[#D1D5DB]">questions</span>
         </h2>
 
@@ -46,7 +46,8 @@ function FAQItem({
   faq: (typeof FAQS)[number];
   index: number;
 }) {
-  const { ref: itemRef, revealClassName } = useRevealOnInView<HTMLDetailsElement>();
+  const { ref: itemRef, revealClassName } =
+    useRevealOnInView<HTMLDetailsElement>();
 
   return (
     <details

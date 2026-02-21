@@ -11,7 +11,7 @@ export function Guarantee() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white py-24 px-4 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
+      className={`bg-white py-8 pt-16 md:py-20 px-4 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
     >
       <div className="mx-auto max-w-[58.75rem] bg-[#FBF6F0] rounded-[60px] md:rounded-[80px] p-8 md:p-20 relative overflow-hidden flex items-center justify-center">
         <div className="flex flex-col items-center justify-center w-full max-w-[40rem]">
@@ -20,7 +20,7 @@ export function Guarantee() {
             <span className="text-foreground font-semibold text-sm mt-1 text-center md:text-left uppercase">
               Guarantee
             </span>
-            <h2 className="text-[#2F2A25] font-display text-[1.875rem] font-semibold leading-[1.1] tracking-tight text-center">
+            <h2 className="text-[#2F2A25] font-display text-[1.25rem] md:text-[1.875rem] font-semibold leading-[1.1] tracking-tight text-center">
               Support that fits your life, backed by a simple 100% satisfaction
               guarantee.
             </h2>

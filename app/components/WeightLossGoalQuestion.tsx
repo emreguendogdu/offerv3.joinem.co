@@ -29,7 +29,7 @@ function OptionSelect({ text, href }: { text: string; href: string }) {
 
 export function WeightLossGoalQuestion() {
   return (
-    <section className="px-4 md:px-8 w-full">
+    <section className="px-4 md:px-8 w-full py-8">
       {/* Card */}
       <div className="flex items-center justify-center max-w-235 py-10 px-6 md:py-27.5 md:px-15  bg-accent-light rounded-[50px] mx-auto">
         {/* Content Wrapper */}

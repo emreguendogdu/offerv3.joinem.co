@@ -18,7 +18,7 @@ interface ButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const variantMap: Record<ButtonVariant, string> = {
   dark: 'bg-black hover:bg-brand-dark transition-colors',
-  orange: 'bg-primary hover:bg-orange-500 hover:shadow-lg transition-all',
+  orange: 'bg-primary hover:bg-primary-dark hover:shadow-lg transition-all',
 };
 
 const sizeMap: Record<ButtonSize, string> = {

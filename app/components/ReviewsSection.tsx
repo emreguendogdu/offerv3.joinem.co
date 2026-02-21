@@ -102,8 +102,8 @@ export function ReviewsSection() {
   ];
 
   return (
-    <section className="bg-white py-24 overflow-hidden">
-      <div className="mx-auto max-w-[77.625rem] mb-16">
+    <section className="bg-white py-8 md:py-20 overflow-hidden">
+      <div className="mx-auto max-w-[77.625rem] mb-6 md:mb-16">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
           <h2 className="text-[#2F2A25] font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
             There&apos;s a reason people are{' '}

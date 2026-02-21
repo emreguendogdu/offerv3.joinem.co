@@ -18,7 +18,7 @@ export function WeightLossCalculator() {
   return (
     <section
       ref={sectionRef}
-      className={`bg-white pt-5 pb-16 px-4 max-w-315 mx-auto md:px-7.5 md:pt-6.25 transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
+      className={`pt-5 pb-16 px-4 max-w-315 mx-auto md:px-7.5 md:pt-6.25 transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
     >
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left */}

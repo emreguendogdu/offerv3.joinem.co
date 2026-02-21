@@ -23,10 +23,14 @@ const STAT_BADGES = [
 ];
 const BADGE_DELAY_STEP_MS = 140;
 const FOOTNOTE_DELAY_MS = STAT_BADGES.length * BADGE_DELAY_STEP_MS + 120;
+const MOBILE_SAFE_HIDDEN_REVEAL_CLASS =
+  'opacity-0 translate-y-8 md:translate-y-[150px] motion-reduce:opacity-100 motion-reduce:translate-y-0';
 
 export function ResultsGrid() {
   const { ref: footnoteRef, revealClassName: footnoteRevealClassName } =
-    useRevealOnInView<HTMLDivElement>();
+    useRevealOnInView<HTMLDivElement>({
+      hiddenClassName: MOBILE_SAFE_HIDDEN_REVEAL_CLASS,
+    });
 
   return (
     <section className="bg-white py-8 overflow-hidden">
@@ -141,7 +145,9 @@ export function ResultsGrid() {
 
 function StatBadge({ text, index }: { text: string; index: number }) {
   const { ref: badgeRef, revealClassName } =
-    useRevealOnInView<HTMLDivElement>();
+    useRevealOnInView<HTMLDivElement>({
+      hiddenClassName: MOBILE_SAFE_HIDDEN_REVEAL_CLASS,
+    });
 
   return (
     <div
