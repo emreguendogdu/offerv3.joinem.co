@@ -19,14 +19,14 @@ const STEPS: Step[] = [
     description:
       'Complete a quick online evaluation to determine if GLP-1 medication is right for you. Our team of licensed professionals will review your information and provide approval in no time.',
     img: '/images/assessment-1.png',
-    alt: 'Online assessment',
+    alt: "A hand holding a smartphone against a neutral gray background, displaying a mobile health app interface. The screen shows a personalized plan titled Amelia's plan for a GLP-1 injection, featuring a 3D render of a medical vial with a teal and navy logo. Above the phone, a large teal floating button with a white checkmark icon reads Recommended. The UI design is minimalist with teal accents and includes progress indicators for Approval, Shipping, and Payment.",
   },
   {
     title: 'Get Prescribed',
     description:
       "Once approved, you'll receive personalized care and a prescription to support your weight loss and health goals. Your care plan is designed to help you achieve lasting results safely and effectively.",
     img: '/images/doctors/alan_viglione.webp',
-    alt: 'Doctor prescribing',
+    alt: 'Close up photo of Dr. Alan Viglione, smiling',
     imageClassName: 'object-top',
   },
   {
@@ -34,7 +34,7 @@ const STEPS: Step[] = [
     description:
       'Your medication will be shipped directly to your door for maximum convenience. With Embody, starting your treatment is as simple as opening your package and following our easy-to-use instructions.',
     img: '/images/assessment-3.webp',
-    alt: 'Package delivery',
+    alt: 'Neatly packaged Embody delivery on a home',
   },
 ];
 

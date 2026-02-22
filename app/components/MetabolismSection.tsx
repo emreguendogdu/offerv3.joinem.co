@@ -9,16 +9,16 @@ export function MetabolismSection() {
         <div className="grid grid-cols-2 gap-4 overflow-hidden">
           <div className="relative h-[25vh] w-full md:w-auto md:h-90 overflow-hidden rounded-2xl mt-8">
             <Image
-              src="/images/setUSuF4LXmXJm1JrIxQ78A4dmg.png"
-              alt="Weight loss result"
+              src="/images/metabolism-2.png"
+              alt="A woman holding out the waistband of oversized blue jeans to show weight loss progress, featuring a midsection view against a light blue background."
               fill
-              className="object-cover"
+              className="object-cover object-center"
             />
           </div>
           <div className="relative h-[25vh] w-full md:w-auto md:h-90 overflow-hidden rounded-2xl">
             <Image
               src="/images/V0vJeyWRHjhriS71aKjPwkKIjAQ.png"
-              alt="Measuring waist"
+              alt="A close-up shot of a person in light blue athletic wear measuring their waist with a white measuring tape shows 28 inches, set against a bright, minimalist background with soft sunlight."
               fill
               className="object-cover"
             />

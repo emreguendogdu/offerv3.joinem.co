@@ -23,16 +23,16 @@ export function SupportSection() {
           <div className="grid grid-cols-2 gap-4 h-[22vh] md:h-[340px]">
             <div className="relative h-full overflow-hidden rounded-[24px] md:rounded-[32px] mt-8">
               <Image
-                src="/images/VFZS546xGl8hWlrXSKafeSpHjhk.png"
-                alt="Support specialist"
+                src="/images/support-1.png"
+                alt="A male support specialist in a white lab coat smiling while showing a red dental model of a jaw to a blonde female patient in a clinic setting with a brick wall background."
                 fill
                 className="object-cover"
               />
             </div>
             <div className="relative h-full overflow-hidden rounded-[24px] md:rounded-[40px]">
               <Image
-                src="/images/FO7DL2EbFiMoQ56vF6yuqTt2xj0.png"
-                alt="Man with medication"
+                src="/images/support-2.png"
+                alt="A smiling man in a black t-shirt holding a white pill bottle in one hand and a glass of water in the other against a solid gray background."
                 fill
                 className="object-cover"
               />
