@@ -39,7 +39,7 @@ export function ResultsGrid() {
 
   return (
     <section className="bg-white overflow-hidden">
-      <div className="w-full mx-auto md:max-w-[81rem] px-4 text-left md:text-center">
+      <div className="w-full mx-auto md:max-w-[78rem] px-4 text-left md:text-center flex flex-col gap-5.5 md:gap-14">
         <div className="flex flex-col gap-4">
           <h2 className="font-display text-3xl md:text-5xl text-left md:text-center font-medium">
             The change we&apos;ve all been waiting for.
@@ -52,7 +52,7 @@ export function ResultsGrid() {
         </div>
 
         {/* People photo grid */}
-        <div className="mt-8 md:mt-10 md:mb-13.5 grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-3 w-[120%] mx-auto -translate-x-[10%] md:translate-x-0 h-auto aspect-472/350 md:aspect-auto md:h-[600px] md:w-fit overflow-x-hidden overflow-y-clip">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-3 w-[120%] mx-auto -translate-x-[10%] md:translate-x-0 h-auto aspect-472/350 md:aspect-auto md:h-[600px] md:w-fit overflow-x-hidden overflow-y-clip">
           {/* Column 1 */}
           <div className="flex flex-col gap-1 md:gap-3 mb-8 md:mb-0">
             <ImageWrapper className="h-1/3">
@@ -132,10 +132,10 @@ export function ResultsGrid() {
         </div>
 
         {/* 3 stat badges */}
-        <div className="flex flex-col w-full max-w-[70rem] gap-5 mx-auto">
+        <div className="flex flex-col w-full max-w-[73.75rem] gap-5 mx-auto">
           <div
             ref={statsRef}
-            className="mt-10 flex flex-wrap items-center justify-start md:justify-center gap-6"
+            className="flex items-center justify-between gap-2"
           >
             {STAT_BADGES.map((badge, index) => (
               <StatBadge
@@ -149,11 +149,11 @@ export function ResultsGrid() {
           {/* Text */}
           <div
             style={{ transitionDelay: `${FOOTNOTE_DELAY_MS}ms` }}
-            className={`flex w-full items-start justify-start md:justify-center transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${footnoteRevealClassName}`}
+            className={`flex w-full items-start justify-start transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${footnoteRevealClassName}`}
           >
             <p className="text-xs text-[#38312C]">
-              * Stat badge data based on Embody patients over their first 6
-              months of treatment
+              * Data based on Embody patients over their first 6 months of
+              treatment
             </p>
           </div>
         </div>
@@ -178,12 +178,12 @@ function StatBadge({
   return (
     <div
       style={{ transitionDelay: `${index * BADGE_DELAY_STEP_MS}ms` }}
-      className={`flex items-center gap-2 transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
+      className={`flex items-center gap-3 transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
     >
-      <Check />
-      <span className="text-lg">
+      <Check className="mt-1" />
+      <span className="text-lg text-left">
         {text}
-        <sup className="ml-0.5 align-super text-[0.65em]">*</sup>
+        <sup className="ml-0.5 text-[0.65em]">*</sup>
       </span>
     </div>
   );
