@@ -73,6 +73,7 @@ export function WeightLossCalculator() {
               step="1"
               value={weight}
               onChange={(e) => setWeight(parseInt(e.target.value))}
+              aria-label="Current weight in pounds"
               className="relative z-20 m-0 h-full w-full cursor-pointer appearance-none bg-transparent opacity-0"
             />
           </div>
