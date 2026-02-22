@@ -121,6 +121,7 @@ export function Hero() {
           alt="Happy patients"
           fill
           className="object-cover md:object-contain"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
           priority
         />
       </div>
