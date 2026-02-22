@@ -9,7 +9,7 @@ export function MetabolismSection() {
         <div className="grid grid-cols-2 gap-4 overflow-hidden">
           <div className="relative h-[25vh] w-full md:w-auto md:h-90 overflow-hidden rounded-2xl mt-8">
             <Image
-              src="/images/metabolism-2.png"
+              src="/images/metabolism-1.png"
               alt="A woman holding out the waistband of oversized blue jeans to show weight loss progress, featuring a midsection view against a light blue background."
               fill
               className="object-cover object-center"
@@ -17,7 +17,7 @@ export function MetabolismSection() {
           </div>
           <div className="relative h-[25vh] w-full md:w-auto md:h-90 overflow-hidden rounded-2xl">
             <Image
-              src="/images/V0vJeyWRHjhriS71aKjPwkKIjAQ.png"
+              src="/images/metabolism-2.png"
               alt="A close-up shot of a person in light blue athletic wear measuring their waist with a white measuring tape shows 28 inches, set against a bright, minimalist background with soft sunlight."
               fill
               className="object-cover"
