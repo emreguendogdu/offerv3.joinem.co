@@ -26,38 +26,38 @@ export function ReviewsSection() {
   const topMarquee: MarqueeContentItem[] = [
     {
       type: 'image',
-      src: '/images/reviews/PXqJ2sfwTMLRdk9LZr7XAMQinYc.png',
+      src: '/images/reviews/big-1.png',
       alt: 'Result 1',
     },
     {
       type: 'review',
       name: 'Lauren M.',
       location: 'Scottsdale, AZ',
-      avatar: '/images/reviews/YKzoGJpfFFf1BdjjaSowMezQ8.png',
+      avatar: '/images/reviews/avatar-1.png',
       text: "I've tried every diet and workout plan out there, but nothing stuck. With Embody, I'm down 37 lbs and for the first time, I don't feel like I'm fighting my own body. For the first time, the results feel steady and something I can realistically maintain.",
     },
     {
       type: 'image',
-      src: '/images/reviews/J9q5bVSoP1ItX7IQ3rtRNrPDWA.png',
+      src: '/images/reviews/big-2.png',
       alt: 'Result 2',
     },
     {
       type: 'review',
       name: 'Nicole S.',
       location: 'Tampa, FL',
-      avatar: '/images/reviews/AD7wBSbBjaoJEY2kpZy640pME.png',
+      avatar: '/images/reviews/avatar-2.png',
       text: "I was nervous to start GLP-1s online, but the process was so simple and the doctor support has been amazing. I'm already down 42 lbs in 4 months. The regular check-ins keep me accountable, and I finally feel like I have a plan I can stick with long term.",
     },
     {
       type: 'image',
-      src: '/images/reviews/eKEZ1mlvVbuQYZZFRP2HGWM52Y.png',
+      src: '/images/reviews/big-3.png',
       alt: 'Result 3',
     },
     {
       type: 'review',
       name: 'Danielle R.',
       location: 'Nashville, TN',
-      avatar: '/images/reviews/LJga7ZjWTOSDuC5dyBzOgGSZYfs.png',
+      avatar: '/images/reviews/avatar-3.png',
       text: "Life changing. The constant food cravings are finally gone. I feel in control again and I'm down 61 pounds since getting started. My confidence is back, my clothes fit comfortably again, and this is the first plan that has felt truly sustainable.",
     },
   ];
@@ -67,36 +67,36 @@ export function ReviewsSection() {
       type: 'review',
       name: 'Erin T.',
       location: 'Denver, CO',
-      avatar: '/images/reviews/N51YbqCRIIzwwYPH36B7N9lcGUo.jpg',
+      avatar: '/images/reviews/avatar-4.png',
       text: "I completed the intake in just a few minutes and had my medication delivered to my door the same week. I'm down 38 lbs and still going... Embody made it truly easy and was so affordable. Follow-ups are easy, and the steady progress keeps me motivated every week.",
     },
     {
       type: 'image',
-      src: '/images/reviews/jCpumbS2hmf0bTV4rn63Ex5o.png',
+      src: '/images/reviews/big-4.png',
       alt: 'Result 4',
     },
     {
       type: 'review',
       name: 'Tim H.',
       location: 'Austin, TX',
-      avatar: '/images/reviews/8jMaqpfuydUeRcai6qscNossfPY.png',
+      avatar: '/images/reviews/avatar-5.png',
       text: "I've lost over 50 pounds so far and my energy levels are higher than they've been in years. I only wish I started sooner. My sleep has improved, my joints feel better, and staying consistent no longer feels like a daily struggle. I finally feel like myself again.",
     },
     {
       type: 'image',
-      src: '/images/reviews/YDTDeNWqw3fWa6r7VeFWgpXIiDw.png',
+      src: '/images/reviews/big-5.png',
       alt: 'Result 5',
     },
     {
       type: 'review',
       name: 'Ashley C.',
       location: 'Charlotte, NC',
-      avatar: '/images/reviews/qYFgJk4MbvlC8LvC0cove7Yoi84.png',
+      avatar: '/images/reviews/avatar-6.png',
       text: "I tried to do it on my own for years. Having a provider guide me through this process made all the difference. I'm down 42 lbs. Having real support at every step made it easier to stay on track, and for the first time these results feel lasting.",
     },
     {
       type: 'image',
-      src: '/images/reviews/HVBXeD99wX7b2PnjNTPHMR0Kgw.png',
+      src: '/images/reviews/big-6.png',
       alt: 'Result 6',
     },
   ];
@@ -180,7 +180,7 @@ function MarqueeItem({
           src={item.src}
           alt={item.alt || ''}
           fill
-          className="object-cover"
+          className="object-cover object-[50%_15%]"
           aria-hidden
         />
       </div>
