@@ -70,7 +70,7 @@ export function Testimonials() {
                   src="/images/products/inj_tirz.webp"
                   alt="Embody GLP-1+GIP Tirzepatide injection box"
                   fill
-                  sizes="(max-width: 768px) 200px, (max-width: 1200px) 400px, 400px"
+                  sizes="(max-width: 768px) 200px, 400px"
                   className="object-contain"
                 />
               </div>
