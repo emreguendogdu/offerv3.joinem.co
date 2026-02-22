@@ -29,7 +29,7 @@ const PRICING_CONFIG: PricingCard[] = [
     imageSrc: '/images/products/gum_sema.webp',
     imageAlt: 'Semaglutide gum',
     title: 'GLP-1 Gum',
-    description: 'One simple gum per day.',
+    description: 'One minty piece per day.',
     price: '$199',
     buttonText: 'Get Started',
   },
@@ -61,7 +61,7 @@ export function PricingCards() {
                   {card.badge}
                 </span>
                 <div className="relative mx-auto my-6 w-[210px] h-[255px] md:w-[200px] md:h-[340px]">
-                  <div className="w-full h-full absolute -top-1/4 hover:scale-[1.1] transition-all">
+                  <div className="w-full h-full absolute -top-[30%] md:-top-[27%] hover:scale-[1.1] transition-all">
                     <Image
                       src={card.imageSrc}
                       alt={card.imageAlt}
