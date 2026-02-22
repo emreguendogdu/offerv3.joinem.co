@@ -66,6 +66,7 @@ export function PricingCards() {
                       src={card.imageSrc}
                       alt={card.imageAlt}
                       fill
+                      sizes="(max-width: 768px) 300px, (max-width: 1200px) 400px, 400px"
                       className="object-contain select-none pointer-events-none"
                     />
                   </div>
