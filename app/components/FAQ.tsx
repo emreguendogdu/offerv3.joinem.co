@@ -24,7 +24,7 @@ const FAQS = [
 export function FAQ() {
   return (
     <section className="bg-[#F8F9FA] px-4">
-      <div className="md:mx-auto md:max-w-[50rem] w-full card  flex flex-col gap-6 md:gap-12.5">
+      <div className="md:mx-auto md:max-w-[50rem] w-full card flex flex-col gap-6 md:gap-12.5">
         <h2 className="text-center font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.5] tracking-tight text-[#2D2925]">
           Frequently asked <span className="text-[#D1D5DB]">questions</span>
         </h2>

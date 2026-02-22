@@ -135,7 +135,7 @@ export function ResultsGrid() {
         <div className="flex flex-col w-full max-w-[73.75rem] gap-5 mx-auto">
           <div
             ref={statsRef}
-            className="flex items-center justify-between gap-2"
+            className="flex flex-wrap items-center justify-between gap-2"
           >
             {STAT_BADGES.map((badge, index) => (
               <StatBadge
