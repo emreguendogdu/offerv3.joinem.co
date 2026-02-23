@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 
 import './globals.css';
 import Script from 'next/script';
+import PlausibleProvider from 'next-plausible';
 
 const quincy = localFont({
   src: [
@@ -59,11 +60,7 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-TXLL9VGZ');
         `}</Script>
-        <script
-          defer
-          data-domain="offer.joinem.co"
-          src="https://plausible.io/js/pa-zFTMHpad447tDsGu6k6oF.js"
-        ></script>
+        <PlausibleProvider domain="offer.joinem.co" />
       </head>
       <body
         className={`${helveticaPro.variable} ${quincy.variable} antialiased`}
