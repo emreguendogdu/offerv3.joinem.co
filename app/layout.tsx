@@ -61,7 +61,7 @@ export default function RootLayout({
         `}</Script>
         <script
           defer
-          data-domain="joinem.co"
+          data-domain="offer.joinem.co"
           src="https://plausible.io/js/pa-zFTMHpad447tDsGu6k6oF.js"
         ></script>
       </head>
