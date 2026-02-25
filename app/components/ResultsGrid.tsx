@@ -61,7 +61,7 @@ export function ResultsGrid() {
                 src={`/images/${PATIENTS[0].src}`}
                 alt={PATIENTS[0].alt}
                 fill
-                className="object-cover rounded-[inherit]"
+                className="object-cover object-top rounded-[inherit]"
               />
             </ImageWrapper>
             <ImageWrapper className="h-2/3">
@@ -125,7 +125,7 @@ export function ResultsGrid() {
                 src={`/images/${PATIENTS[6].src}`}
                 alt={PATIENTS[6].alt}
                 fill
-                className="object-cover rounded-[inherit]"
+                className="object-cover rounded-[inherit] object-[50%_15%]"
               />
             </ImageWrapper>
           </div>
