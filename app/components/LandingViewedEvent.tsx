@@ -4,10 +4,8 @@ import { useEffect, useRef } from 'react';
 import { usePlausible } from 'next-plausible';
 
 type PlausibleEvents = {
-  'Landing Viewed': {
-    props: {
-      variant: string;
-    };
+  'Offer Viewed': {
+    variant: string;
   };
 };
 
@@ -21,7 +19,7 @@ export function LandingViewedEvent() {
     }
 
     hasTrackedRef.current = true;
-    plausible('Landing Viewed', { props: { variant: 'offer' } });
+    plausible('Offer Viewed', { props: { variant: 'offer' } });
   }, [plausible]);
 
   return null;
