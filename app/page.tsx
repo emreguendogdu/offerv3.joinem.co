@@ -17,7 +17,7 @@ import { FeaturesGrid } from './components/FeaturesGrid';
 import { WeightLossGoalQuestion } from './components/WeightLossGoalQuestion';
 import { Footer } from './components/Footer';
 import { Testimonials } from './components/Testimonials';
-import { LandingViewedEvent } from './components/LandingViewedEvent';
+import LandingViewedEvent from './components/LandingViewedEvent';
 
 export default function Home() {
   return (

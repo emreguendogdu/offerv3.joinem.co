@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { usePlausible } from 'next-plausible';
 
-export function LandingViewedTracker() {
+export default function LandingViewedTracker() {
   const plausible = usePlausible();
 
   useEffect(() => {
