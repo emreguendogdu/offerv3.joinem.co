@@ -7,7 +7,7 @@ export default function LandingViewedTracker() {
   const plausible = usePlausible();
 
   useEffect(() => {
-    plausible('Landing Viewed', { props: { variant: 'offer' } });
+    plausible('Landing Viewed - Offer');
   }, [plausible]);
 
   return null;
