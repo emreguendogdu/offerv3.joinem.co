@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 import Script from 'next/script';
 import PlausibleProvider from 'next-plausible';
+import LandingViewedTracker from './components/LandingViewedEvent';
 
 const quincy = localFont({
   src: [
@@ -53,21 +54,33 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script id="gtm" strategy="afterInteractive">{`
-          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-TXLL9VGZ');
+        {/* GTM */}
+        <Script id="gtm" strategy="beforeInteractive">{`
+          ;((function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TXLL9VGZ'));
         `}</Script>
-        <Script id="katalys" strategy="afterInteractive">{`
-          (!function(w,d,e,u,v,n,t,s){if(w[u])return;n=w[u]=[];n.push=function(){Array.prototype.push.call(w[u],arguments)};t=d.createElement(e);t.async=!0;t.src=v;s=d.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})(window,document,"script","_revoffers_track","https://db.revoffers.com/js/KA-8ZYJMB2WQ4.js");
-        `}</Script>
-        <PlausibleProvider domain="https://joinem.co" />
+
+        {/* Katalys */}
+        <Script
+          id="katalys"
+          strategy="afterInteractive"
+          src="https://db.revoffers.com/js/KA-8ZYJMB2WQ4.js"
+        />
+        <PlausibleProvider domain="joinem.co" />
       </head>
       <body
         className={`${helveticaPro.variable} ${quincy.variable} antialiased`}
       >
+        <LandingViewedTracker />
+        {/* GTM NoScript */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TXLL9VGZ"
