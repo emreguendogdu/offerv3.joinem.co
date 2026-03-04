@@ -60,7 +60,7 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-TXLL9VGZ');
         `}</Script>
-        <PlausibleProvider domain="joinem.co" />
+        <PlausibleProvider domain="https://joinem.co" />
       </head>
       <body
         className={`${helveticaPro.variable} ${quincy.variable} antialiased`}
