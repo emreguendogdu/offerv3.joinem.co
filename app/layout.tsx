@@ -60,6 +60,9 @@ export default function RootLayout({
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-TXLL9VGZ');
         `}</Script>
+        <Script id="katalys" strategy="afterInteractive">{`
+          (!function(w,d,e,u,v,n,t,s){if(w[u])return;n=w[u]=[];n.push=function(){Array.prototype.push.call(w[u],arguments)};t=d.createElement(e);t.async=!0;t.src=v;s=d.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})(window,document,"script","_revoffers_track","https://db.revoffers.com/js/KA-8ZYJMB2WQ4.js");
+        `}</Script>
         <PlausibleProvider domain="https://joinem.co" />
       </head>
       <body
