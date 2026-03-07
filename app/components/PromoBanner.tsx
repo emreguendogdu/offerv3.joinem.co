@@ -48,7 +48,7 @@ export function PromoBanner() {
           </div>
 
           {/* Secondary Badge/Info */}
-          <div className="flex items-center gap-2 rounded-full bg-linear-to-r from-primary to-secondary px-4 py-2 shadow-lg shadow-black/20">
+          <div className="flex flex-col items-center sm:gap-2 rounded-full bg-linear-to-r from-primary to-secondary px-4 py-2 shadow-lg shadow-black/20">
             <span className=" font-black text-white uppercase leading-none">
               $200+ OFF
             </span>
