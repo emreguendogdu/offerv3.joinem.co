@@ -16,12 +16,12 @@ const HERO_FEATURES = [
   {
     mobileText: (
       <>
-        <strong>LIMITED TIME Sale.</strong> Save $150 or more instantly.
+        <strong>LIMITED TIME Sale.</strong> Save $200 or more instantly.
       </>
     ),
     desktopText: (
       <>
-        <strong>LIMITED TIME Sale.</strong> Save $150 or more instantly.
+        <strong>LIMITED TIME Sale.</strong> Save $200 or more instantly.
       </>
     ),
   },
