@@ -16,12 +16,12 @@ const HERO_FEATURES = [
   {
     mobileText: (
       <>
-        <strong>50% OFF Sale.</strong> Save $150 or more instantly.
+        <strong>LIMITED TIME Sale.</strong> Save $150 or more instantly.
       </>
     ),
     desktopText: (
       <>
-        <strong>50% OFF Sale.</strong> Save $150 or more instantly.
+        <strong>LIMITED TIME Sale.</strong> Save $150 or more instantly.
       </>
     ),
   },
@@ -82,7 +82,7 @@ export function Hero() {
           <p className="text-lg text-center pt-1 pb-2">
             Starting at{' '}
             <span className="font-display text-[1.5625rem] md:text-3xl font-black text-primary">
-              $149
+              $99
             </span>{' '}
             – Compounded GLP-1 &amp; GLP-1 + GIP in stock
           </p>
