@@ -30,7 +30,7 @@ const PRICING_CONFIG: PricingCard[] = [
     imageAlt: 'Semaglutide gum',
     title: 'GLP-1 Gum',
     description: 'One minty piece per day.',
-    price: '$199',
+    price: '$149',
     buttonText: 'Get Started',
   },
 ];
