@@ -53,7 +53,7 @@ export function PromoBanner() {
               $200+ OFF
             </span>
             <span className=" font-medium text-white/90 leading-none">
-              all weight loss plans
+              with free shipping and no long term commitment!
             </span>
           </div>
         </div>

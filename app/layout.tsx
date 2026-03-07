@@ -43,7 +43,7 @@ const helveticaPro = localFont({
 export const metadata: Metadata = {
   title: 'Personalized Weight Loss Programs That Work | Embody',
   description:
-    'Start your weight loss journey with Embody. FDA-regulated GLP-1 medications, licensed providers, no insurance required. Starting at $149/month.',
+    'Start your weight loss journey with Embody. FDA-regulated GLP-1 medications, licensed providers, no insurance required. Starting at $99/month.',
 };
 
 export default function RootLayout({

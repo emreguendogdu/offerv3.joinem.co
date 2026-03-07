@@ -20,7 +20,7 @@ const PRICING_CONFIG: PricingCard[] = [
     imageAlt: 'Semaglutide vial',
     title: 'GLP-1 Injection',
     description: 'One simple injection per week.',
-    price: '$149',
+    price: '$99',
     buttonText: 'Get Started',
   },
   {

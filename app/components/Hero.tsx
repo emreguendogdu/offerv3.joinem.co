@@ -27,12 +27,15 @@ const HERO_FEATURES = [
   },
   {
     mobileText: (
-      <>Prescription & telemed visits included. No insurance required.</>
+      <>
+        <strong>No long term contract.</strong>{' '}
+        <span className="mx-1 opacity-35">·</span> Simple monthly plan only.
+      </>
     ),
     desktopText: (
       <>
-        <strong>No insurance required</strong>{' '}
-        <span className="mx-1 opacity-35">·</span> Simple monthly plan
+        <strong>No long term contract.</strong>{' '}
+        <span className="mx-1 opacity-35">·</span> Simple monthly plan only.
       </>
     ),
   },
@@ -80,11 +83,11 @@ export function Hero() {
 
           {/* Pricing line */}
           <p className="text-lg text-center pt-1 pb-2">
-            Starting at{' '}
+            GLP-1 for{' '}
             <span className="font-display text-[1.5625rem] md:text-3xl font-black text-primary">
               $99
             </span>{' '}
-            – Compounded GLP-1 &amp; GLP-1 + GIP in stock
+            with no long term commitment
           </p>
 
           {/* Feature checklist */}
