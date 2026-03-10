@@ -30,12 +30,17 @@ export default async function Home({ searchParams }: HomeProps) {
   const { utm_term: utmTerm } = await searchParams;
   const normalizedUtmTerm =
     (Array.isArray(utmTerm) ? utmTerm[0] : utmTerm)?.trim().toLowerCase() ?? '';
-  const promoBannerContent =
-    promoBannerContentByUtmTerm[normalizedUtmTerm] ?? defaultPromoBannerContent;
+  const promoBannerOverrides = promoBannerContentByUtmTerm[normalizedUtmTerm];
+  const promoBannerContent = {
+    heading: promoBannerOverrides?.heading || defaultPromoBannerContent.heading,
+    primaryText:
+      promoBannerOverrides?.primaryText || defaultPromoBannerContent.primaryText,
+    subText: promoBannerOverrides?.subText || defaultPromoBannerContent.subText,
+  };
 
   return (
     <div className="min-h-screen bg-white font-text">
-      <PromoBanner heading={promoBannerContent.heading} />
+      <PromoBanner content={promoBannerContent} />
 
       <div className="relative bg-[linear-gradient(#faf0e4_10%,#fff_100%)] p-[0.9375rem] md:pt-10 md:pb-7.5 flex flex-col gap-3 md:gap-5 md:px-4">
         <Header />
