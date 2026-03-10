@@ -1,6 +1,9 @@
-import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import DiscountIcon from './icons/DiscountIcon';
+
+type PromoBannerProps = {
+  heading: string;
+};
 
 function SaleStrip({ className }: { className?: string }) {
   return (
@@ -25,7 +28,7 @@ function SaleStrip({ className }: { className?: string }) {
   );
 }
 
-export function PromoBanner() {
+export function PromoBanner({ heading }: PromoBannerProps) {
   return (
     <div className="relative overflow-hidden bg-black text-white">
       {/* Decorative 'SALE' Strips */}
@@ -42,18 +45,16 @@ export function PromoBanner() {
           {/* Main Offer */}
           <div className="flex items-center gap-2">
             <DiscountIcon className="w-6 h-6" />
-            <span className="text-base font-bold text-white">
-              Limited Time Offer!
-            </span>
+            <span className="text-base font-bold text-white">{heading}</span>
           </div>
 
           {/* Secondary Badge/Info */}
           <div className="flex flex-col items-center sm:gap-2 rounded-full bg-linear-to-r from-primary to-secondary px-4 py-2 shadow-lg shadow-black/20">
             <span className=" font-black text-white uppercase leading-none">
-              $200+ OFF
+              $200 OFF (GLP1 for $99 today)
             </span>
             <span className=" font-medium text-white/90 leading-none">
-              with free shipping and no long term commitment!
+              With free shipping and no long term commitment!
             </span>
           </div>
         </div>
