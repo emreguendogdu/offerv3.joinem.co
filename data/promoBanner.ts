@@ -28,4 +28,26 @@ export const promoBannerContentByUtmTerm: Record<
   'mens-health': {
     heading: 'Exclusive Mens Health Offer!',
   },
+  'web-md': {
+    heading: 'Exclusive WebMD Offer!',
+  },
+  'top-10': {
+    heading: 'Exclusive Top10 Offer!',
+  },
+  'best-weight-loss': {
+    heading: 'Exclusive Best Weight Loss Offer!',
+  },
+  'weight-loss-meds': {
+    heading: 'Exclusive WeightLossMeds Offer!',
+  },
+  'top-5': {
+    heading: 'Exclusive Top5 Offer!',
+  },
+  'best-weight-loss-meds': {
+    heading: 'Exclusive BestWeightLossMeds Offer!',
+  },
+  'compare-treatments': {
+    heading: 'Exclusive Compare Treatments Offer!',
+  },
+  
 };
