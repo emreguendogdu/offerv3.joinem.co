@@ -28,14 +28,12 @@ const HERO_FEATURES = [
   {
     mobileText: (
       <>
-        <strong>No long term contract.</strong>{' '}
-        <span className="mx-1 opacity-35">·</span> Simple monthly plan only.
+        <strong>No long term contract.</strong> Simple monthly plan only.
       </>
     ),
     desktopText: (
       <>
-        <strong>No long term contract.</strong>{' '}
-        <span className="mx-1 opacity-35">·</span> Simple monthly plan only.
+        <strong>No long term contract.</strong> Simple monthly plan only.
       </>
     ),
   },
@@ -84,7 +82,10 @@ export function Hero() {
           {/* Pricing line */}
           <p className="text-lg text-center pt-1 pb-2">
             GLP-1 for{' '}
-            <span className="font-display text-[1.5625rem] md:text-3xl font-black text-primary">
+            <span
+              className="shiny-text font-display text-[1.5625rem] md:text-3xl font-black"
+              data-text="$99"
+            >
               $99
             </span>{' '}
             with no long term commitment

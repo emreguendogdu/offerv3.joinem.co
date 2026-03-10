@@ -17,6 +17,8 @@
   --color-brand-peach: #dbeafe;
   --color-brand-blue-light: #eff6ff;
   --color-brand-blue: #2563eb;
+  --color-deep-brown: hsl(17, 49%, 26%);
+  --color-soft-gold: #fec36f;
 
   --color-bg-secondary: #e4ddd4;
 
@@ -71,6 +73,15 @@ body {
   }
   to {
     transform: translateY(-100%);
+  }
+}
+
+@keyframes text-shine {
+  from {
+    background-position: 220% 50%;
+  }
+  to {
+    background-position: -140% 50%;
   }
 }
 
@@ -167,6 +178,38 @@ input[type='range']::-webkit-slider-thumb {
     padding: 2.5rem 1rem; /* 40px 16px */
   }
 
+  .shiny-text {
+    position: relative;
+    display: inline-block;
+    color: var(--color-brand-dark);
+  }
+
+  .shiny-text::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    color: transparent;
+    background-image: linear-gradient(
+      110deg,
+      transparent 0%,
+      transparent 42%,
+      var(--color-soft-gold) 49%,
+      #fff3cf 50%,
+      var(--color-soft-gold) 51%,
+      transparent 58%,
+      transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 230% 100%;
+    background-position: 220% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-shine 2s linear infinite;
+    will-change: background-position;
+    pointer-events: none;
+  }
+
   @media screen and (min-width: 768px) {
     .card {
       padding: 4rem; /* 64px */
@@ -187,5 +230,12 @@ input[type='range']::-webkit-slider-thumb {
     .vial-rotate-container {
       transform: rotateZ(10deg) rotateY(-5deg);
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shiny-text::after {
+    animation: none;
+    background-position: 220% 50%;
   }
 }
