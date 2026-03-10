@@ -36,7 +36,7 @@ export function PromoBanner({ heading }: PromoBannerProps) {
         <SaleStrip />
       </div>
 
-      <div className="absolute left-[85%] md:left-[63%] -translate-x-1/2 top-1/2 translate-y-1/2">
+      <div className="absolute left-[85%] md:left-[67.5%] -translate-x-1/2 top-1/2 translate-y-1/2">
         <SaleStrip />
       </div>
 
