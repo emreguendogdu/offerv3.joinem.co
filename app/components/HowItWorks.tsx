@@ -111,10 +111,10 @@ export function HowItWorks() {
     <section className="bg-white px-4 md:px-10 overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] flex flex-col lg:flex-row justify-between gap-12 lg:gap-20">
         <div className="flex flex-col gap-6 w-full lg:max-w-[420px]">
-          <h2 className="text-[#2F2A25] font-display text-[2.25rem] md:text-[2.5rem] font-medium leading-[1.1] md:tracking-tight">
+          <h2 className="text-(--color-text-dark) font-display text-[2.25rem] md:text-[2.5rem] font-medium leading-[1.1] md:tracking-tight">
             Begin your weight loss journey with Embody.
           </h2>
-          <p className="leading-[1.6] text-[#2F2A25] text-base md:text-lg opacity-90">
+          <p className="leading-[1.6] text-(--color-text-dark) text-base md:text-lg opacity-90">
             Start your transformation today with Embody it&apos;s easy,
             personalized process for accessing GLP-1 medications. Designed with
             your convenience in mind, our streamlined approach ensures
@@ -122,7 +122,7 @@ export function HowItWorks() {
             receiving your prescription.
           </p>
           <div className="mt-4">
-            <Button className="bg-[#111111] text-white px-10 py-4 rounded-full font-bold text-[0.875rem] tracking-widest uppercase hover:opacity-90 transition-opacity w-full md:w-fit">
+            <Button className="bg-(--color-text-darkest) text-white px-10 py-4 rounded-full font-bold text-[0.875rem] tracking-widest uppercase hover:opacity-90 transition-opacity w-full md:w-fit">
               Get Started
             </Button>
           </div>
@@ -135,7 +135,7 @@ export function HowItWorks() {
         >
           {/* Track Line */}
 
-          <div className="absolute left-[0.75rem] md:left-[2.5rem] top-0 md:top-4 bottom-4 w-[1px] bg-[#F1F5F9]" />
+          <div className="absolute left-[0.75rem] md:left-[2.5rem] top-0 md:top-4 bottom-4 w-[1px] bg-(--color-bg-slate)" />
           {/* Progress Line */}
           <div
             ref={lineRef}
@@ -154,22 +154,22 @@ export function HowItWorks() {
                   'absolute -left-[3.25rem] md:-left-[6.25rem] top-0 md:top-1.5 w-6 h-6 rounded-full border-2 transition-colors duration-500 bg-white flex items-center justify-center z-10',
                   activeStep >= index
                     ? 'border-accent-dark'
-                    : 'border-[#F1F5F9]',
+                    : 'border-(--color-bg-slate)',
                 )}
               >
                 <div
                   className={cn(
                     'w-2.5 h-2.5 rounded-full transition-colors duration-500',
-                    activeStep >= index ? 'bg-accent-dark' : 'bg-[#F1F5F9]',
+                    activeStep >= index ? 'bg-accent-dark' : 'bg-(--color-bg-slate)',
                   )}
                 />
               </div>
               <div className="flex flex-col gap-6 w-full lg:max-w-[29.125rem]">
                 <div>
-                  <h3 className="text-lg lg:text-[1.375rem] font-semibold text-[#2F2A25] leading-tight mb-3">
+                  <h3 className="text-lg lg:text-[1.375rem] font-semibold text-(--color-text-dark) leading-tight mb-3">
                     {step.title}
                   </h3>
-                  <p className="leading-[1.6] text-[#2F2A25] text-base md:text-lg opacity-90">
+                  <p className="leading-[1.6] text-(--color-text-dark) text-base md:text-lg opacity-90">
                     {step.description}
                   </p>
                 </div>

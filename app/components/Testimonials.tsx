@@ -48,7 +48,7 @@ export function Testimonials() {
         >
           <p className=" text-gray-500">10,000+ Patients Agree</p>
           <div className="mt-2 flex justify-center">
-            <Stars starClassName="w-12 h-18 text-[#E1CAA0]" />
+            <Stars starClassName="w-12 h-18 text-(--color-ui-gold)" />
           </div>
           <h3 className="mt-4 font-display text-3xl text-[2rem] md:text-4xl">
             &ldquo;When nothing else worked,{' '}
@@ -116,7 +116,7 @@ export function Testimonials() {
         </div>
 
         {/* HSA/FSA bar */}
-        <div className="pt-8 md:pt-12  flex items-center justify-center gap-2 text-[1.5rem] md:text-[2rem] md:text-[2.5rem] font-bold text-[#2F2A25]">
+        <div className="pt-8 md:pt-12  flex items-center justify-center gap-2 text-[1.5rem] md:text-[2rem] md:text-[2.5rem] font-bold text-(--color-text-dark)">
           <div className="relative h-10 w-10 md:h-12 md:w-12">
             <Image
               src="/images/HpMphmT9reZWKHyliNJuwSGqX0.png"

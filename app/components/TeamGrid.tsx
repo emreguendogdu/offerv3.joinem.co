@@ -26,18 +26,18 @@ export function TeamGrid() {
     <section className="bg-white overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] px-4">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 mb-6 md:mb-16">
-          <h2 className="text-[#2F2A25] font-display text-[2rem] md:text-[2.5rem] font-medium leading-[1.1] tracking-tight max-w-[500px]">
+          <h2 className="text-(--color-text-dark) font-display text-[2rem] md:text-[2.5rem] font-medium leading-[1.1] tracking-tight max-w-[500px]">
             Meet the <span className="text-primary">incredible</span> doctors
             we&apos;ve partnered with.
           </h2>
           <div className="flex flex-col gap-6 lg:max-w-[420px]">
-            <p className="text-[#2F2A25] text-base md:text-lg leading-[1.6] opacity-90">
+            <p className="text-(--color-text-dark) text-base md:text-lg leading-[1.6] opacity-90">
               Embody physicians are here to guide you every step of the way,
               bringing both their expertise and genuine care to keep you
               supported.
             </p>
             <div>
-              <Button className="bg-gradient-to-r from-[#F59E0B] to-[#EAB308] text-white px-8 py-4 rounded-full font-normal md:font-bold text-[0.875rem] tracking-widest uppercase border-none shadow-lg">
+              <Button className="bg-gradient-to-r from-(--color-brand-orange) to-[#EAB308] text-white px-8 py-4 rounded-full font-normal md:font-bold text-[0.875rem] tracking-widest uppercase border-none shadow-lg">
                 TAKE THE ASSESSMENT
               </Button>
             </div>
@@ -58,7 +58,7 @@ export function TeamGrid() {
           {doctorsList.map((doc, i) => (
             <div
               key={`${doc.name}-${i}`}
-              className="relative aspect-[4/5] w-[336px] md:w-[350px] shrink-0 overflow-hidden rounded-[56px] bg-[#7A8F97]"
+              className="relative aspect-[4/5] w-[336px] md:w-[350px] shrink-0 overflow-hidden rounded-[56px] bg-(--color-bg-teal)"
             >
               <Image
                 src={doc.src}
@@ -67,10 +67,10 @@ export function TeamGrid() {
                 className="object-cover"
               />
               <div className="absolute inset-x-4 bottom-4 bg-white/95 backdrop-blur-sm rounded-[32px] p-6 text-center shadow-lg border border-white/20">
-                <h4 className="text-[#2F2A25] font-bold text-lg leading-tight mb-1">
+                <h4 className="text-(--color-text-dark) font-bold text-lg leading-tight mb-1">
                   {doc.name}
                 </h4>
-                <p className="text-[#2F2A25] text-[0.6875rem] leading-snug opacity-60">
+                <p className="text-(--color-text-dark) text-[0.6875rem] leading-snug opacity-60">
                   {doc.cred}
                 </p>
               </div>

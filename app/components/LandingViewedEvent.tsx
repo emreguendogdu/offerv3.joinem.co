@@ -3,37 +3,23 @@
 import { useEffect } from 'react';
 import { usePlausible } from 'next-plausible';
 
-const LANDING_VIEWED_STORAGE_KEY = 'analytics:landing-viewed-offer';
-let hasTrackedLandingViewInMemory = false;
-
-export default function LandingViewedTracker() {
+export default function LandingViewedTracker({
+  landingName = 'Offer',
+}: {
+  landingName?: string;
+}) {
   const plausible = usePlausible();
 
   useEffect(() => {
-    if (hasTrackedLandingViewInMemory) {
-      return;
-    }
+    const eventName = `Landing Viewed - ${landingName}`;
+    const sessionKey = `tracked_${eventName.replace(/\s+/g, '_')}`;
 
-    try {
-      if (
-        window.localStorage.getItem(LANDING_VIEWED_STORAGE_KEY) === 'true'
-      ) {
-        hasTrackedLandingViewInMemory = true;
-        return;
-      }
-    } catch {
-      // Ignore storage access issues and fall back to the in-memory guard.
+    // If it hasn't fired in this specific browser tab/session yet, fire it.
+    if (!sessionStorage.getItem(sessionKey)) {
+      plausible(eventName);
+      sessionStorage.setItem(sessionKey, 'true');
     }
-
-    plausible('Landing Viewed - Offer');
-    hasTrackedLandingViewInMemory = true;
-
-    try {
-      window.localStorage.setItem(LANDING_VIEWED_STORAGE_KEY, 'true');
-    } catch {
-      // Ignore storage access issues and rely on the in-memory guard.
-    }
-  }, [plausible]);
+  }, [plausible, landingName]);
 
   return null;
 }

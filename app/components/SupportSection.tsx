@@ -4,14 +4,14 @@ import Image from 'next/image';
 export function SupportSection() {
   return (
     <section className="bg-white px-4">
-      <div className="mx-auto max-w-[77.625rem] bg-[#F2F2F2] rounded-[48px] p-8 md:p-16 lg:p-20">
+      <div className="mx-auto max-w-[77.625rem] bg-(--color-bg-gray) rounded-[48px] p-8 md:p-16 lg:p-20">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
-            <h2 className="text-[#2F2A25] font-display text-[2.25rem] md:text-[2.5rem] leading-[1.1] md:tracking-tight">
+            <h2 className="text-(--color-text-dark) font-display text-[2.25rem] md:text-[2.5rem] leading-[1.1] md:tracking-tight">
               Unlimited 24/7 support <br />
               <strong className="text-primary">included.</strong>
             </h2>
-            <p className="text-[#2F2A25] text-base md:text-lg leading-[1.6] opacity-90 max-w-[480px]">
+            <p className="text-(--color-text-dark) text-base md:text-lg leading-[1.6] opacity-90 max-w-[480px]">
               Embody provides 24/7 access to a dedicated team of specialists,
               ensuring you have the support you need{' '}
               <span className="text-primary">around the clock</span>. With

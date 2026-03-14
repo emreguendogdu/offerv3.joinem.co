@@ -23,10 +23,10 @@ const FAQS = [
 
 export function FAQ() {
   return (
-    <section className="bg-[#F8F9FA] px-4">
+    <section className="bg-(--color-bg-gray-light) px-4">
       <div className="md:mx-auto md:max-w-[50rem] w-full card flex flex-col gap-6 md:gap-12.5">
-        <h2 className="text-center font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.5] tracking-tight text-[#2D2925]">
-          Frequently asked <span className="text-[#D1D5DB]">questions</span>
+        <h2 className="text-center font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.5] tracking-tight text-(--color-text-darker)">
+          Frequently asked <span className="text-(--color-text-gray-light)">questions</span>
         </h2>
 
         <div className="space-y-4">
@@ -55,7 +55,7 @@ function FAQItem({
       style={{ transitionDelay: `${index * 90}ms` }}
       className={`group rounded-[24px] bg-white shadow-sm border border-gray-100 overflow-hidden transition-all duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform motion-reduce:transition-none ${revealClassName}`}
     >
-      <summary className="flex cursor-pointer items-center justify-between px-8 py-7 text-lg font-semibold text-[#2F2925]">
+      <summary className="flex cursor-pointer items-center justify-between px-8 py-7 text-lg font-semibold text-(--color-text-darker)">
         {faq.q}
         <div className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-50 group-open:bg-blue-100 transition-colors">
           <svg
@@ -74,7 +74,7 @@ function FAQItem({
         </div>
       </summary>
       <div className="px-8 pb-7">
-        <p className="text-[0.96875rem] leading-[1.6] text-[#2F2A25] opacity-80">
+        <p className="text-[0.96875rem] leading-[1.6] text-(--color-text-dark) opacity-80">
           {faq.a}
         </p>
       </div>

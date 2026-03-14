@@ -105,12 +105,12 @@ export function ReviewsSection() {
     <section className="bg-white overflow-hidden">
       <div className="mx-auto max-w-[77.625rem] mb-6 md:mb-16">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 px-4">
-          <h2 className="text-[#2F2A25] font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
+          <h2 className="text-(--color-text-dark) font-display text-[2.25rem] md:text-[2.8125rem] font-medium leading-[1.1] tracking-tight lg:max-w-[500px]">
             There&apos;s a reason people are{' '}
             <span className="text-primary">raving about us.</span>
           </h2>
           <div className="flex flex-col gap-6 lg:max-w-[420px]">
-            <p className="text-[#2F2A25] text-base md:text-lg leading-[1.6] opacity-90">
+            <p className="text-(--color-text-dark) text-base md:text-lg leading-[1.6] opacity-90">
               Join the thousands of people who have trusted Embody to help
               change their lives, achieving significant,{' '}
               <span className="text-primary font-semibold">
@@ -119,7 +119,7 @@ export function ReviewsSection() {
               .
             </p>
             <div>
-              <Button className="bg-[#2D2925] text-white px-10 py-4 rounded-full font-bold text-[0.875rem] tracking-widest uppercase hover:opacity-90 transition-opacity">
+              <Button className="bg-(--color-text-darker) text-white px-10 py-4 rounded-full font-bold text-[0.875rem] tracking-widest uppercase hover:opacity-90 transition-opacity">
                 I&apos;M READY, LET&apos;S GO
               </Button>
             </div>
@@ -143,7 +143,7 @@ export function ReviewsSection() {
             <MarqueeItem
               key={`top-${index}`}
               item={item}
-              reviewBgClass="bg-[#FFF4E6]"
+              reviewBgClass="bg-(--color-bg-peach-light)"
             />
           ))}
         </Marquee>
@@ -162,7 +162,7 @@ export function ReviewsSection() {
 function MarqueeItem({
   item,
   className,
-  reviewBgClass = 'bg-[#F8F9FA]',
+  reviewBgClass = 'bg-(--color-bg-gray-light)',
 }: {
   item: MarqueeContentItem;
   className?: string;
@@ -174,7 +174,7 @@ function MarqueeItem({
   if (item.type === 'image') {
     return (
       <div
-        className={`relative shrink-0 rounded-[24px] overflow-hidden bg-[#F8F9FA] ${sizeClasses} ${className || ''}`}
+        className={`relative shrink-0 rounded-[24px] overflow-hidden bg-(--color-bg-gray-light) ${sizeClasses} ${className || ''}`}
       >
         <Image
           src={item.src}
@@ -205,17 +205,17 @@ function MarqueeItem({
             </div>
           ) : null}
           <div className="flex flex-col">
-            <span className="text-[#2F2A25] font-bold text-base leading-tight">
+            <span className="text-(--color-text-dark) font-bold text-base leading-tight">
               {item.name}
             </span>
-            <span className="text-[#6B7280] text-[0.625rem] md:text-[0.75rem] leading-tight">
+            <span className="text-(--color-text-gray) text-[0.625rem] md:text-[0.75rem] leading-tight">
               {item.location}
             </span>
           </div>
         </div>
         <Stars />
       </div>
-      <p className="text-[#2F2A25] text-sm opacity-80 leading-[1.6] md:overflow-y-auto custom-scrollbar">
+      <p className="text-(--color-text-dark) text-sm opacity-80 leading-[1.6] md:overflow-y-auto custom-scrollbar">
         {item.text}
       </p>
     </div>
