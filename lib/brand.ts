@@ -5,8 +5,9 @@ export const BRAND = {
   ctaUrl: 'https://joinem.co/pages/intake',
   logoAlt: 'Embody logo',
   contact: {
-    email: 'support@withembody.com',
+    email: 'support@mail.withembody.com',
     phone: '(844) 357-3601',
+    phoneFormatted: '+18443573601',
     address:
       '1811 Silverside Road, Suite 260, Wilmington, New Castle County, Delaware 19180',
   },

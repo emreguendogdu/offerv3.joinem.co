@@ -21,7 +21,10 @@ export function Footer() {
         <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-16">
           <Logo className="w-16 h-16 md:w-32 md:h-32" />
           <div className="flex flex-col gap-5 text-gray-600">
-            <div className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold">
+            <a
+              href={`mailto:${BRAND.contact.email}`}
+              className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold"
+            >
               <svg
                 className="shrink-0"
                 width="18"
@@ -35,8 +38,11 @@ export function Footer() {
                 <polyline points="22,6 12,13 2,6" />
               </svg>
               {BRAND.contact.email}
-            </div>
-            <div className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold">
+            </a>
+            <a
+              href={`tel:${BRAND.contact.phoneFormatted}`}
+              className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold"
+            >
               <svg
                 className="shrink-0"
                 width="18"
@@ -49,7 +55,7 @@ export function Footer() {
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.36 1.6.66 2.36a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.76.3 1.55.53 2.36.66A2 2 0 0122 16.92z" />
               </svg>
               {BRAND.contact.phone}
-            </div>
+            </a>
             <div className="flex items-center gap-3 rounded-full bg-[#FAFAFA] px-5 py-2.5 w-fit max-w-[320px] font-semibold">
               <svg
                 className="shrink-0"
