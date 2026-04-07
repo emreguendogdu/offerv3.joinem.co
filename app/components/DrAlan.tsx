@@ -56,7 +56,7 @@ export default function DrAlan() {
               fill
               className="object-cover object-[50%_10%]"
             />
-            <div className="absolute inset-x-4 bottom-4 bg-white backdrop-blur-sm rounded-[32px] p-6 text-center shadow-lg border border-white/20 w-fit mx-auto">
+            <div className="absolute inset-x-2 md:inset-x-4 bottom-2 md:bottom-4 bg-white backdrop-blur-sm rounded-[24px] md:rounded-[32px] p-3 md:p-6 text-center shadow-lg border border-white/20 w-fit mx-auto">
               <h4 className="text-(--color-text-dark) font-bold text-lg leading-tight mb-1">
                 Dr. Alan Viglione
               </h4>
