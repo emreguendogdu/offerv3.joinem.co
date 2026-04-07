@@ -12,7 +12,6 @@ import { SupportSection } from './components/SupportSection';
 import { ReviewsSection } from './components/ReviewsSection';
 import { FAQ } from './components/FAQ';
 import { Guarantee } from './components/Guarantee';
-import { TeamGrid } from './components/TeamGrid';
 import { FeaturesGrid } from './components/FeaturesGrid';
 import { WeightLossGoalQuestion } from './components/WeightLossGoalQuestion';
 import { Footer } from './components/Footer';
@@ -21,6 +20,7 @@ import {
   defaultPromoBannerContent,
   promoBannerContentByUtmTerm,
 } from '@/data/promoBanner';
+import DrAlan from './components/DrAlan';
 
 type HomeProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -34,7 +34,8 @@ export default async function Home({ searchParams }: HomeProps) {
   const promoBannerContent = {
     heading: promoBannerOverrides?.heading || defaultPromoBannerContent.heading,
     primaryText:
-      promoBannerOverrides?.primaryText || defaultPromoBannerContent.primaryText,
+      promoBannerOverrides?.primaryText ||
+      defaultPromoBannerContent.primaryText,
     subText: promoBannerOverrides?.subText || defaultPromoBannerContent.subText,
   };
 
@@ -61,7 +62,7 @@ export default async function Home({ searchParams }: HomeProps) {
         <ReviewsSection />
         <FAQ />
         <Guarantee />
-        <TeamGrid />
+        <DrAlan />
         <WeightLossGoalQuestion />
         <FeaturesGrid />
         <Footer />
