@@ -16,12 +16,12 @@ const HERO_FEATURES = [
   {
     mobileText: (
       <>
-        <strong>LIMITED TIME Sale.</strong> Save $200 or more instantly.
+        <strong>LIMITED TIME Sale.</strong> Save $170 or more instantly.
       </>
     ),
     desktopText: (
       <>
-        <strong>LIMITED TIME Sale.</strong> Save $200 or more instantly.
+        <strong>LIMITED TIME Sale.</strong> Save $170 or more instantly.
       </>
     ),
   },
@@ -84,9 +84,9 @@ export function Hero() {
             GLP-1 for{' '}
             <span
               className="shiny-text font-display text-[1.5625rem] md:text-3xl font-black"
-              data-text="$99"
+              data-text="$129"
             >
-              $99
+              $129
             </span>{' '}
             with no long term commitment
           </p>
