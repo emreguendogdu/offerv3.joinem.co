@@ -3,48 +3,19 @@ import { Stars, Check } from './ui/Icons';
 import { Button } from './ui/Buttons';
 
 const HERO_FEATURES = [
-  {
-    mobileText: (
-      <>100% online medical visit. Injections and oral options available.</>
-    ),
-    desktopText: (
-      <>
-        <strong>100% online</strong> medical review with licensed U.S. providers
-      </>
-    ),
-  },
-  {
-    mobileText: (
-      <>
-        <strong>LIMITED TIME Sale.</strong> Save $170 or more instantly.
-      </>
-    ),
-    desktopText: (
-      <>
-        <strong>LIMITED TIME Sale.</strong> Save $170 or more instantly.
-      </>
-    ),
-  },
-  {
-    mobileText: (
-      <>
-        <strong>No long term contract.</strong> Simple monthly plan only.
-      </>
-    ),
-    desktopText: (
-      <>
-        <strong>No long term contract.</strong> Simple monthly plan only.
-      </>
-    ),
-  },
-  {
-    mobileText: <>Free shipping. Arrives in 1–2 days.</>,
-    desktopText: (
-      <>
-        <strong>Free shipping.</strong> Arrives in 1–2 days.
-      </>
-    ),
-  },
+  <>
+    <strong>100% online medical visit.</strong> Injections and oral options
+    available.
+  </>,
+  <>
+    <strong>LIMITED TIME Sale.</strong> Save $170 or more instantly.
+  </>,
+  <>
+    <strong>No long term contract.</strong> Simple monthly plan only.
+  </>,
+  <>
+    <strong>Free shipping</strong> in 1–2 days.
+  </>,
 ];
 
 export function Hero() {
@@ -96,14 +67,7 @@ export function Hero() {
             {HERO_FEATURES.map((feature, index) => (
               <div key={index} className="flex items-start gap-3">
                 <Check />
-                <span className="text-lg">
-                  <span className="inline-block md:hidden">
-                    {feature.mobileText}
-                  </span>
-                  <span className="hidden md:inline-block">
-                    {feature.desktopText}
-                  </span>
-                </span>
+                <span className="text-lg">{feature}</span>
               </div>
             ))}
           </div>
