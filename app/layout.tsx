@@ -67,7 +67,10 @@ export default function RootLayout({
             f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-TXLL9VGZ'));
         `}</Script>
-
+      </head>
+      <body
+        className={`${helveticaPro.variable} ${quincy.variable} antialiased`}
+      >
         {/* Katalys */}
         <Script
           id="katalys"
@@ -75,10 +78,6 @@ export default function RootLayout({
           src="https://db.revoffers.com/js/KA-8ZYJMB2WQ4.js"
         />
         <PlausibleProvider domain="joinem.co" />
-      </head>
-      <body
-        className={`${helveticaPro.variable} ${quincy.variable} antialiased`}
-      >
         <LandingViewedTracker />
         {/* GTM NoScript */}
         <noscript>
