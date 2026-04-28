@@ -2,7 +2,7 @@ export const BRAND = {
   displayName: 'Embody',
   shortName: 'Em',
   siteUrl: 'https://joinem.co',
-  ctaUrl: 'https://joinem.co/pages/intake',
+  ctaUrl: 'https://joinem.co/pages/intake?exclusivev2=true',
   logoAlt: 'Embody logo',
   contact: {
     email: 'support@mail.withembody.com',
