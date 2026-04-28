@@ -5,7 +5,7 @@ import {
 
 export const defaultPromoBannerContent: PromoBannerContent = {
   heading: 'Limited Time Offer!',
-  primaryText: '$170 OFF (GLP1 for $129 today)',
+  primaryText: '$100 OFF (GLP1 for $99 today)',
   subText: 'With free shipping and no long term commitment!',
 };
 
@@ -16,7 +16,7 @@ export const defaultPromoBannerContent: PromoBannerContent = {
 // Example:
 // forbes: {
 //   heading: 'Exclusive Forbes Offer!',
-//   primaryText: '50% + $50 OFF (GLP1 for $129 today)',
+//   primaryText: '50% + $50 OFF (GLP1 for $99 today)',
 // },
 export const promoBannerContentByUtmTerm: Record<
   string,

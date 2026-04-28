@@ -8,10 +8,10 @@ const HERO_FEATURES = [
     available.
   </>,
   <>
-    <strong>LIMITED TIME Sale.</strong> Save $170 or more instantly.
+    <strong>LIMITED TIME Sale.</strong> Save $100 or more instantly.
   </>,
   <>
-    <strong>No long term contract.</strong> Simple monthly plan only.
+    <strong>No long term contract.</strong> Cancel anytime.
   </>,
   <>
     <strong>Free shipping</strong> in 1–2 days.
@@ -55,9 +55,9 @@ export function Hero() {
             GLP-1 for{' '}
             <span
               className="shiny-text font-display text-[1.5625rem] md:text-3xl font-black"
-              data-text="$129"
+              data-text="$99"
             >
-              $129
+              $99
             </span>{' '}
             with no long term commitment
           </p>
