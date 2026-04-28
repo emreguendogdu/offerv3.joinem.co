@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { usePlausible } from 'next-plausible';
 
 export default function LandingViewedTracker({
-  landingName = 'Offer',
+  landingName = 'Offer V3',
 }: {
   landingName?: string;
 }) {
