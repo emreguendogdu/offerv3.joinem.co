@@ -6,25 +6,40 @@ type PromoBannerProps = {
   content: PromoBannerContent;
 };
 
-function SaleStrip({ className }: { className?: string }) {
+function SaleStrip({
+  className,
+  reverse = false,
+}: {
+  className?: string;
+  reverse?: boolean;
+}) {
   return (
     <div
       className={cn(
-        'flex items-center gap-[1.5rem] border-y border-[#ebeaea] bg-[#fefefe]/10 p-2 opacity-20 select-none pointer-events-none whitespace-nowrap -rotate-45',
+        'flex items-center border-y border-white/40 bg-white/[0.08] opacity-70 -rotate-45 select-none pointer-events-none overflow-hidden',
         className,
       )}
       style={{
-        width: 'min-content',
-        height: 'min-content',
+        width: '28rem',
+        height: '2.25rem',
       }}
     >
-      {Array.from({ length: 12 }).map((_, i) => (
-        <div key={i} className="flex justify-center">
-          <p className="font-text text-[0.875rem] leading-[1rem] text-[#fefefe] font-normal">
+      <div
+        className={cn(
+          'flex h-full items-center gap-[1.5rem] px-2',
+          reverse ? 'promo-stripe-track-reverse' : 'promo-stripe-track',
+        )}
+        style={{ width: 'max-content' }}
+      >
+        {Array.from({ length: 24 }).map((_, i) => (
+          <p
+            key={i}
+            className="font-text text-[0.875rem] leading-[1rem] text-white font-normal"
+          >
             SALE
           </p>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
@@ -38,7 +53,7 @@ export function PromoBanner({ content }: PromoBannerProps) {
       </div>
 
       <div className="absolute left-[85%] md:left-[67.5%] -translate-x-1/2 top-1/2 translate-y-1/2">
-        <SaleStrip />
+        <SaleStrip reverse />
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-7xl items-center justify-center px-4 pt-4 pb-3">
@@ -52,11 +67,11 @@ export function PromoBanner({ content }: PromoBannerProps) {
           </div>
 
           {/* Secondary text */}
-          <div className="flex flex-col items-center sm:gap-2 rounded-full bg-linear-to-r from-primary to-secondary px-4 py-2 shadow-lg shadow-black/20">
-            <span className=" font-black text-white uppercase leading-none">
+          <div className="promo-pill flex flex-col items-center sm:gap-2 rounded-full bg-linear-to-r from-primary to-secondary px-4 py-2">
+            <span className="font-black text-white uppercase leading-none">
               {content.primaryText}
             </span>
-            <span className=" font-medium text-white/90 leading-none">
+            <span className="font-medium text-white/90 leading-none">
               {content.subText}
             </span>
           </div>

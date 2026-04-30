@@ -265,9 +265,90 @@ input[type='range']::-webkit-slider-thumb {
   }
 }
 
+/* ---------- Promo banner aesthetics ---------- */
+
+.promo-stripe-track {
+  animation: promo-stripe 25s linear infinite;
+  will-change: transform;
+}
+.promo-stripe-track-reverse {
+  animation: promo-stripe-reverse 30s linear infinite;
+  will-change: transform;
+}
+@keyframes promo-stripe {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes promo-stripe-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.promo-pill {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation: promo-pill-pulse 2.8s ease-in-out infinite;
+}
+.promo-pill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 62%
+  );
+  transform: translateX(-120%);
+  animation: promo-pill-sheen 3.4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes promo-pill-sheen {
+  0% {
+    transform: translateX(-120%);
+  }
+  55% {
+    transform: translateX(120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+@keyframes promo-pill-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 6px 18px -4px rgba(0, 0, 0, 0.45),
+      -14px 0 22px -8px rgba(47, 140, 131, 0),
+      14px 0 22px -8px rgba(34, 61, 112, 0);
+  }
+  50% {
+    box-shadow:
+      0 6px 18px -4px rgba(0, 0, 0, 0.45),
+      -14px 0 26px -4px rgba(47, 140, 131, 0.55),
+      14px 0 26px -4px rgba(34, 61, 112, 0.55);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .shiny-text::after {
     animation: none;
     background-position: 220% 50%;
+  }
+  .promo-stripe-track,
+  .promo-stripe-track-reverse,
+  .promo-pill,
+  .promo-pill::after {
+    animation: none !important;
   }
 }

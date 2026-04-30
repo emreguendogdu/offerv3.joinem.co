@@ -8,7 +8,7 @@ const HERO_FEATURES = [
     available.
   </>,
   <>
-    <strong>LIMITED TIME Sale.</strong> Save $100 or more instantly.
+    <strong>LIMITED TIME SALE.</strong> Save $100 or more instantly.
   </>,
   <>
     <strong>No long term contract.</strong> Cancel anytime.
@@ -31,7 +31,7 @@ export function Hero() {
             <Stars />
             <span className="inline-flex justify-center gap-2.5 items-center flex-wrap">
               <span className="w-fit">
-                <strong>4.9</strong> Excellent Rating
+                <strong>4.8</strong> Excellent Rating
               </span>
               <span className="opacity-30 w-fit">•</span>
               <span className="w-fit">
