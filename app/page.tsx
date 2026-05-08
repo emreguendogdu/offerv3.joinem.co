@@ -20,7 +20,6 @@ import {
   defaultPromoBannerContent,
   promoBannerContentByUtmTerm,
 } from '@/data/promoBanner';
-import DrAlan from './components/DrAlan';
 
 type HomeProps = {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -62,7 +61,6 @@ export default async function Home({ searchParams }: HomeProps) {
         <ReviewsSection />
         <FAQ />
         <Guarantee />
-        <DrAlan />
         <WeightLossGoalQuestion />
         <FeaturesGrid />
         <Footer />
