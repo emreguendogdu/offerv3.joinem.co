@@ -54,8 +54,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://plausible.io" crossOrigin="" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="preconnect" href="https://db.revoffers.com" crossOrigin="" />
+        <link rel="preconnect" href="https://aut.revoffers.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
         {/* GTM */}
-        <Script id="gtm" strategy="beforeInteractive">{`
+        <Script id="gtm" strategy="afterInteractive">{`
           ;((function(w,d,s,l,i){
             w[l]=w[l]||[];
             w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
