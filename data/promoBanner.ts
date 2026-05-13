@@ -29,7 +29,7 @@ export const promoBannerContentByUtmTerm: Record<
     heading: 'Exclusive Mens Health Offer!',
   },
   'web-md': {
-    heading: 'Exclusive WebMD Offer!',
+    heading: 'Exclusive Offer!',
   },
   'top-10': {
     heading: 'Exclusive Top10 Offer!',

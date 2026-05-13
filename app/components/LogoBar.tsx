@@ -4,7 +4,6 @@ import Image from 'next/image';
 const LOGOS = [
   { src: 'U48qcpkacQKAyJbYT82Eg0BVM.png', alt: 'Forbes', w: 90 },
   { src: 'fd3XdCFVeQySyIiCXrlczGl4tIs.png', alt: 'The New York Times', w: 170 },
-  { src: 'PAhgK3RUegOS8Mc9SJTTtcY3tp0.png', alt: 'WebMD', w: 100 },
   { src: 'NgTZQOUiAvlr5e289SRKWMCBk2A.png', alt: 'Healthline', w: 140 },
   { src: '350xFQNKQZgsZEX9KIvtISDHdAw.png', alt: 'Fortune', w: 100 },
   { src: 'kjvSCI55yxrVfZIkJdop0opiEw.png', alt: 'Bloomberg', w: 125 },
