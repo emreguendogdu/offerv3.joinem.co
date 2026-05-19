@@ -50,7 +50,7 @@ export const promoBannerContentByUtmTerm: Record<
     heading: 'Exclusive Compare Treatments Offer!',
   },
   'policy-lab': {
-    heading: 'Exclusive Policy Lab Offer!',
+    heading: 'Exclusive PolicyLab Offer!',
   },
   
 };

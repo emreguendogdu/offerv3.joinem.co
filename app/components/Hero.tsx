@@ -28,8 +28,8 @@ export function Hero({ hideStats }: { hideStats?: boolean }) {
         <div className="flex flex-col items-center pt-2 pb-7 gap-6">
           {/* Trust bar */}
           <div className="flex flex-row flex-wrap items-center justify-center gap-2.5 text-brand-brown">
-            <Stars />
-            <span className="inline-flex justify-center gap-2.5 items-center flex-wrap">
+            <Stars className="mb-0.75" />
+            <span className="inline-flex justify-center gap-2.5 items-center flex-wrap leading-[0.8] mt-0.75">
               <span className="w-fit">
                 <strong>4.8</strong> Excellent Rating
               </span>
