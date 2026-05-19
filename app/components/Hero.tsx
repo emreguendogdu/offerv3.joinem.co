@@ -18,7 +18,7 @@ const HERO_FEATURES = [
   </>,
 ];
 
-export function Hero() {
+export function Hero({ hideStats }: { hideStats?: boolean }) {
   return (
     <section
       id="hero"
@@ -33,10 +33,14 @@ export function Hero() {
               <span className="w-fit">
                 <strong>4.8</strong> Excellent Rating
               </span>
-              <span className="opacity-30 w-fit">•</span>
-              <span className="w-fit">
-                <strong>350,000+</strong> happy patients
-              </span>
+              {!hideStats && (
+                <>
+                  <span className="opacity-30 w-fit">•</span>
+                  <span className="w-fit">
+                    <strong>350,000+</strong> happy patients
+                  </span>
+                </>
+              )}
             </span>
           </div>
 
