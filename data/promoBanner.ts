@@ -49,5 +49,8 @@ export const promoBannerContentByUtmTerm: Record<
   'compare-treatments': {
     heading: 'Exclusive Compare Treatments Offer!',
   },
+  'policy-lab': {
+    heading: 'Exclusive Policy Lab Offer!',
+  },
   
 };
